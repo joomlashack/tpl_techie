@@ -17,32 +17,29 @@ defined('_JEXEC') or die('Restricted access');
 <doctype>
 <html>
 <head>
-
+<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 <w:head />
 </head>
 <body class="<?php echo $responsive ?>">
-    <?php if ($this->countModules('toolbar')) : ?>
-    <!-- menu -->
-	<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+     <?php if ($this->countModules('toolbar')) : ?>
+        <!-- toolbar -->
+        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
     <?php endif; ?>
+        <!-- hidden menu -->
+    <?php if ($this->countModules('lateral-menu')) : ?>
+     <w:logo name="lateral-menu" />   
+    <?php endif; ?>
+
+    <?php if ($this->countModules('top')) : ?>
+     <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />   
+    <?php endif; ?>
+
     <div class="<?php echo $containerClass ?>">
-        <!-- header -->
-        <header id="header">
-        	<div class="<?php echo $gridMode; ?> clearfix">
-        		<w:logo name="top" />
-        		<div class="clear"></div>
-        	</div>
-        </header>
-        <?php if ($this->countModules('menu')) : ?>
-        <!-- menu -->
-   		<w:nav name="menu" />
-        <?php endif; ?>
-        <!-- featured -->
-        <?php if ($this->countModules('featured')) : ?>
-        <div id="featured">
-            <w:module type="none" name="featured" chrome="xhtml" />
+        <div class="<?php echo $containerClass; ?>">
+            <div class="<?php echo $gridMode; if ($featuredSpace) { echo ' dropup';} ?>">
+                    <w:logo name="menu" />
+            </div>
         </div>
-        <?php endif; ?>
         <!-- grid-top -->
         <?php if ($this->countModules('grid-top')) : ?>
         <div id="grid-top">
@@ -55,6 +52,7 @@ defined('_JEXEC') or die('Restricted access');
             <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>
+
         <div id="main-content" class="<?php echo $gridMode; ?>">
             <!-- sidebar1 -->
             <aside id="sidebar1">
