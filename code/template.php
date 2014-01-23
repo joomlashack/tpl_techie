@@ -17,15 +17,18 @@ defined('_JEXEC') or die('Restricted access');
 <doctype>
 <html>
 <head>
+<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 <w:head />
 </head>
 <body class="<?php echo $responsive ?>">
+    
+     <!-- toolbar -->
      <?php if ($this->countModules('toolbar')) : ?>
-        <!-- toolbar -->
-        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+    <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
     <?php endif; ?>
-        <!-- hidden menu -->
+    
+    <!-- hidden menu -->
     <?php if ($this->countModules('lateral-menu')) : ?>
      <w:logo name="lateral-menu" />   
     <?php endif; ?>

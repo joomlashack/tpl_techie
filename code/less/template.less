@@ -1,114 +1,110 @@
-.navbar-inner , .navbar-inverse .navbar-inner{
-	background: #4A3B54;
-	min-height: 100%;
+.navbar-inner {
+    border: none;
 }
 
-.navbar .nav{
-	> li {
-		padding: 10px 15px;
-		> a{
-			color: @gray;
-			padding: 2px 0;
-			text-transform: uppercase;
-		}
-		.caret {
-			margin-top: 6px;
-			margin-left: 5px;
-		}
-		&:focus,
-		&:hover{
-			background: #604D6E;
-			> a {
-				color: @gray;
-				position: relative;
-				&:before, &:after{
-					content: '';
-					height: 0;
-					left: 0;
-					position: absolute;
-					width: 100%;
-				}
-				&:before{
-					top: 0;
-				}
-				&:after{
-					bottom: 0;
-				}
-			}
-		}
-		&.active{
-			background: #604D6E;
-			> a{
-				background: #604D6E;
-				position: relative;
-				color: @gray;
-				&:before, &:after{
-					content: '';
-					height: 0;
-					left: 0;
-					position: absolute;
-					width: 100%;
-				}
-				&:before{
-					top: 0;
-				}
-				&:after{
-					bottom: 0;
-				}
-				&:hover, &:focus{
-					background: #604D6E;
-					box-shadow: none;
-				}
-			}
-		}
-		&.divider-vertical{
-			border-left-color: @grayLight;
-			margin-top: 0;
-			padding-bottom: 3px;
-		}
-	}
+.navbar .nav {
+    > li {
+        padding: 5px 15px;
+        > a {
+            color: @linkTopColor;
+            padding: 2px 0;
+            text-transform: uppercase;
+        }
+        .caret {
+        	border-bottom-color: @linkTopColor;
+        	border-top-color: @linkTopColor;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+        &:focus, &:hover {
+            background: @color_three;
+            > a {
+                position: relative;
+                &:before, &:after {
+                    content:'';
+                    height: 0;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                }
+                &:before {
+                    top: 0;
+                }
+                &:after {
+                    bottom: 0;
+                }
+            }
+        }
+        &.active {
+            background: @color_three;
+            > a {
+                background: @color_three;
+                position: relative;
+                box-shadow: none;
+                &:before, &:after {
+                    content:'';
+                    height: 0;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                }
+                &:before {
+                    top: 0;
+                }
+                &:after {
+                    bottom: 0;
+                }
+                &:hover, &:focus {
+                    background: @color_three;
+                    box-shadow: none;
+                }
+            }
+        }
+        &.divider-vertical {
+            border-left-color: @grayLight;
+            margin-top: 0;
+            padding-bottom: 3px;
+        }
+    }
 }
 
-.dropdown, .dropdown-menu {
-			background: transparent;
-			padding: 0px;
-			ul {
-				width: 100%;
-			}
-			> li {
-				background: #604D6E;
-				> a {
-					background-color: transparent;
-					padding: 10px 15px;
-					text-transform: uppercase;
-					color: #EBEBEB;
-					.caret {
-						border-top-color: transparent;
-						border-left-color: @dropdownLinkColor;
-					}
-					&:hover,
-					&:focus {
-						background: #4A3C55;
-						.caret {
-							border-left-color: @dropdownLinkColorHover;
-						}
-					}
-				}
-				&.active {
-					background: #4A3C55;
-					> a {
-						.caret {
-							border-left-color: @dropdownLinkColorActive;
-						}
-						&:hover,
-						&:focus {
-							.caret {
-								border-left-color: @dropdownLinkColorActive;
-							}
-						}
-					}
-				}
-			}
-		}
-
-
+.navbar .nav > li > .dropdown-menu {
+    width: 100%;
+    border-radius: 0px;
+    box-shadow: none;
+    padding: 0px;
+    &:before, &:after {
+        content: none;
+    }
+    > li {
+    	border-top: 1px solid @color_four;
+        > a {
+        	padding: 5px 15px;
+            color: @linkTopColor;
+            text-transform: uppercase;
+            .caret {
+                border-top-color: transparent;
+                border-left-color: @dropdownLinkColor;
+            }
+            &:hover, &:focus {
+                background: @color_four;
+                .caret {
+                    border-left-color: @dropdownLinkColorHover;
+                }
+            }
+        }
+        &.active {
+            background: @color_four;
+            > a {
+                .caret {
+                    border-left-color: @dropdownLinkColorActive;
+                }
+                &:hover, &:focus {
+                    .caret {
+                        border-left-color: @dropdownLinkColorActive;
+                    }
+                }
+            }
+        }
+    }
+}
