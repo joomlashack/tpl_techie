@@ -28,6 +28,11 @@ defined('_JEXEC') or die('Restricted access');
     <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
     <?php endif; ?>
     <!-- toolbar end -->
+    <!-- logo -->
+    <?php if ($this->countModules('logo')) : ?>
+    <w:logo name="top" />
+    <?php endif; ?>
+    <!-- logo end -->
     <!-- lateral-menu -->
     <?php if ($this->countModules('lateral-menu')) : ?>
     <w:logo name="lateral-menu" />
