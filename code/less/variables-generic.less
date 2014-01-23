@@ -124,7 +124,7 @@
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:            @color_four;
+@dropdownBackground:            @color_three;
 @dropdownBorder:                rgba(0,0,0,.2);
 @dropdownDividerTop:            #e5e5e5;
 @dropdownDividerBottom:         @white;
@@ -133,7 +133,7 @@
 @dropdownLinkColorHover:        @linkTopColor;
 @dropdownLinkColorActive:       @linkTopColor;
 
-@dropdownLinkBackgroundActive:  @color_four;
+@dropdownLinkBackgroundActive:  @color_three;
 @dropdownLinkBackgroundHover:   @dropdownLinkBackgroundActive;
 
 
@@ -162,7 +162,7 @@
 
 // Input placeholder text color
 // -------------------------
-@placeholderText:         @grayLight;
+@placeholderText:         @textColor;
 
 
 // Hr border color
@@ -186,7 +186,7 @@
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    30px;
-@navbarBackgroundHighlight:       #ffffff;
+@navbarBackgroundHighlight:       @color_three;
 @navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
@@ -209,10 +209,10 @@
 @navbarInverseLinkColorHover:            @linkTopColor;
 @navbarInverseLinkColorActive:           @linkTopColor;
 @navbarInverseLinkBackgroundHover:       transparent;
-@navbarInverseLinkBackgroundActive:      @color_four;
+@navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
 
 @navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
-@navbarInverseSearchBackgroundFocus:     @white;
+@navbarInverseSearchBackgroundFocus:     @color_four;
 @navbarInverseSearchBorder:              @navbarInverseBackground;
 @navbarInverseSearchPlaceholderColor:    #ccc;
 
@@ -223,7 +223,7 @@
 // -------------------------
 @paginationBackground:                #fff;
 @paginationBorder:                    #ddd;
-@paginationActiveBackground:          #f5f5f5;
+@paginationActiveBackground:          @color_one;
 
 
 // Hero unit
@@ -254,8 +254,8 @@
 
 // Tooltips and popovers
 // -------------------------
-@tooltipColor:            #fff;
-@tooltipBackground:       #000;
+@tooltipColor:            @textColor;
+@tooltipBackground:       @color_three;
 @tooltipArrowWidth:       5px;
 @tooltipArrowColor:       @tooltipBackground;
 
