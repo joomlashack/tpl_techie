@@ -19,29 +19,47 @@ defined('_JEXEC') or die('Restricted access');
 <head>
 <w:head />
 </head>
-<body class="<?php echo $responsive ?>">
-    <!-- header -->
-    <div class="wrapper-header">
-    <header id="header">
+<body class="<?php   echo $responsive . $fixedClass . $sidebarClass?>">
     <!-- toolbar -->
     <?php if ($this->countModules('toolbar')) : ?>
     <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
     <?php endif; ?>
     <!-- toolbar end -->
+    <!-- header -->
+    <header id="header">
+   <!-- Place Holder Slideshow -->
+    <div class="bg-wrapp">
+        <div class="bg-wrapp-inner">
+            <img id="bg-header" src='<?php echo JURI::root(true) ?>/templates/js_techie/images/default-bg-one.jpg' />
+        </div>
+    </div>
+    <a id="prevslide" class="load-item"></a>
+    <a id="nextslide" class="load-item"></a>
+    <!-- Place holder Slideshow end -->
+    <!-- Slideshow and Standard Background end -->
     <!-- logo -->
+    <div class="<?php echo $containerClass ?>">
+    <div class="header-inner">
     <?php if ($this->countModules('logo')) : ?>
-    <w:logo name="top" />
+    <w:logo name="top"/>
+    <div class="clear"></div>
     <?php endif; ?>
+    </div>
     <!-- logo end -->
     <!-- lateral-menu -->
     <?php if ($this->countModules('lateral-menu')) : ?>
     <w:logo name="lateral-menu" />
     <?php endif; ?>
     <!-- lateral-menu end -->
+	</div>
+	</header>
+	<!-- header end -->
     <!-- top -->
     <?php if ($this->countModules('top')) : ?>
-    <div class="<?php echo $gridMode; ?> clearfix">
-        <w:module type="<?php echo $gridMode; ?>" name="top" chrome="wrightflexgrid" />
+    <div id="top-header">
+        <div class="<?php echo $containerClass ?>">
+                <w:module type="<?php echo $gridMode; ?>" name="top" chrome="wrightflexgrid" />
+        </div>  
     </div>
     <?php endif; ?>
     <!-- top end -->
@@ -56,23 +74,21 @@ defined('_JEXEC') or die('Restricted access');
         <w:module type="single" name="breadcrumbs" chrome="none" />
     </div>
     <?php endif; ?>
-    <!-- breadcrumbs -->
-    </header>
-    </div>
-    <!-- header end -->
+    <!-- breadcrumbs end -->
     <!-- Main container -->
     <div class="<?php echo $containerClass ?>">
         <!-- grid-top -->
         <?php if ($this->countModules('grid-top')) : ?>
         <div id="grid-top">
-            <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
+            <w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>
         <!-- grid-top end -->
         <!-- grid-top2 -->
         <?php if ($this->countModules('grid-top2')) : ?>
+                 <!-- grid-top2 -->
         <div id="grid-top2">
-            <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
+           <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>
         <!-- grid-top2 end -->

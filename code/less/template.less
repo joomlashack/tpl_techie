@@ -1,3 +1,182 @@
+// Typografhy styles
+.btn {
+  background-image: none;
+  text-transform: uppercase;
+  border-radius: 0px;
+  border: 0px;
+  font-size: @baseFontSize + 6;
+}
+
+//Table classes
+
+.table{
+    td{
+      color: @grayLighter;
+    }
+    &.table-striped tbody>tr:nth-child(odd){
+      >td,
+      >th{
+        background-color: @grayLighter;
+      }
+    }
+    &.table-hover tbody tr:hover{
+      >td,
+      >th{
+        background-color: @tableBackgroundHover;
+        color: @textColor;
+      }
+    }
+  }
+
+
+.table{
+  thead{
+    th{
+      background-color: @color_two;
+      color: @white;
+      font-family: @altFontFamily;
+      font-size: @baseFontSize + 2;
+      a{
+        color: @white;
+      }
+    }
+  }
+  th{
+    font-weight: normal;
+  }
+  td{
+    color: @grayDark + #111;
+  }
+  th , td{
+    padding-bottom: 13px;
+    padding-top: 13px;
+    text-align: center;
+  }
+}
+.table-condensed {
+  th, td{
+    padding-bottom: 8px;
+    padding-top: 8px;
+  }
+}
+
+.table-bordered{
+  .border-radius(0);
+}
+.table-bordered caption+thead tr:first-child th:first-child, .table-bordered caption+tbody tr:first-child td:first-child, .table-bordered colgroup+thead tr:first-child th:first-child, .table-bordered colgroup+tbody tr:first-child td:first-child{
+  .border-radius(0);
+}
+.table-bordered caption+thead tr:first-child th:last-child, .table-bordered caption+tbody tr:first-child td:last-child, .table-bordered colgroup+thead tr:first-child th:last-child, .table-bordered colgroup+tbody tr:first-child td:last-child{
+  .border-radius(0);
+}
+.table-bordered thead:first-child tr:first-child>th:first-child, .table-bordered tbody:first-child tr:first-child>td:first-child, .table-bordered tbody:first-child tr:first-child>th:first-child{
+  .border-radius(0);
+}
+.table-bordered thead:first-child tr:first-child>th:last-child, .table-bordered tbody:first-child tr:first-child>td:last-child, .table-bordered tbody:first-child tr:first-child>th:last-child{
+  .border-radius(0);
+}
+.table-bordered thead:last-child tr:last-child>th:first-child, .table-bordered tbody:last-child tr:last-child>td:first-child, .table-bordered tbody:last-child tr:last-child>th:first-child, .table-bordered tfoot:last-child tr:last-child>td:first-child, .table-bordered tfoot:last-child tr:last-child>th:first-child{
+  .border-radius(0);
+}
+.table-bordered thead:last-child tr:last-child>th:last-child, .table-bordered tbody:last-child tr:last-child>td:last-child, .table-bordered tbody:last-child tr:last-child>th:last-child, .table-bordered tfoot:last-child tr:last-child>td:last-child, .table-bordered tfoot:last-child tr:last-child>th:last-child{
+  .border-radius(0);
+}
+
+// Page Heading
+
+.page-header {
+  margin-top: 30px;
+}
+
+// Docs
+
+div{
+  .prettyprint{
+    .border-radius(0);
+  }
+  .bs-docs-example{
+    border: 1px solid @grayLighter;
+    border-radius: 0;
+    padding: 60px 30px 40px;
+
+    &:after{
+      background-color: @grayLighter;
+      border-radius: 0;
+      border: 0;
+      font-size: @baseFontSize;
+      font-family: @altFontFamily;
+      color: @textColor;
+      content : "EXAMPLE";
+      height: 20px;
+      left: 10px;
+      top: 10px;
+    }
+  }
+  code{
+    background-color: transparent;
+    color : @linkColor;
+    border: 0;
+    font-size: @baseFontSize;
+    font-family: @sansFontFamily;
+  }
+}
+
+// Top tabs
+
+.nav.nav-tabs+.current {
+  background-color: @white;
+  padding: 50px 50px 50px 100px;
+}
+
+.nav.nav-tabs {
+  margin-bottom: 0px;
+}
+
+.tabs { 
+     h3 {
+       a {
+         background: @tabBackground;
+         border-radius: 0px;
+         color: @white;
+         text-transform: uppercase;
+         padding: 10px 15px;
+       &:hover {
+         text-decoration: none;
+         background: @linkColor;
+       }
+       }
+     }
+ }
+ 
+.nav-tabs { 
+    border-bottom: 1px solid @color_one;
+    .open{
+      span {
+        position: relative;
+        top: 1px;
+      }
+    h3 
+      a{
+      color : @linkColor !important;
+      border-top: 2px solid @white;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid @white;
+      text-decoration: none;
+      &:hover {
+        background: @white;
+      }
+     }
+}
+}
+
+dl.tabs.nav h3 {
+  margin-right: 1px;
+  font-size: @baseFontSize + 2;
+  line-height: 42px;
+} 
+
+// Top Navigation
 .navbar-inner {
     border: none;
 }
@@ -106,4 +285,103 @@
             }
         }
     }
+}
+
+#header{
+  position: relative;
+  width: 100%;
+  margin-bottom: 0px;
+  .bg-wrapp{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    .bg-wrapp-inner{
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      #bg-header{
+        display: block;
+        left: 0;
+        max-height: inherit;
+        max-width: inherit;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
+    }
+}
+
+}
+.header-inner {
+    border-bottom: 1px solid #CECEBF;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    position: relative;
+    z-index: 1;
+    .logo, [class*="span"] {
+        margin-left: 0 !important;
+    }
+}
+
+#top-header {
+  background: @hedaer-top;
+  .module_mounted {
+    position: relative;
+  .custom_mounted {
+    background: @color_three;
+    color: @white;
+    text-align: center;
+    font-size: @baseFontSize + 2;
+    font-weight: normal;
+    padding: 15px;
+    position: absolute;
+    bottom: -82px; 
+    z-index: 1;
+    > span {
+        font-size: @baseFontSize - 2;
+      }
+    > a {
+      text-transform: uppercase;
+      font-size: @baseFontSize - 2;
+    }
+  } 
+  }
+  .module_futured {
+    position: relative;
+    padding: 15px 0px;
+    h3 {
+      font-size: @baseFontSize;
+      width: auto;
+      float: left;
+      position: relative;
+      top: 8px;
+      text-transform: uppercase;
+    }
+    .custom_futured {
+      position: relative;
+      left: 15px;
+      float: left;
+    } 
+  }
+}
+
+#grid-top {
+  padding: 40px 0px 20px 0px;
+  .module {
+    text-align: center;
+    .custom {
+      > span {
+      display: inline-block;
+      height: 2px;
+      width: 4%;
+      background: @linkColor;
+      margin-bottom: 10px;
+    }
+    }
+  }
 }
