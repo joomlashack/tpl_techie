@@ -1,10 +1,31 @@
 // Typografhy styles
+
+@import "variables-generic.less";
+
 .btn {
   background-image: none;
   text-transform: uppercase;
   border-radius: 0px;
   border: 0px;
   font-size: @baseFontSize + 6;
+  color: @textColor;
+  text-shadow: none;
+  padding: 10px 20px;
+  border-bottom: 4px solid @color_one;
+  &:hover {
+  	color: @textColor;
+  }
+}
+
+.btn-inverse {
+  	color: @white;
+  	&:hover {
+  		color: @white;
+  	}
+}
+
+.btn-link {
+	border-bottom: none; 
 }
 
 //Table classes
@@ -177,6 +198,15 @@ dl.tabs.nav h3 {
 } 
 
 // Top Navigation
+
+#menu {
+  margin-bottom: 0px;
+}
+
+.navbar-inverse .navbar-inner {
+  background-image: none;
+}
+
 .navbar-inner {
     border: none;
 }
@@ -287,13 +317,19 @@ dl.tabs.nav h3 {
     }
 }
 
+// Well styles
+
+.well {
+  box-shadow: none;
+}
+
 #header{
   position: relative;
   width: 100%;
   margin-bottom: 0px;
   .bg-wrapp{
     height: 100%;
-    left: 0;
+    left: 0; 
     position: absolute;
     top: 0;
     width: 100%;
@@ -319,7 +355,7 @@ dl.tabs.nav h3 {
 }
 .header-inner {
     border-bottom: 1px solid #CECEBF;
-    margin-top: 10px;
+    margin-top: 20px;
     padding-bottom: 5px;
     position: relative;
     z-index: 1;
@@ -373,7 +409,6 @@ dl.tabs.nav h3 {
 #grid-top {
   padding: 40px 0px 20px 0px;
   .module {
-    text-align: center;
     .custom {
       > span {
       display: inline-block;
@@ -385,3 +420,21 @@ dl.tabs.nav h3 {
     }
   }
 }
+
+//Breadcrumbs
+
+#breadcrumbs {
+  background: @white;
+  margin-bottom: 0px;
+    .breadcrumb {
+    margin-bottom: 0px;
+    border-radius: 0px;
+    background: transparent;
+    > li {}
+  }
+}
+
+ 
+
+
+
