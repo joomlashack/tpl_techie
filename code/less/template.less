@@ -5,6 +5,7 @@
 .btn {
   background-image: none;
   text-transform: uppercase;
+  font-family: @altFontFamily;
   border-radius: 0px;
   border: 0px;
   font-size: @baseFontSize + 6;
@@ -19,9 +20,26 @@
 
 .btn-inverse {
   	color: @white;
+  	border-bottom: 4px solid  lighten(@grayDarker, 25%);
   	&:hover {
   		color: @white;
   	}
+}
+
+.btn-info {
+	border-bottom: 4px solid  darken(@btnInfoBackground, 25%);
+}
+
+.btn-success {
+	border-bottom: 4px solid  darken(@btnSuccessBackground, 25%);
+}
+
+.btn-warning {
+	border-bottom: 4px solid  darken(@btnWarningBackground, 25%);
+}
+
+.btn-danger {
+	border-bottom: 4px solid  darken(@btnDangerBackground, 25%);
 }
 
 .btn-link {
