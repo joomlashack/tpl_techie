@@ -16,9 +16,9 @@
   &:hover {
   	color: @textColor;
   }
-}
 
-.btn-inverse {
+
+&.btn-inverse {
   	color: @white;
   	border-bottom: 4px solid  lighten(@grayDarker, 25%);
   	&:hover {
@@ -26,24 +26,55 @@
   	}
 }
 
-.btn-info {
+&.btn-info {
 	border-bottom: 4px solid  darken(@btnInfoBackground, 25%);
 }
 
-.btn-success {
+&.btn-success {
 	border-bottom: 4px solid  darken(@btnSuccessBackground, 25%);
 }
 
-.btn-warning {
+&.btn-warning {
 	border-bottom: 4px solid  darken(@btnWarningBackground, 25%);
 }
 
-.btn-danger {
+&.btn-danger {
 	border-bottom: 4px solid  darken(@btnDangerBackground, 25%);
 }
 
-.btn-link {
+&.btn-link {
 	border-bottom: none; 
+}
+
+}
+
+// Blockquote
+
+blockquote { 
+	padding: 20px 25px;
+	background: @color_three;
+	border-left: none;
+	p { 
+	font-size: @fontSizeLarge + 4;
+	color: @white;
+	text-align: center;
+	}
+	small {
+		color: white;
+		text-align: center;
+		font-size: @baseFontSize;
+		margin-top: 15px;
+		&:before{
+			content: none;
+		}
+	}
+	&.pull-right {
+		small {
+		&:after {
+			content: none;
+		}
+		}
+	}
 }
 
 //Table classes
@@ -419,7 +450,9 @@ dl.tabs.nav h3 {
     .custom_futured {
       position: relative;
       left: 15px;
-      float: left;
+    }
+    .span3 {
+    	margin-left: 0px;
     } 
   }
 }
@@ -451,8 +484,3 @@ dl.tabs.nav h3 {
     > li {}
   }
 }
-
- 
-
-
-
