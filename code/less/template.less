@@ -456,7 +456,29 @@ dl.tabs.nav h3 {
 }
 
 #grid-top {
-  padding: 40px 0px; 
+  padding: 20px 0px; 
+}
+
+#grid-bottom2 {
+  background-color: @color_three;
+  margin-bottom: 0px;
+  .container {
+    padding: 20px 0px; 
+  }
+}
+
+.jssocialicons-before {
+    width: 100%;  
+    float: left;  
+    text-align: center;
+    color: @white;
+    font-size: @baseFontSize + 10.5;
+    font-family: @altFontFamily;
+    font-weight: 400;
+    margin-bottom: 20px;
+    &:after {
+      .heading-after ();
+    }  
 }
  
 .module_default, .moduletext_default, .moduletable_default {
@@ -465,16 +487,25 @@ dl.tabs.nav h3 {
 		float: left;	
 		text-align: center;
 		&:after {
-			content: '';
-  		display: block;
-  		height: 2px;
-  		width: 46px; 
-			background: @color_one;
+			.heading-after ();
 		}
 	}
-    .custom {
+    .custom_default {
+      text-align: center;
     } 
 } 
+
+.heading-after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 46px; 
+      background: @color_one;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+}
 
 //Breadcrumbs
 
@@ -495,7 +526,7 @@ dl.tabs.nav h3 {
   color: white;
   line-height: 15px;
   .wrapper-bottom-menu {
-    background-color: @color_three;
+    background-color: @color_three; 
   }
   .navbar-inner {
     box-shadow: none;

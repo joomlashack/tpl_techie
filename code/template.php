@@ -145,6 +145,7 @@ defined('_JEXEC') or die('Restricted access');
 					</aside>
 					<!-- sidebar2 end -->
 				</div>
+				</div>
 				<!-- grid-bottom -->
 				<?php if ($this->countModules('grid-bottom')) :	?> 
 				<div id="grid-bottom" >
@@ -154,12 +155,13 @@ defined('_JEXEC') or die('Restricted access');
 				<!-- grid-bottom end -->
 				<!-- grid-bottom2 -->
 				<?php if ($this->countModules('grid-bottom2')) : ?>
-				<div id="grid-bottom2" >
+				<div id="grid-bottom2" >	
+				<div class="<?php echo $containerClass ?>">
 					<w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
+				</div>
 				</div>
 				<?php endif; ?>
 				<!-- grid-bottom2 end -->
-			</div>
 			<!-- main container end -->
 			<!-- footer -->
 			<div class="wrapper-footer">
