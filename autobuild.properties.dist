@@ -1,2 +1,2 @@
 www.dir=/var/www/techie
-node.skip=false
+node.build=all
