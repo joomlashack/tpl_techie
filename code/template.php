@@ -149,7 +149,9 @@ defined('_JEXEC') or die('Restricted access');
 				<!-- grid-bottom -->
 				<?php if ($this->countModules('grid-bottom')) :	?> 
 				<div id="grid-bottom" >
+					<div class="<?php echo $containerClass ?>">
 					<w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
+					</div>
 				</div>
 				<?php endif; ?>
 				<!-- grid-bottom end -->
