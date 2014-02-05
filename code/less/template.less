@@ -467,6 +467,8 @@ dl.tabs.nav h3 {
   }
 }
 
+// Social plugin
+
 .jssocialicons-before {
     width: 100%;  
     float: left;  
@@ -478,22 +480,47 @@ dl.tabs.nav h3 {
     margin-bottom: 20px;
     &:after {
       .heading-after ();
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }  
 }
+
+// Module styles
+
+.module {
+  h3 {
+    width: 100%;  
+    float: left;  
+    &:after {
+      .heading-after ();
+    }
+  }
+    .custom {
+      text-align: center;
+    } 
+} 
  
-.module_default, .moduletext_default, .moduletable_default {
+.module_ms3 {
 	h3 {
 		width: 100%;	
 		float: left;	
 		text-align: center;
 		&:after {
 			.heading-after ();
+			display: block;
+      margin-left: auto;
+      margin-right: auto;
 		}
 	}
-    .custom_default {
+    .custom_ms3 {
       text-align: center;
     } 
-} 
+}
+
+
+
+// Classes resourses 
 
 .heading-after {
       content: '';
@@ -501,9 +528,6 @@ dl.tabs.nav h3 {
       height: 2px;
       width: 46px; 
       background: @color_one;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
       margin-top: 10px;
 }
 
