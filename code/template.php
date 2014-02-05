@@ -82,7 +82,7 @@ defined('_JEXEC') or die('Restricted access');
 			<?php endif; ?>
 			<!-- breadcrumbs end -->
 			<!-- Main container -->
-			<div class="<?php echo $containerClass ?>">
+			<div class="<?php echo $containerClass ?> wrapp-content">
 				<!-- grid-top -->
 				<?php if ($this->countModules('grid-top')) : ?>
 				<div id="grid-top">

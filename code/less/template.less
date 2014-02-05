@@ -464,9 +464,6 @@ dl.tabs.nav h3 {
 #grid-bottom2 {
   background-color: @color_three;
   margin-bottom: 0px;
-  .container {
-    padding: 20px 0px; 
-  }
 }
 
 // Social plugin
@@ -479,21 +476,31 @@ dl.tabs.nav h3 {
     font-size: @baseFontSize + 10.5;
     font-family: @altFontFamily;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin: 40px 0px;
     &:after {
       .heading-after ();
       display: block;
       margin-left: auto;
       margin-right: auto;
-    }  
+    } 
 }
+
+.jssocialicons-horizontal {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-bottom: 40px;
+} 
 
 // Module styles
 
 .module {
+  margin-bottom: 0;
   h3 {
     width: 100%;  
-    float: left;  
+    float: left;
+    color: @headingTabColor;  
     &:after {
       .heading-after ();
     }
@@ -507,6 +514,7 @@ dl.tabs.nav h3 {
 		width: 100%;	
 		float: left;	
 		text-align: center;
+		color: @headingTabColor;
 		&:after {
 			.heading-after ();
 			display: block;
@@ -518,8 +526,6 @@ dl.tabs.nav h3 {
       text-align: center;
     } 
 }
-
-
 
 // Classes resourses 
 
@@ -542,6 +548,15 @@ dl.tabs.nav h3 {
     border-radius: 0px;
     background: transparent; 
     > li {}
+  }
+}
+
+// Footer
+
+#bottom-menu {
+  margin-bottom: 0;
+  .navbar { 
+  margin-bottom: 0;
   }
 }
 
@@ -569,3 +584,5 @@ dl.tabs.nav h3 {
     }
   }
 }
+
+// Cotent Items
