@@ -42,9 +42,7 @@ defined('_JEXEC') or die('Restricted access');
 						<div class="clear"></div> 
 						<?php endif; ?>
 					</div>
-					<div id="current-menu-item"><h1><?php $JoomlaApp = JFactory::getApplication(); 
-														  $menu_itemActive = $JoomlaApp->getMenu()->getActive()->title;
-														  echo $menu_itemActive; ?> </h1>
+					<div id="current-menu-item"><h1><?php echo $menu_itemActive; ?></h1>
 					</div>		  
 					<!-- logo end -->
 					<!-- lateral-menu -->

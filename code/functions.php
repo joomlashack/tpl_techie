@@ -22,3 +22,8 @@ $responsive = ' responsive';
 if ($responsivePage == 0) {
     $responsive = ' no-responsive';
 }
+
+// get active menu item
+
+$JoomlaApp = JFactory::getApplication(); 
+$menu_itemActive = $JoomlaApp->getMenu()->getActive()->title;
