@@ -30,7 +30,6 @@ defined('_JEXEC') or die('Restricted access');
 				<!-- Place holder inner images -->
 				<div class="bg-wrapp">
 	                <div class="bg-wrapp-inner">
-	                	<img id="bg-header" src='<?php echo JURI::root(true) ?>/templates/js_techie/images/techie-inner-background.png' />
 	                </div>
             	</div>
 				<!-- Place holder inner images end -->
@@ -43,7 +42,10 @@ defined('_JEXEC') or die('Restricted access');
 						<div class="clear"></div> 
 						<?php endif; ?>
 					</div>
-					<div id="current-item"><h1>Doc & Setup</h1></div>		  
+					<div id="current-menu-item"><h1><?php $JoomlaApp = JFactory::getApplication(); 
+														  $menu_itemActive = $JoomlaApp->getMenu()->getActive()->title;
+														  echo $menu_itemActive; ?> </h1>
+					</div>		  
 					<!-- logo end -->
 					<!-- lateral-menu -->
 					<?php if ($this->countModules('lateral-menu')) : ?>
