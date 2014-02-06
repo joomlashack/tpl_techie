@@ -437,11 +437,7 @@ dl.tabs.nav h3 {
 }
 
 .bg-wrapp-bottom {
-  background-image: url(../images/botom-object.png);
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  position: relative; 
-  z-index: 9000;
+  
 }
 
 #top-header {
@@ -454,8 +450,12 @@ dl.tabs.nav h3 {
 }
 
 #grid-bottom2 {
+  background-image: url(../images/botom-object.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
   background-color: @color_three;
   margin-bottom: 0px;
+  padding: 40px 0px;
 }
 
 // Social plugin
@@ -468,7 +468,7 @@ dl.tabs.nav h3 {
     font-size: @baseFontSize + 10.5;
     font-family: @altFontFamily;
     font-weight: 400;
-    margin: 40px 0px;
+    margin-bottom: 40px;
     &:after {
       .heading-after ();
       display: block;
@@ -482,7 +482,6 @@ dl.tabs.nav h3 {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
-    margin-bottom: 40px;
 }
 
 // Content
