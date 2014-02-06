@@ -1,3 +1,4 @@
+
 <?php
 /**
  * @package     Wright
@@ -157,17 +158,19 @@ defined('_JEXEC') or die('Restricted access');
 				<div id="grid-bottom" >
 					<div class="<?php echo $containerClass ?>">
 					<w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
-					</div>	
-				</div>
+					</div>
+				</div> 
 				<?php endif; ?>
-				<!-- grid-bottom end -->
-				<!-- grid-bottom2 -->
+				<!-- grid-bottom end --> 
+				<!-- grid-bottom2 --> 
 				<?php if ($this->countModules('grid-bottom2')) : ?>
 				<div id="grid-bottom2" >	
 				<div class="<?php echo $containerClass ?>">
+				<div class="bg-wrapp-bottom">
 					<w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
+				</div>	
 				</div>
-				</div>
+				</div>  
 				<?php endif; ?>
 				<!-- grid-bottom2 end -->
 			<!-- main container end -->

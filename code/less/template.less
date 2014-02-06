@@ -436,6 +436,14 @@ dl.tabs.nav h3 {
   }
 }
 
+.bg-wrapp-bottom {
+  background-image: url(../images/botom-object.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  position: relative; 
+  z-index: 9000;
+}
+
 #top-header {
   background: @hedaer-top;
   padding: 20px 0px;
@@ -475,7 +483,14 @@ dl.tabs.nav h3 {
     margin-right: auto;
     margin-bottom: 0;
     margin-bottom: 40px;
-} 
+}
+
+// Content
+
+.wrapp-content {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}  
 
 // Module styles
 
@@ -484,10 +499,12 @@ dl.tabs.nav h3 {
 }
 
 .module {
+  margin-bottom: 0px;
   h3 {
     width: 100%;  
     float: left;
-    color: @headingTabColor;  
+    color: @headingTabColor;
+    text-shadow: none;  
     &:after {
       .heading-after ();
     }
@@ -616,11 +633,34 @@ dl.tabs.nav h3 {
 #breadcrumbs {
   background: @white;
   margin-bottom: 0px;
+  color: @activeTextColor;
+  font-size: @baseFontSize + 2;
     .breadcrumb {
     margin-bottom: 0px;
     border-radius: 0px;
     background: transparent; 
-    > li {}
+    padding: 15px 0px 15px 20px;
+    > li {
+    text-shadow: none;
+     .hasTip {
+    display: none;
+    }
+    .divider{
+      color : @activeTextColor;
+      &.icon-map-marker{
+        padding-left: 0;
+      }
+      [class^="icon-"], [class*=" icon-"]{
+        padding-right: 5px;
+        &:before{
+          content: '\f054';
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  >.active{
+  }
   }
 }
 
