@@ -63,11 +63,11 @@ defined('_JEXEC') or die('Restricted access');
 			</div>
 			<?php endif; ?>
 			<!-- top end -->
-			<!-- menu -->
+			<!-- menu colapsed -->
 			<?php if ($this->countModules('menu')) : ?>
 			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="menu" />
 			<?php endif; ?>
-			<!-- menu end -->
+			<!-- menu colapsed end -->
 			<!-- breadcrumbs -->
 			<?php if ($this->countModules('breadcrumbs')) : ?>
 			<div id="breadcrumbs">
@@ -83,6 +83,13 @@ defined('_JEXEC') or die('Restricted access');
 			<!-- breadcrumbs end -->
 			<!-- Main container -->
 			<div class="<?php echo $containerClass ?> wrapp-content">
+				<!-- Featured -->
+				<?php if ($this->countModules('featured')) : ?>
+                <div id="featured">
+                	<w:module type="none" name="featured" chrome="xhtml" />
+				</div>
+                <?php endif; ?>	
+                <!-- Featured end -->
 				<!-- grid-top -->
 				<?php if ($this->countModules('grid-top')) : ?>
 				<div id="grid-top">
