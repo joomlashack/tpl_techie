@@ -379,7 +379,9 @@ dl.tabs.nav h3 {
   position: relative;
   width: 100%;
   margin-bottom: 0px;
-  .bg-wrapp{
+}
+
+.bg-wrapp{
     height: 100%;
     left: 0; 
     position: absolute;
@@ -392,11 +394,11 @@ dl.tabs.nav h3 {
       position: relative;
       width: 100%;
       #bg-header{
+        position: absolute;
         display: block;
         left: 0;
         max-height: inherit;
         max-width: inherit;
-        position: absolute;
         top: 0;
         width: 100%;
       }
@@ -404,7 +406,7 @@ dl.tabs.nav h3 {
     }
 }
 
-}
+
 .header-inner {
     border-bottom: 1px solid #CECEBF;
     margin-top: 20px;
@@ -414,6 +416,21 @@ dl.tabs.nav h3 {
     .logo, [class*="span"] {
         margin-left: 0 !important;
     }
+}
+
+#current-item {
+  position: relative; 
+  z-index: 1;
+  margin-top: 60px;
+  margin-left: 100px;
+   margin-bottom: 60px;
+  h1 {
+    font-family: @sansFontFamily;
+    color: @white;
+    background: @headerTitleBackground;
+    padding: 10px 20px;
+    display: table;
+  }
 }
 
 #top-header {

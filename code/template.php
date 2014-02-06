@@ -26,16 +26,14 @@ defined('_JEXEC') or die('Restricted access');
 			<!-- toolbar end -->
 			<!-- header -->
 			<header id="header">
-				<!-- Place Holder Slideshow -->
+				
+				<!-- Place holder inner images -->
 				<div class="bg-wrapp">
-					<div class="bg-wrapp-inner">
-						<img id="bg-header" src='<?php echo JURI::root(true) ?>/templates/js_techie/images/default-bg-one.jpg' />
-					</div>
-				</div>
-				<a id="prevslide" class="load-item"></a>
-				<a id="nextslide" class="load-item"></a>
-				<!-- Place holder Slideshow end -->
-				<!-- Slideshow and Standard Background end -->
+	                <div class="bg-wrapp-inner">
+	                	<img id="bg-header" src='<?php echo JURI::root(true) ?>/templates/js_techie/images/techie-inner-background.png' />
+	                </div>
+            	</div>
+				<!-- Place holder inner images end -->
 				<!-- logo -->
 				<div class="<?php echo $containerClass ?>">
 					<div class="header-inner"> 
@@ -44,13 +42,14 @@ defined('_JEXEC') or die('Restricted access');
 						<w:logo name="top"/>
 						<div class="clear"></div> 
 						<?php endif; ?>
-					</div>  
+					</div>
+					<div id="current-item"><h1>Doc & Setup</h1></div>		  
 					<!-- logo end -->
 					<!-- lateral-menu -->
 					<?php if ($this->countModules('lateral-menu')) : ?>
 					<w:logo name="lateral-menu" />
 					<?php endif; ?>
-					<!-- lateral-menu end -->
+				<!-- lateral-menu end -->
 				</div>
 			</header> 
 			<!-- header end -->
