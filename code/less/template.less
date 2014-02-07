@@ -494,14 +494,26 @@ dl.tabs.nav h3 {
 // Module styles
 
 #grid-bottom2 .module {
-  .module ();
+   margin-bottom: 0px;
+   color: @white;
+  h3 {
+    margin-top: 0px;
+    margin-bottom: 40px;
+    width: 100%;  
+    color: @white;
+    text-shadow: none;  
+    &:after {
+      .heading-after ();
+    }
+  }
+    .custom {
+    } 
 }
 
 .module {
   margin-bottom: 0px;
   h3 {
     width: 100%;  
-    float: left;
     color: @headingTabColor;
     text-shadow: none;  
     &:after {
