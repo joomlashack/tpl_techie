@@ -372,8 +372,38 @@ dl.tabs.nav h3 {
 // Well styles
 
 .well {
-  box-shadow: none;
+  box-shadow: none; 
+  .nav-pills.nav {
+   > li {
+      padding: 5px 0px;
+      border-bottom: 1px solid @boderModuleStyleColor;
+      &.active {
+        a {
+          background: none;
+          color: @headingTabColor;
+          &:hover,&:focus {
+            color: lighten(@headingTabColor, 25%);
+          }
+          &:after {
+            content: '\f054';
+            float: right;
+            font-family : FontAwesome;
+            font-size: @baseFontSize - 4;
+          }
+        }
+      }
+      a {
+        font-size: @baseFontSize + 6;
+      }
+      :hover, :focus {
+        background: none;
+        color: @headingTabColor;
+      }
+    }
+  }
 }
+
+// Header Styles
 
 #header{
   position: relative;
@@ -690,7 +720,6 @@ dl.tabs.nav h3 {
   color: white;
   line-height: 15px;
   .wrapper-bottom-menu {
-    background-color: @color_three; 
   }
   .navbar-inner {
     box-shadow: none;
