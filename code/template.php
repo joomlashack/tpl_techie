@@ -37,8 +37,7 @@ defined('_JEXEC') or die('Restricted access');
 				<!-- logo -->
 				<div class="<?php echo $containerClass ?>">
 					<div class="header-inner"> 
-						<?php if ($this->countModules('logo')) :
-						?> 
+						<?php if ($this->countModules('logo')) : ?> 
 						<w:logo name="top"/>
 						<div class="clear"></div> 
 						<?php endif; ?>
@@ -46,11 +45,6 @@ defined('_JEXEC') or die('Restricted access');
 					<div id="current-menu-item"><h1><?php echo $menu_itemActive; ?></h1>
 					</div>		  
 					<!-- logo end -->
-					<!-- lateral-menu -->
-					<?php if ($this->countModules('lateral-menu')) : ?>
-					<w:logo name="lateral-menu" />
-					<?php endif; ?>
-				<!-- lateral-menu end -->
 				</div>
 			</header> 
 			<!-- header end -->
@@ -65,7 +59,9 @@ defined('_JEXEC') or die('Restricted access');
 			<!-- top end -->
 			<!-- menu colapsed -->
 			<?php if ($this->countModules('menu')) : ?>
-			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="menu" />
+			<div class="<?php echo $containerClass ?>">
+			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-inverse" type="toolbar" name="menu" />
+			</div>
 			<?php endif; ?>
 			<!-- menu colapsed end -->
 			<!-- breadcrumbs -->

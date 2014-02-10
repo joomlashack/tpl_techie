@@ -369,6 +369,14 @@ dl.tabs.nav h3 {
     }
 }
 
+.dropdown-menu { 
+  border-radius: 0;
+  .divider {
+    border: 1px solid @color_four;
+    background-color: @color_four;
+  }
+} 
+
 // Well styles
 
 .well {
@@ -388,12 +396,13 @@ dl.tabs.nav h3 {
             content: '\f054';
             float: right;
             font-family : FontAwesome;
-            font-size: @baseFontSize - 4;
+            font-size: @baseFontSize - 6;
           }
         }
       }
       a {
         font-size: @baseFontSize + 6;
+        line-height: 25px;
       }
       :hover, :focus {
         background: none;
@@ -401,6 +410,20 @@ dl.tabs.nav h3 {
       }
     }
   }
+}
+
+// Tabs Buttons
+
+.btn-group>.btn:first-child {
+  border-radius: 0;
+}
+
+.btn-group>.btn:last-child {
+  border-radius: 0;
+}
+
+.btn-group>.btn:last-child, .btn-group>.dropdown-toggle {
+  border-radius: 0;
 }
 
 // Header Styles
@@ -709,6 +732,7 @@ dl.tabs.nav h3 {
 
 #bottom-menu {
   margin-bottom: 0;
+  margin-top: 5px;
   .navbar { 
   margin-bottom: 0;
   }
