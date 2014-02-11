@@ -254,6 +254,9 @@ div{
       }
      }
 }
+  .dropdown-menu {
+    border-radius: 0;
+  }
 }
 
 dl.tabs.nav h3 {
@@ -384,11 +387,27 @@ dl.tabs.nav h3 {
     }
 }
 
-.dropdown-menu { 
+.dropdown-menu {
+  padding: 0; 
   border-radius: 0;
   .divider {
     border: 1px solid @color_four;
     background-color: @color_four;
+    margin: 0;
+    height: 0px;
+  }
+  li {
+  a {   
+  text-transform: uppercase;
+  padding: 5px 15px;  
+  &:hover {
+    background-image: none;
+    background-color: @color_four;
+  }
+  }
+   &.current .active {
+    background-color: @color_four;
+  }
   }
 } 
 
@@ -396,8 +415,9 @@ dl.tabs.nav h3 {
 
 .well {
   box-shadow: none; 
-  .nav-pills.nav {
-   > li {
+  .nav-pills {
+  &.nav {
+    li {
       padding: 5px 0px;
       border-bottom: 1px solid @boderModuleStyleColor;
       &.active {
@@ -425,20 +445,22 @@ dl.tabs.nav h3 {
       }
     }
   }
+  }
 }
 
 // Tabs Buttons
 
-.btn-group>.btn:first-child {
+.btn-group
+  &.btn {
+  &:first-child {
   border-radius: 0;
-}
-
-.btn-group>.btn:last-child {
+  }
+  &:last-child { 
   border-radius: 0;
-}
-
-.btn-group>.btn:last-child, .btn-group >.dropdown-toggle {
-  border-radius: 0;
+  }
+  &.dropdown-toggle {
+    border-radius: 0;
+  }
 }
 
 // Header Styles
