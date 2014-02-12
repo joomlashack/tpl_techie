@@ -754,6 +754,9 @@ dl.tabs.nav h3 {
       color : @activeTextColor;
       &.icon-map-marker{
         padding-left: 0;
+        &:before {
+          content: none;
+        }
       }
       [class^="icon-"], [class*=" icon-"]{
         padding-right: 5px;
