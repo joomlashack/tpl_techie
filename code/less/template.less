@@ -429,7 +429,8 @@ dl.tabs.nav h3 {
   }
 }
 
-.module .nav {
+.module {
+  .nav, .nav.nav-stacked {
     li {
       padding: 5px 0px;
       border-bottom: 1px solid @boderModuleStyleColor;
@@ -450,13 +451,13 @@ dl.tabs.nav h3 {
       }
       a {
         font-size: @baseFontSize + 4;
-        line-height: 25px;
-      }
-      :hover, :focus {
+        &:hover, &:focus {
         background: none;
         color: @headingTabColor;
       }
+      }
     }
+   }
 }
 
 // Tabs Buttons
