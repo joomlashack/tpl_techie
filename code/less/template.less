@@ -329,7 +329,6 @@ dl.tabs.nav h3 {
           &.active {
               background: @color_three;
               > a {
-                  background: @color_three;
                   position: relative;
                   box-shadow: none;
                   &:before, &:after {
@@ -403,24 +402,29 @@ dl.tabs.nav h3 {
 .dropdown-menu {
   padding: 0; 
   border-radius: 0;
-  .divider {
-    border: 1px solid @color_four;
-    background-color: @color_four;
-    margin: 0;
-    height: 0px;
-  }
+    .divider {
+      border: 1px solid @color_four;
+      background-color: @color_four;
+      margin: 0;
+      height: 0px;
+    }
   li {
-  a {   
-  text-transform: uppercase;
-  padding: 5px 15px;  
-  &:hover {
-    background-image: none;
-    background-color: @color_four;
-  }
-  }
-   &.current .active {
-    background-color: @color_four;
-  }
+    a {   
+    text-transform: uppercase;
+    padding: 5px 15px;  
+      &:hover {
+        background-image: none;
+        background-color: @color_four;
+      }
+    }
+   &.current {
+      &.active {
+         a {
+          background-color: @color_four;
+          background-image: none;
+         }
+       }
+    }
   }
 } 
 
@@ -609,7 +613,6 @@ dl.tabs.nav h3 {
    color: @white;
   h3 {
     margin-top: 0px;
-    margin-bottom: 40px;
     width: 100%;  
     color: @white;
     text-shadow: none;  
