@@ -281,6 +281,16 @@ dl.tabs.nav h3 {
     border-radius: 0;
 }
 
+.nav {
+  li {
+    > a {
+      &:focus, &:hover { 
+        background-color: none;
+      }
+    }
+  }
+}
+
 .navbar .nav {
     > li {
         padding: 5px 15px;
@@ -416,12 +426,15 @@ dl.tabs.nav h3 {
 .well {
   box-shadow: none; 
   .nav-pills {
-  &.nav {
+  }
+}
+
+.module .nav {
     li {
       padding: 5px 0px;
       border-bottom: 1px solid @boderModuleStyleColor;
       &.active {
-        a {
+         a {
           background: none;
           color: @headingTabColor;
           &:hover,&:focus {
@@ -436,7 +449,7 @@ dl.tabs.nav h3 {
         }
       }
       a {
-        font-size: @baseFontSize + 6;
+        font-size: @baseFontSize + 4;
         line-height: 25px;
       }
       :hover, :focus {
@@ -444,8 +457,6 @@ dl.tabs.nav h3 {
         color: @headingTabColor;
       }
     }
-  }
-  }
 }
 
 // Tabs Buttons
