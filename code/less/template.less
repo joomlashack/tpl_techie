@@ -241,19 +241,19 @@ div{
         position: relative;
         top: 1px;
       }
-    h3 
-      a{
-      color : @linkColor !important;
-      border-top: 2px solid @white;
-      border-left: none;
-      border-right: none;
-      border-bottom: 1px solid @white;
-      text-decoration: none;
-      &:hover {
-        background: @white;
-      }
-     }
-}
+      h3 
+        a{
+        color : @linkColor !important;
+        border-top: 2px solid @white;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid @white;
+        text-decoration: none;
+          &:hover {
+            background: @white;
+          }
+       }
+    }
   .dropdown-menu {
     border-radius: 0;
   }
@@ -438,9 +438,10 @@ dl.tabs.nav h3 {
 }
 
 .module {
-  .nav, .nav.nav-stacked {
+  .nav, .nav.nav-stacked, .nav.nav-list  { 
     li {
-      padding: 5px 0px;
+      padding-top: 5px;
+      padding-bottom: 5px;
       border-bottom: 1px solid @boderModuleStyleColor;
       &.active {
          a {
@@ -459,15 +460,50 @@ dl.tabs.nav h3 {
       }
       a {
         font-size: @baseFontSize + 4;
+        margin-left: 0px;
+        margin-right: 0px;
         &:hover, &:focus {
         background: none;
         color: @headingTabColor;
       }
+        .caret {
+          display: none;
+        }
+      }
+      &.dropdown {
+        .dropdown-menu {
+          li {
+            padding-left: 15px;
+            > a {
+              text-transform: none;
+              color: @color_one;
+              font-size: @baseFontSize + 2;
+              &:hover {
+                color: lighten(@headingTabColor, 25%);
+              }
+              &:after {
+                content: ' ';
+              }
+            }
+           &:last-child {
+              border-bottom: none; 
+           }
+          }
+        }
+      }
+      &.deeper.parent {
+        a {
+            &:after {
+              content: '\f107';
+              float: right;
+              font-family : FontAwesome;
+              font-size: @baseFontSize - 2;
+           }
+        }
       }
     }
    }
 }
-
 
 // Tabs Buttons
 
