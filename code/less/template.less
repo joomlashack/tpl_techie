@@ -292,7 +292,6 @@ dl.tabs.nav h3 {
 }
 
 .navbar {
-    margin-bottom: 0px;
     .nav {
       > li {
           padding: 5px 15px;
@@ -439,24 +438,26 @@ dl.tabs.nav h3 {
 
 .module {
   .nav, .nav.nav-stacked, .nav.nav-list  { 
+    padding-left: 0px;
+    padding-right: 0px;
     li {
       padding-top: 5px;
       padding-bottom: 5px;
       border-bottom: 1px solid @boderModuleStyleColor;
       &.active {
-         a {
-          background: none;
-          color: @headingTabColor;
-          &:hover,&:focus {
-            color: lighten(@headingTabColor, 25%);
+           a {
+            background: none;
+            color: @headingTabColor;
+            &:hover,&:focus {
+              color: lighten(@headingTabColor, 25%);
+            }
+            &:after {
+              content: '\f054';
+              float: right;
+              font-family : FontAwesome;
+              font-size: @baseFontSize - 6;
+            }
           }
-          &:after {
-            content: '\f054';
-            float: right;
-            font-family : FontAwesome;
-            font-size: @baseFontSize - 6;
-          }
-        }
       }
       a {
         font-size: @baseFontSize + 4;
@@ -502,6 +503,29 @@ dl.tabs.nav h3 {
         }
       }
     }
+   }
+   .nav.nav-tabs {
+      li {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 0;
+        a {
+          &:hover {
+            margin-left: 1px;
+            border-left: none;
+          }
+        }
+         &.active { 
+           a {
+           margin-left: -1px;
+           border-left-color: @bodyBackground;
+             &:hover {
+               border-left: 1px solid @bodyBackground;
+               margin-left: -1px;
+               }
+           }
+         }
+      }     
    }
 }
 
