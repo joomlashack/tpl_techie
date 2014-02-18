@@ -25,12 +25,19 @@ defined('_JEXEC') or die('Restricted access');
 			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
 			<?php endif; ?>
 			<!-- toolbar end -->
+			<!-- lateral menu -->
+			<?php if ($this->countModules('lateral-menu')) : ?>
+			<div class="<?php echo $containerClass ?>">
+			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-inverse" type="toolbar" name="menu" />
+			</div>
+			<?php endif; ?>
+			<!-- lateral menu end -->
 			<!-- header -->
 			<header id="header">
 				<!-- Place holder inner images -->
 				<div class="bg-wrapp">
 	                <div class="bg-wrapp-inner">
-	                </div>+
+	                </div>
             	</div>
 				<!-- Place holder inner images end -->
 				<!-- logo -->
@@ -56,13 +63,6 @@ defined('_JEXEC') or die('Restricted access');
 			</div>
 			<?php endif; ?>
 			<!-- top end -->
-			<!-- menu colapsed -->
-			<?php if ($this->countModules('menu')) : ?>
-			<div class="<?php echo $containerClass ?>">
-			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-inverse" type="toolbar" name="menu" />
-			</div>
-			<?php endif; ?>
-			<!-- menu colapsed end -->
 			<!-- breadcrumbs -->
 			<?php if ($this->countModules('breadcrumbs')) : ?>
 			<div id="breadcrumbs">
@@ -76,6 +76,13 @@ defined('_JEXEC') or die('Restricted access');
 			</div>
 			<?php endif; ?>
 			<!-- breadcrumbs end -->
+			<!-- menu  -->
+			<?php if ($this->countModules('menu')) : ?>
+			<div class="<?php echo $containerClass ?>">
+			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="" type="toolbar" name="menu" />
+			</div>
+			<?php endif; ?>
+			<!-- menu end -->
 			<!-- Main container -->
 			<div class="<?php echo $containerClass ?> wrapp-content">
 				<!-- Featured -->
