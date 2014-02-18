@@ -52,6 +52,13 @@ defined('_JEXEC') or die('Restricted access');
 				</div>
 			</header> 
 			<!-- header end -->
+			<!-- menu  -->
+			<?php if ($this->countModules('menu')) : ?>
+			<div class="<?php echo $containerClass ?>">
+			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="" type="toolbar" name="menu" />
+			</div>
+			<?php endif; ?>
+			<!-- menu end -->
 			<!-- top -->
 			<?php if ($this->countModules('top')) : ?> 
 			<div id="top-header"> 
@@ -74,13 +81,6 @@ defined('_JEXEC') or die('Restricted access');
 			</div>
 			<?php endif; ?>
 			<!-- breadcrumbs end -->
-			<!-- menu  -->
-			<?php if ($this->countModules('menu')) : ?>
-			<div class="<?php echo $containerClass ?>">
-			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="" type="toolbar" name="menu" />
-			</div>
-			<?php endif; ?>
-			<!-- menu end -->
 			<!-- Main container -->
 			<div class="<?php echo $containerClass ?> wrapp-content">
 				<!-- Featured -->
