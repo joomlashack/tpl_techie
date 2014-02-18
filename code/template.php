@@ -43,10 +43,8 @@ defined('_JEXEC') or die('Restricted access');
 				<!-- logo -->
 				<div class="<?php echo $containerClass ?>">
 					<div class="header-inner"> 
-						<?php if ($this->countModules('logo')) : ?> 
 						<w:logo name="top"/>
 						<div class="clear"></div> 
-						<?php endif; ?>
 					</div>
 					<div id="current-menu-item"><h1><?php echo $menu_itemActive; ?></h1>
 					</div>		  
