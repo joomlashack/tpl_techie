@@ -27,11 +27,10 @@ defined('_JEXEC') or die('Restricted access');
 			<!-- toolbar end -->
 			<!-- header -->
 			<header id="header">
-				
 				<!-- Place holder inner images -->
 				<div class="bg-wrapp">
 	                <div class="bg-wrapp-inner">
-	                </div>
+	                </div>+
             	</div>
 				<!-- Place holder inner images end -->
 				<!-- logo -->
