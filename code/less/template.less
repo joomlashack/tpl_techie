@@ -735,26 +735,15 @@ dl.tabs.nav h3 {
     } 
 }
 
-.mounted {
+.module_mounted {
     position: relative;
-  > .custom {
-    background: @color_three;
-    color: @white;
-    text-align: center;
-    font-size: @baseFontSize + 2;
-    font-weight: normal;
+  .custom_mounted {
     padding: 15px;
     position: absolute;
-    bottom: -73px; 
+    bottom: 0;
     z-index: 1;
-    > span {
-        font-size: @baseFontSize - 2;
-      }
-    > a {
-      text-transform: uppercase;
-      font-size: @baseFontSize - 2;
-    }
-} 
+  } 
+}
 
 .module_featured {
     position: relative;
@@ -775,7 +764,6 @@ dl.tabs.nav h3 {
       margin-left: 0px;
     } 
   }
-}
 
 .double {
   h3 {
