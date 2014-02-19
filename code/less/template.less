@@ -477,7 +477,7 @@ dl.tabs.nav h3 {
 					background: none;
 					color: @headingTabColor;
 					&:hover , &:focus {
-						color: lighten(@headingTabColor, 25%);
+						color: darken(@linkColor, 15%);
 					}
 
 					&:after {
@@ -495,7 +495,7 @@ dl.tabs.nav h3 {
 				margin-right: 0px;
 				&:hover , &:focus {
 					background: none;
-					color: @headingTabColor;
+					color: darken(@linkColor, 15%);
 				}
 
 				.caret {
@@ -511,7 +511,7 @@ dl.tabs.nav h3 {
 						color: @color_one;
 						font-size: @baseFontSize + 2;
 						&:hover {
-							color: lighten(@headingTabColor, 25%);
+							color: darken(@linkColor, 15%);
 						}
 
 						&:after {
