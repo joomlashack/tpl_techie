@@ -478,6 +478,9 @@ dl.tabs.nav h3 {
 					color: @headingTabColor;
 					&:hover , &:focus {
 						color: darken(@linkColor, 15%);
+						[class *= "icon-"] {
+							color: darken(@linkColor, 15%);
+						}
 					}
 
 					&:after {
@@ -496,6 +499,9 @@ dl.tabs.nav h3 {
 				&:hover , &:focus {
 					background: none;
 					color: darken(@linkColor, 15%);
+					[class *= "icon-"] {
+						color: darken(@linkColor, 15%);
+					}
 				}
 
 				.caret {
@@ -503,15 +509,18 @@ dl.tabs.nav h3 {
 				}
 			}
 
-			&.dropdown, .dropdown-menu {
+			&.dropdown , .dropdown-menu {
 				li {
 					padding-left: 15px;
 					a {
 						text-transform: none;
 						color: @color_one;
 						font-size: @baseFontSize + 2;
-						&:hover {
+						&:hover , &:focus {
 							color: darken(@linkColor, 15%);
+							[class *= "icon-"] {
+								color: darken(@linkColor, 15%);
+							}
 						}
 
 						&:after {
