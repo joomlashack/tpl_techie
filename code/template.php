@@ -44,6 +44,14 @@ defined('_JEXEC') or die('Restricted access');
 				<div class="<?php echo $containerClass ?>">
 					<div class="header-inner"> 
 						<w:logo name="top"/>
+						<div class="toolbar-collapse-btn">
+						<div class="legend-menu">MENU</div>
+						<div class="menu-icons-container">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</div>
+						</div>
 						<div class="clear"></div> 
 					</div>
 					<div id="current-menu-item"><h1><?php echo $menu_itemActive; ?></h1>

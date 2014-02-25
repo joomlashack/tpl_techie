@@ -286,6 +286,12 @@ dl.tabs.nav h3 {
 	}
 }
 
+.navbar-search {
+	> .search-query {
+		margin: 5px 0px 5px 0px;
+	}
+}
+
 .navbar-inverse .navbar-inner {
 	background-image: none;
 	border-radius: 0;
@@ -304,6 +310,31 @@ dl.tabs.nav h3 {
 			}
 		}
 	}
+}
+
+//Colappse Menu
+.toolbar-collapse-btn {
+	float: right;
+	margin-top: 15px;
+	> .legend-menu {
+		float: left;
+		margin-top: 5px;
+		margin-right: 5px;
+		font-size: @baseFontSize;
+		color: @linkTopColor;
+		font-family: @altFontFamily;
+		font-weight: 400;
+	}
+	.menu-icons-container {
+	float: left;
+	> .icon-bar {
+		display: block;
+		height: 1px;
+		width: 23px;
+		background-color: @menuIconLines;
+		margin-top: 5px;
+	}
+  }
 }
 
 .navbar {
