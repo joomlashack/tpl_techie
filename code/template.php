@@ -25,13 +25,6 @@ defined('_JEXEC') or die('Restricted access');
 			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
 			<?php endif; ?>
 			<!-- toolbar end -->
-			<!-- lateral menu -->
-			<?php if ($this->countModules('lateral-menu')) : ?>
-			<div class="<?php echo $containerClass ?>">
-			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-inverse" type="toolbar" name="menu" />
-			</div>
-			<?php endif; ?>
-			<!-- lateral menu end -->
 			<!-- header -->
 			<header id="header">
 				<!-- Place holder inner images -->
@@ -63,7 +56,7 @@ defined('_JEXEC') or die('Restricted access');
 			<!-- menu  -->
 			<?php if ($this->countModules('menu')) : ?>
 			<div class="<?php echo $containerClass ?>">
-			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="" type="toolbar" name="menu" />
+			<w:nav containerClass="<?php echo $containerClass ?>" name="lateral-menu" />
 			</div>
 			<?php endif; ?>
 			<!-- menu end -->
