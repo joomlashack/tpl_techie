@@ -1,7 +1,7 @@
 
 <?php
 /**
- * @package     Wright
+ * @package     Techie
  * @subpackage  Template File
  *
  * @copyright   Copyright (C) 2005 - 2013 Joomlashack. Meritage Assets.  All rights reserved.
