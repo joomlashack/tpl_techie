@@ -74,6 +74,18 @@ blockquote {
 	}
 }
 
+form {
+	.input-append , .input-prepend {
+		input[type="text"] {
+			height: 34px;
+		}
+
+		> .add-on {
+			padding: 11px 11px;
+		}
+	}
+}
+
 .table {
 	td {
 		color: @grayLighter;
@@ -162,10 +174,6 @@ blockquote {
 
 .page-header {
 	margin-top: 30px;
-}
-
-#top-header {
-	text-align: center;
 }
 
 div {
@@ -316,6 +324,7 @@ dl.tabs.nav h3 {
 .toolbar-collapse-btn {
 	float: right;
 	margin-top: 10px;
+	cursor: pointer;
 	> .legend-menu {
 		float: left;
 		margin-top: 5px;
@@ -619,7 +628,7 @@ dl.tabs.nav h3 {
 	}
 }
 
-#header, #breadcrumbs {
+#header , #breadcrumbs {
 	position: relative;
 	margin-bottom: 0px;
 }
@@ -656,7 +665,7 @@ dl.tabs.nav h3 {
 	padding-bottom: 15px;
 	position: relative;
 	z-index: 1;
-	.logo , [class *= "span"] { 
+	.logo , [class *= "span"] {
 		margin-left: 0 ! important;
 	}
 }
@@ -763,32 +772,6 @@ dl.tabs.nav h3 {
 	}
 }
 
-.module_ms3 {
-	h3 {
-		width: 100%;
-		float: left;
-		text-align: center;
-		color: @headingTabColor;
-		&:after {
-			.heading-after ();
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
-
-	.custom_ms3 {
-		text-align: center;
-	}
-}
-
-.module_mounted {
-	padding: 15px;
-	position: absolute;
-	bottom: 0;
-	z-index: 1;
-}
-
 .module_featured {
 	position: relative;
 	padding: 15px 0px;
@@ -801,7 +784,7 @@ dl.tabs.nav h3 {
 		text-transform: uppercase;
 	}
 
-	.custom_featured {
+	.module-inner {
 		position: relative;
 		left: 15px;
 	}
@@ -811,40 +794,21 @@ dl.tabs.nav h3 {
 	}
 }
 
-.double {
-	h3 {
-		text-align: center;
-		text-transform: uppercase;
-		width: 100%;
-		padding-top: 3px;
-		color: @white;
-		font-size: @baseFontSize;
-		background-color: @doubleBackgroundColor;
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-
-	img {
-		width: 100%;
-		height: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-
 .module_ms1 {
-	position: relative;
-	background: @color_three;
-	padding: 15px;
 	text-align: center;
+	.box-sizing (border-box);
+	padding: 15px;
+	
 	h3 {
 		color: @color_one;
 	}
 
-	.custom_ms1 {
+	.module-inner {
+		padding: 15px;
 		color: @white;
 		font-size: @baseFontSize + 2;
 		font-weight: normal;
+		background: @color_three;
 		> span {
 			font-size: @baseFontSize - 2;
 		}
@@ -867,13 +831,48 @@ dl.tabs.nav h3 {
 		padding-bottom: 5px;
 	}
 
-	.custom_ms2 {
+	.module-inner {
 		margin-top: 20px;
 		padding: 0px 5px;
 		> a {
 			margin-top: 15px;
 			text-transform: uppercase;
 			font-size: @baseFontSize - 2;
+		}
+	}
+}
+
+.module_ms4 {
+	background-color: white;
+	.module_ms2 ();
+} 
+
+.module_ms3 {
+	h3 {
+		width: 100%;
+		float: left;
+		text-align: center;
+		color: @headingTabColor;
+		&:after {
+			.heading-after ();
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.module-inner {
+		text-align: center;
+	}
+}
+
+[class ^= "module"] {
+	&.mounted {
+		position: relative;
+		.module-inner {
+			position: absolute;
+			bottom: 0;
+			z-index: 1;
 		}
 	}
 }
