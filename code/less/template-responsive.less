@@ -34,6 +34,17 @@
 		}
 	}
 
+	[class ^= "module"] {
+		&.mounted {
+			position: relative;
+			.module-inner {
+				position: relative;
+				bottom: auto;
+				z-index: 1;
+			}
+		}
+	}
+
 	#logo {
 		&[class *= "span"] {
 			float: left;
