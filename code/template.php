@@ -56,9 +56,9 @@ defined('_JEXEC') or die('Restricted access');
 			</div>
 			<!-- Place holder inner images end -->
 			<!-- menu  -->
-			<?php if ($this->countModules('menu')) : ?>
+			<?php if ($this->countModules('lateral-menu')) : ?>
 			<div class="<?php echo $containerClass ?>">
-			<w:nav containerClass="<?php echo $containerClass ?>" name="lateral-menu" />
+			<w:module type="<?php echo $gridMode; ?>" name="lateral-menu" chrome="wrightflexgrid" extradivs="module" />
 			</div>
 			<?php endif; ?>
 			<!-- menu end -->
@@ -84,6 +84,13 @@ defined('_JEXEC') or die('Restricted access');
 			</div>
 			<?php endif; ?>
 			<!-- breadcrumbs end -->
+			<!-- menu  -->
+            <?php if ($this->countModules('menu')) : ?>
+            <div class="<?php echo $containerClass ?>">
+            <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="" type="toolbar" name="menu" />
+            </div>
+            <?php endif; ?>
+            <!-- menu end -->
 			<!-- Main container -->
 			<div class="<?php echo $containerClass ?> wrapp-content">
 				<!-- Featured -->
