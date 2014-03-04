@@ -633,28 +633,33 @@ dl.tabs.nav h3 {
 	margin-bottom: 0px;
 }
 
-.bg-wrapp {
-	background-image: url(../images/techie-inner-background.jpg);
-	background-size: cover;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
+.slide-bg-container {
+	position: relative;
 	width: 100%;
-	z-index: 0;
-	.bg-wrapp-inner {
+	height: auto;
+	.bg-wrapp {
+		background-image: url(../images/techie-inner-background.jpg);
+		background-size: cover;
 		height: 100%;
-		overflow: hidden;
-		position: relative;
+		left: 0;
+		position: absolute;
+		top: 0;
 		width: 100%;
-		#bg-header {
-			position: absolute;
-			display: block;
-			left: 0;
-			max-height: inherit;
-			max-width: inherit;
-			top: 0;
+		z-index: 0;
+		.bg-wrapp-inner {
+			height: 100%;
+			overflow: hidden;
+			position: relative;
 			width: 100%;
+			#bg-header {
+				position: absolute;
+				display: block;
+				left: 0;
+				max-height: inherit;
+				max-width: inherit;
+				top: 0;
+				width: 100%;
+			}
 		}
 	}
 }

@@ -25,14 +25,14 @@ defined('_JEXEC') or die('Restricted access');
 			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
 			<?php endif; ?>
 			<!-- toolbar end -->
+			 <!-- Place holder inner images -->
+			 <div class="slide-bg-container">
+                <div class="bg-wrapp">
+                    <div class="bg-wrapp-inner">
+                    </div>
+                </div>
 			<!-- header -->
 			<header id="header">
-				<!-- Place holder inner images -->
-				<div class="bg-wrapp">
-	                <div class="bg-wrapp-inner">
-	                </div>
-            	</div>
-				<!-- Place holder inner images end -->
 				<!-- logo -->
 				<div class="<?php echo $containerClass ?>">
 					<div class="header-inner"> 
@@ -53,6 +53,8 @@ defined('_JEXEC') or die('Restricted access');
 				</div>
 			</header> 
 			<!-- header end -->
+			</div>
+			<!-- Place holder inner images end -->
 			<!-- menu  -->
 			<?php if ($this->countModules('menu')) : ?>
 			<div class="<?php echo $containerClass ?>">
