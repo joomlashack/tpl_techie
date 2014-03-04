@@ -55,13 +55,6 @@ defined('_JEXEC') or die('Restricted access');
 			<!-- header end -->
 			</div>
 			<!-- Place holder inner images end -->
-			<!-- menu  -->
-			<?php if ($this->countModules('lateral-menu')) : ?>
-			<div class="<?php echo $containerClass ?>">
-			<w:module type="<?php echo $gridMode; ?>" name="lateral-menu" chrome="wrightflexgrid" extradivs="module" />
-			</div>
-			<?php endif; ?>
-			<!-- menu end -->
 			<!-- top -->
 			<?php if ($this->countModules('top')) : ?> 
 			<div id="top-header"> 
@@ -199,6 +192,15 @@ defined('_JEXEC') or die('Restricted access');
 				</footer>
 			</div>
 			<!-- footer end -->
+			<!-- Lateral-menu  -->
+            <?php if ($this->countModules('lateral-menu')) : ?>
+            <div class="lateral-menu-wrapper">
+            <div class="<?php echo $containerClass ?>">
+            <w:module type="<?php echo $gridMode; ?>" name="lateral-menu" chrome="wrightflexgrid" extradivs="module" />
+            </div>
+            </div>
+            <?php endif; ?>
+            <!-- Lateral-menu end -->
 			<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_techie/js/techie.js'></script>
 		</body>
 	</html>
