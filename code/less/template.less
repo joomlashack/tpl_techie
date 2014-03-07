@@ -845,12 +845,6 @@ dl.tabs.nav h3 {
 	}
 }
 
-.module_ms4 , .moduletable_ms4 , .moduletext_ms4 {
-	background-color: white;
-	padding: 15px 5px;
-	.module_ms2 ();
-}
-
 .module_ms3 , .moduletable_ms3 , .moduletext_ms3 {
 	h3 {
 		width: 100%;
@@ -867,6 +861,60 @@ dl.tabs.nav h3 {
 
 	.module-inner {
 		text-align: center;
+	}
+}
+
+.module_ms4 , .moduletable_ms4 , .moduletext_ms4 {
+	background-color: white;
+	padding: 15px 5px;
+	.module_ms2 ();
+
+	&.double{
+		padding: 0;
+
+		.module-inner{
+			margin-top: 0;
+			padding: 0;
+		}
+
+		.wrightmodule-imgfeatured{
+			position: relative;
+			width: 200%;
+			z-index: 3;
+
+			img{
+				width: 100%;
+			}
+		}
+		.wrightmodule-content{
+			padding-left: 10px;
+			padding-right: 10px;
+
+			> h3{
+				position: relative;
+				width: 205%;
+				z-index: 3;
+			}
+		}
+
+		+ .module_ms4 , + .moduletable_ms4 , + .moduletext_ms4 {
+			margin-left: 0;
+			padding: 0;
+			position: relative;
+			height: 1297px;
+
+			.module-inner{
+				bottom: 0;
+				margin-top: 0;
+				padding: 0;
+				position: absolute;
+			}
+
+			.wrightmodule-content{
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
 	}
 }
 
