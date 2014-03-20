@@ -1,7 +1,7 @@
 
 <?php
 /**
- * @package     Techie
+ * @package     Wright
  * @subpackage  Template File
  *
  * @copyright   Copyright (C) 2005 - 2013 Joomlashack. Meritage Assets.  All rights reserved.
@@ -25,14 +25,14 @@ defined('_JEXEC') or die('Restricted access');
 			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
 			<?php endif; ?>
 			<!-- toolbar end -->
-			 <!-- Place holder inner images -->
-			 <div class="slide-bg-container">
-                <div class="bg-wrapp">
-                    <div class="bg-wrapp-inner">
-                    </div>
-                </div>
 			<!-- header -->
 			<header id="header">
+				<!-- Place holder inner images -->
+				<div class="bg-wrapp">
+	                <div class="bg-wrapp-inner">
+	                </div>
+            	</div>
+				<!-- Place holder inner images end -->
 				<!-- logo -->
 				<div class="<?php echo $containerClass ?>">
 					<div class="header-inner"> 
@@ -53,8 +53,13 @@ defined('_JEXEC') or die('Restricted access');
 				</div>
 			</header> 
 			<!-- header end -->
+			<!-- menu  -->
+			<?php if ($this->countModules('menu')) : ?>
+			<div class="<?php echo $containerClass ?>">
+			<w:nav containerClass="<?php echo $containerClass ?>" name="lateral-menu" />
 			</div>
-			<!-- Place holder inner images end -->
+			<?php endif; ?>
+			<!-- menu end -->
 			<!-- top -->
 			<?php if ($this->countModules('top')) : ?> 
 			<div id="top-header"> 
@@ -77,13 +82,6 @@ defined('_JEXEC') or die('Restricted access');
 			</div>
 			<?php endif; ?>
 			<!-- breadcrumbs end -->
-			<!-- menu  -->
-            <?php if ($this->countModules('menu')) : ?>
-            <div class="<?php echo $containerClass ?>">
-            <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="" type="toolbar" name="menu" />
-            </div>
-            <?php endif; ?>
-            <!-- menu end -->
 			<!-- Main container -->
 			<div class="<?php echo $containerClass ?> wrapp-content">
 				<!-- Featured -->
@@ -192,15 +190,6 @@ defined('_JEXEC') or die('Restricted access');
 				</footer>
 			</div>
 			<!-- footer end -->
-			<!-- Lateral-menu  -->
-            <?php if ($this->countModules('lateral-menu')) : ?>
-            <div class="lateral-menu-wrapper">
-            <div class="<?php echo $containerClass ?>">
-            <w:module type="<?php echo $gridMode; ?>" name="lateral-menu" chrome="wrightflexgrid" extradivs="module" />
-            </div>
-            </div>
-            <?php endif; ?>
-            <!-- Lateral-menu end -->
 			<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_techie/js/techie.js'></script>
 		</body>
 	</html>
