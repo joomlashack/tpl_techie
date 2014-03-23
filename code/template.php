@@ -192,7 +192,7 @@ defined('_JEXEC') or die('Restricted access');
 				</footer>
 			</div>
 			<!-- footer end -->
-			<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_techie/js/techie.js'></script>
+			<!-- script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_techie/js/techie.js'></script> ->
 		</body>
 	</html>
 </doctype>
