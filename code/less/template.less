@@ -691,10 +691,14 @@ dl.tabs.nav h3 {
 
 #top-header {
 	background: @hedaer-top;
-	padding: 20px 0px;
+	.container {
+		.row {
+			position: relative;
+		}
+	}
 }
 
-#grid-top {
+[class^="grid"] {
 	padding: 20px 0px;
 }
 
@@ -825,9 +829,8 @@ dl.tabs.nav h3 {
 	text-align: center;
 	h3 {
 		color: @color_one;
-		text-transform: uppercase;
-		border-bottom: 1px solid @boderModuleStyleColor;
 		padding-bottom: 5px;
+		font-size: @baseFontSize + 6; 
 	}
 
 	.module-inner {
@@ -916,7 +919,6 @@ dl.tabs.nav h3 {
 
 [class ^= "module"] {
 	&.mounted {
-		position: relative;
 		.module-inner {
 			position: absolute;
 			bottom: 0;
