@@ -58,7 +58,7 @@ defined('_JEXEC') or die('Restricted access');
 			<!-- menu  -->
 			<?php if ($this->countModules('menu')) : ?>
 			<div class="<?php echo $containerClass ?>">
-			<w:nav containerClass="<?php echo $containerClass ?>" name="lateral-menu" />
+			<w:module type="<?php echo $gridMode; ?>" name="lateral-menu" chrome="wrightflexgrid" extradivs="module" />
 			</div>
 			<?php endif; ?>
 			<!-- menu end -->
