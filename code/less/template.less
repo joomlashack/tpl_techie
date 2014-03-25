@@ -1,15 +1,31 @@
  // Typografhy styles
 
 @import 'variables-bamboo-light.less';
-
 // Headings
 // ------------------------
-h1{	font-size: 40px; }
-h2{	font-size: 30px; }
-h3{ font-size: 24px; }
-h4{	font-size: 20px; }
-h5{	font-size: 16px; }
-h6{	font-size: 14px; }
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 16px;
+}
+
+h6 {
+	font-size: 14px;
+}
 
 .btn {
 	background-image: none;
@@ -219,22 +235,22 @@ div {
 }
 
 body {
-	.prettyprint{
+	.prettyprint {
 		background-color: @btnPrimaryBoder;
 		border: 0;
 	}
-	.kwd, .prettyprint .tag{
-	}
-	.typ, .atn, .dec, .var,
-	.pln,
-	.str, .atv{
-	}
-	.prettyprint.linenums{
-		box-shadow :inset 40px 0 0 @color_two, inset 41px 0 0 @color_two;
-		
+
+	.kwd , .prettyprint .tag {
 	}
 
-	ol.linenums li{
+	.typ , .atn , .dec , .var , .pln , .str , .atv {
+	}
+
+	.prettyprint.linenums {
+		box-shadow: inset 40px 0 0 @color_two, inset 41px 0 0 @color_two;
+	}
+
+	ol.linenums li {
 		text-shadow: none;
 		color: @textColor;
 	}
@@ -335,6 +351,7 @@ dl.tabs.nav h3 {
 .navbar-inverse .navbar-inner {
 	background-image: none;
 	border-radius: 0;
+	border: 0;
 }
 
 .nav {
@@ -377,7 +394,10 @@ dl.tabs.nav h3 {
 .navbar {
 	.nav {
 		> li {
-			padding: 5px 15px;
+			padding: 5px 40px;
+			.dropdown-menu {
+				width: 100%;
+			}	
 			> a {
 				color: @linkTopColor;
 				padding: 2px 0;
@@ -725,10 +745,6 @@ dl.tabs.nav h3 {
 	}
 }
 
-[class ^= "grid"] {
-	padding: 20px 0px;
-}
-
 #grid-bottom2 {
 	background-image: url(../images/botom-object.png);
 	background-repeat: no-repeat;
@@ -740,6 +756,9 @@ dl.tabs.nav h3 {
 
 #grid-bottom {
 	padding: 40px 0px;
+}
+
+.content2 {
 }
 
 .jssocialicons-before {
