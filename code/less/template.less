@@ -274,7 +274,7 @@ body {
 }
 
 .tabs {
-	h3, span {
+	h3 , span , li {
 		a {
 			background: @tabBackground;
 			border-radius: 0px;
@@ -302,7 +302,7 @@ body {
 			top: 1px;
 		}
 
-		h3 a, span a {
+		h3 a , span a {
 			color: @linkColor ! important;
 			border-top: 2px solid @white;
 			border-left: none;
@@ -320,7 +320,7 @@ body {
 	}
 }
 
-dl.tabs.nav h3, dl.tabs.nav p{
+dl.tabs.nav h3 , dl.tabs.nav p {
 	margin-right: 1px;
 	font-size: @baseFontSize + 2;
 	line-height: 42px;
@@ -397,7 +397,8 @@ dl.tabs.nav h3, dl.tabs.nav p{
 			padding: 5px 40px;
 			.dropdown-menu {
 				width: 100%;
-			}	
+			}
+
 			> a {
 				color: @linkTopColor;
 				padding: 2px 0;
@@ -738,11 +739,23 @@ dl.tabs.nav h3, dl.tabs.nav p{
 
 #top-header {
 	background: @hedaer-top;
+	color: @activeTextColor;
 	.container {
 		.row {
 			position: relative;
+			h4 {
+			position: relative;	
+			font-size: @baseFontSize + 2;
+			}
 		}
 	}
+}
+
+#grid-top2 {
+	margin: 40px 0px;
+}
+#grid-top {
+	margin-top: 40px;
 }
 
 #grid-bottom2 {
@@ -750,15 +763,31 @@ dl.tabs.nav h3, dl.tabs.nav p{
 	background-repeat: no-repeat;
 	background-position: bottom right;
 	background-color: @color_three;
-	margin-bottom: 0px;
-	padding: 40px 0px;
+	margin-bottom: 60px;
 }
 
-#grid-bottom {
-	padding: 40px 0px;
-}
-
-.content2 {
+#content-wrapper {
+	.container {
+		background-image: url(../images/content-bg.png);
+		background-repeat: no-repeat;
+		background-position: bottom right;
+	}
+	background-color: @content-background;
+	width: 100%;
+	#content {
+		margin-top: 20px;
+		margin-bottom: 50px;
+		.row {
+			.module_ms3 {
+				h3 {
+					color: @white;
+				}
+			}
+		}
+	}
+	#content2 {
+		margin-bottom: 20px;
+	}
 }
 
 .jssocialicons-before {

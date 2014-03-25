@@ -85,31 +85,40 @@ defined('_JEXEC') or die('Restricted access');
 			<?php endif; ?>
 			<!-- breadcrumbs end -->
 			<!-- Main container -->
-			<div class="<?php echo $containerClass ?> wrapp-content">
 				<!-- Featured -->
 				<?php if ($this->countModules('featured')) : ?>
+				<div class="<?php echo $containerClass ?>">	
                 <div id="featured">
                 	<w:module type="none" name="featured" chrome="xhtml" />
+				</div>
 				</div>
                 <?php endif; ?>	
                 <!-- Featured end -->
 				<!-- grid-top -->
 				<?php if ($this->countModules('grid-top')) : ?>
+				<div class="<?php echo $containerClass ?>">		
 				<div id="grid-top">
 					<w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" extradivs="module" />
+				</div>
 				</div>
 				<?php endif; ?>
 				<!-- grid-top end -->
 				<!-- grid-top2 -->
 				<?php if ($this->countModules('grid-top2')) : ?>
 				<!-- grid-top2 -->
+				<div class="<?php echo $containerClass ?>">	
 				<div id="grid-top2">
 					<w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" extradivs="module" />
 				</div>
+				</div>
 				<?php endif; ?>
 				<!-- grid-top2 end -->
+				<?php if ($this->countModules('content2')) : ?>
+				<div id="content-wrapper">
+				<?php endif; ?>	
 				<!-- content -->
 				<?php if ($this->countModules('content')) : ?>
+				<div class="<?php echo $containerClass ?>">	
 				<div id="content">
 					<w:module type="<?php echo $gridMode; ?>" name="content" chrome="wrightflexgrid" extradivs="module" />
 				</div>
@@ -122,6 +131,10 @@ defined('_JEXEC') or die('Restricted access');
 				</div>
 				<?php endif; ?>
 				<!-- content2 end -->
+				<?php if ($this->countModules('content2')) : ?>
+				</div>
+				</div>
+				<?php endif; ?>	
 				<div id="main-content" class="<?php echo $gridMode; ?>">
 					<!-- sidebar1 -->
 					<aside id="sidebar1">
@@ -154,7 +167,6 @@ defined('_JEXEC') or die('Restricted access');
 						<w:module name="sidebar2" chrome="xhtml" />
 					</aside>
 					<!-- sidebar2 end -->
-				</div>
 				</div>
 				<!-- grid-bottom -->
 				<?php if ($this->countModules('grid-bottom')) :	?> 
