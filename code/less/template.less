@@ -274,13 +274,13 @@ body {
 }
 
 .tabs {
-	h3 {
+	h3, span {
 		a {
 			background: @tabBackground;
 			border-radius: 0px;
 			color: @white;
 			text-transform: uppercase;
-			padding: 10px 15px;
+			padding: 11px 15px;
 			&:hover {
 				text-decoration: none;
 				background: @linkColor;
@@ -302,7 +302,7 @@ body {
 			top: 1px;
 		}
 
-		h3 a {
+		h3 a, span a {
 			color: @linkColor ! important;
 			border-top: 2px solid @white;
 			border-left: none;
@@ -320,7 +320,7 @@ body {
 	}
 }
 
-dl.tabs.nav h3 {
+dl.tabs.nav h3, dl.tabs.nav p{
 	margin-right: 1px;
 	font-size: @baseFontSize + 2;
 	line-height: 42px;
