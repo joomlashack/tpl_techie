@@ -23,7 +23,7 @@
 }
 
 @media (max-width: 767px) {
-	#header , #breadcrumbs, #top-header {
+	#header , #breadcrumbs{
 		position: relative;
 		margin-bottom: 0px;
 		margin-right: -20px;
@@ -31,6 +31,31 @@
 		.header-inner {
 			margin-left: 20px;
 			margin-right: 20px;
+		}
+	}
+
+	#top-header {
+		position: relative;
+		margin-bottom: 0px;
+		margin-right: -20px;
+		margin-left: -20px;
+		.header-inner {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		.container {
+			.row {
+				h4 {
+					text-align: center;
+					margin: 30px 0px;
+					img {
+						margin-top: 30px;
+						margin-left: auto;
+						margin-right: auto;
+						display: block;
+					}
+				}
+			}
 		}
 	}
 
@@ -44,11 +69,10 @@
 			}
 		}
 	}
-	
-	.module_ms1 , .moduletable_ms1 , .moduletext_ms1 { 
+
+	.module_ms1 , .moduletable_ms1 , .moduletext_ms1 {
 		padding: 0px;
 	}
-	
 
 	.module_ms4 , .moduletable_ms4 , .moduletext_ms4 {
 		h3 {
@@ -60,15 +84,12 @@
 		}
 
 		&.double {
-		
 			.module-inner {
-				
 			}
 
 			.wrightmodule-imgfeatured {
 				width: 100%;
 				img {
-				
 				}
 			}
 
@@ -77,16 +98,13 @@
 			}
 
 			.wrightmodule-content {
-				
 				> h3 {
 					width: 100%;
 				}
 			}
 
 			+ .module_ms4 , + .moduletable_ms4 , + .moduletext_ms4 {
-			
 				.module-inner {
-					
 				}
 
 				.wrightmodule-imgfeatured {
@@ -95,12 +113,10 @@
 
 				.wrightmodule-content {
 					h3 {
-						
 					}
 				}
 
 				.wrightmodule-content {
-					
 				}
 			}
 		}
