@@ -186,6 +186,7 @@ defined('_JEXEC') or die('Restricted access');
 				</div>  
 				<?php endif; ?>
 				<!-- grid-bottom2 end -->
+		</div>
 			<!-- main container end -->
 			<!-- footer -->
 			<div class="wrapper-footer">
