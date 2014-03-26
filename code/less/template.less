@@ -747,13 +747,16 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 
 #top-header {
 	background: @hedaer-top;
-	color: @activeTextColor;
 	.container {
 		.row {
 			position: relative;
 			h4 {
 			position: relative;	
 			font-size: @baseFontSize + 2;
+			color: @activeTextColor;
+			img {
+				margin: 0px 5px;
+			}
 			}
 		}
 	}
@@ -915,13 +918,13 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		font-size: @baseFontSize + 6;
 	}
 
-	.module-inner {
+	.module-inner, .custom_ms2 {
 		margin-top: 20px;
 		padding: 0px 5px;
 		> a {
 			margin-top: 15px;
 			text-transform: uppercase;
-			font-size: @baseFontSize - 2;
+			font-size: @baseFontSize + 2;
 			font-weight: bold;
 		}
 	}
