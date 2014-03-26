@@ -168,6 +168,8 @@ defined('_JEXEC') or die('Restricted access');
 					</aside>
 					<!-- sidebar2 end -->
 				</div>
+						</div>
+			<!-- main container end -->
 				<!-- grid-bottom -->
 				<?php if ($this->countModules('grid-bottom')) :	?> 
 				<div id="grid-bottom" >
@@ -186,8 +188,6 @@ defined('_JEXEC') or die('Restricted access');
 				</div>  
 				<?php endif; ?>
 				<!-- grid-bottom2 end -->
-		</div>
-			<!-- main container end -->
 			<!-- footer -->
 			<div class="wrapper-footer">
 				<footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky" <?php endif; ?> >
