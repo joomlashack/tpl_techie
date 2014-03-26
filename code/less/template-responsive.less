@@ -23,7 +23,7 @@
 }
 
 @media (max-width: 767px) {
-	#header , #breadcrumbs{
+	#header , #breadcrumbs {
 		position: relative;
 		margin-bottom: 0px;
 		margin-right: -20px;
@@ -43,6 +43,7 @@
 			margin-left: 20px;
 			margin-right: 20px;
 		}
+
 		.container {
 			.row {
 				h4 {
@@ -105,14 +106,17 @@
 
 			+ .module_ms4 , + .moduletable_ms4 , + .moduletext_ms4 {
 				.module-inner {
+					margin-top: 0px;
 				}
 
 				.wrightmodule-imgfeatured {
 					width: 100%;
+					display: none;
 				}
 
 				.wrightmodule-content {
 					h3 {
+						display: none;
 					}
 				}
 
@@ -140,6 +144,17 @@
 	#current-menu-item {
 		padding-left: 20px;
 		h1 {
+		}
+	}
+
+	#content-wrapper {
+		background-image: none;
+		width: auto;
+		margin-left: -20px;
+		margin-right: -20px;
+		[id ^= "content"] {
+			margin-left: 20px;
+			margin-right: 20px;
 		}
 	}
 }

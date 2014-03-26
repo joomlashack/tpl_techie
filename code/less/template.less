@@ -676,10 +676,21 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	}
 }
 
-#header , #breadcrumbs {
+.top-properties {
 	position: relative;
 	margin-bottom: 0px;
 }
+
+#header {
+	.top-properties();
+	background-image: url(../images/top-logo-object.png);
+	background-repeat: no-repeat;
+	background-position: bottom right;
+}
+
+#breadcrumbs {
+	.top-properties ();
+} 
 
 .bg-wrapp {
 	background-image: url(../images/techie-inner-background.jpg);
@@ -689,7 +700,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	position: absolute;
 	top: 0;
 	width: 100%;
-	z-index: 0;
+	z-index: -1;
 	.bg-wrapp-inner {
 		height: 100%;
 		overflow: hidden;
@@ -719,9 +730,6 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 }
 
 #current-menu-item {
-	background-image: url(../images/top-logo-object.png);
-	background-repeat: no-repeat;
-	background-position: bottom right;
 	position: relative;
 	z-index: 1;
 	padding: 80px 0px 80px 100px;
@@ -767,11 +775,9 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 }
 
 #content-wrapper {
-	.container {
-		background-image: url(../images/content-bg.png);
-		background-repeat: no-repeat;
-		background-position: bottom right;
-	}
+	background-image: url(../images/content-bg.png);
+	background-repeat: no-repeat;
+	background-position: bottom right;
 	background-color: @content-background;
 	width: 100%;
 	#content {
