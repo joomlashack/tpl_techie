@@ -113,12 +113,12 @@ defined('_JEXEC') or die('Restricted access');
 				</div>
 				<?php endif; ?>
 				<!-- grid-top2 end -->
-				<?php if ($this->countModules('content2')) : ?>
+				<?php if ($this->countModules('content') || $this->countModules('content2')) : ?>
 				<div id="content-wrapper">
+				<div class="<?php echo $containerClass ?>">	
 				<?php endif; ?>	
 				<!-- content -->
 				<?php if ($this->countModules('content')) : ?>
-				<div class="<?php echo $containerClass ?>">	
 				<div id="content">
 					<w:module type="<?php echo $gridMode; ?>" name="content" chrome="wrightflexgrid" extradivs="module" />
 				</div>
@@ -131,7 +131,7 @@ defined('_JEXEC') or die('Restricted access');
 				</div>
 				<?php endif; ?>
 				<!-- content2 end -->
-				<?php if ($this->countModules('content2')) : ?>
+				<?php if ($this->countModules('content') || $this->countModules('content2')) : ?>
 				</div>
 				</div>
 				<?php endif; ?>	
