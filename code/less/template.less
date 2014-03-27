@@ -954,6 +954,11 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	.module-inner {
 		margin-top: 20px;
 		padding: 0px 5px;
+		h5 {
+			margin-top: 40px;
+			color: @doubleBackgroundColor;
+		}
+
 		> a {
 			margin-top: 15px;
 			text-transform: uppercase;
@@ -964,8 +969,15 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	&.double {
 		padding-bottom: 15px;
 		.module-inner {
-			margin-top: 35px;
 			padding: 0;
+			.double h5 {
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+			h5 {
+				margin-top: 29px;
+			}
 		}
 
 		.custom_ms4 {
@@ -1011,8 +1023,13 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 			margin-left: 0;
 			padding-bottom: 15px;
 			position: relative;
-			.module-inner {
-				margin-top: 35px;
+			h5 {
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+			h5 {
+				margin-top: 29px;
 			}
 
 			.wrightmodule-imgfeatured {
