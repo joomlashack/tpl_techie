@@ -194,7 +194,7 @@ form {
 	.border-radius (0);
 }
 
-#sidebar1 input[type=submit] , #sidebar2 input[type=submit] {
+#sidebar1 input[type=submit] , #sidebar2 input[type=submit] ,  {
 	height: auto;
 }
 
@@ -682,7 +682,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 }
 
 #header {
-	.top-properties();
+	.top-properties ();
 	background-image: url(../images/top-logo-object.png);
 	background-repeat: no-repeat;
 	background-position: bottom right;
@@ -690,7 +690,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 
 #breadcrumbs {
 	.top-properties ();
-} 
+}
 
 .bg-wrapp {
 	background-image: url(../images/techie-inner-background.jpg);
@@ -751,12 +751,12 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		.row {
 			position: relative;
 			h4 {
-			position: relative;	
-			font-size: @baseFontSize + 2;
-			color: @activeTextColor;
-			img {
-				margin: 0px 5px;
-			}
+				position: relative;
+				font-size: @baseFontSize + 2;
+				color: @activeTextColor;
+				img {
+					margin: 0px 5px;
+				}
 			}
 		}
 	}
@@ -765,6 +765,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 #grid-top2 {
 	margin: 40px 0px;
 }
+
 #grid-top {
 	margin-top: 40px;
 }
@@ -797,8 +798,9 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 			}
 		}
 	}
+
 	#content2 {
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 	}
 }
 
@@ -920,7 +922,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		font-size: @baseFontSize + 6;
 	}
 
-	.module-inner, .custom_ms2 {
+	.module-inner , .custom_ms2 {
 		margin-top: 20px;
 		padding: 0px 5px;
 		> a {
@@ -934,9 +936,13 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 
 .module_ms4 , .moduletable_ms4 , .moduletext_ms4 {
 	background-color: white;
-	padding: 15px 5px;
+	padding: 15px 0px;
 	position: relative;
 	text-align: center;
+	.custom_ms4 {
+		padding: 12px 35px 0px 35px;
+	}
+
 	h3 {
 		text-transform: uppercase;
 		border-bottom: 1px solid @boderModuleStyleColor;
@@ -956,10 +962,14 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	}
 
 	&.double {
-		padding: 0;
+		padding-bottom: 15px;
 		.module-inner {
 			margin-top: 35px;
 			padding: 0;
+		}
+
+		.custom_ms4 {
+			padding: 12px 30px 0px 30px;
 		}
 
 		.wrightmodule-imgfeatured {
@@ -999,19 +1009,21 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 
 		+ .module_ms4 , + .moduletable_ms4 , + .moduletext_ms4 {
 			margin-left: 0;
-			padding: 0;
+			padding-bottom: 15px;
 			position: relative;
 			.module-inner {
 				margin-top: 35px;
 			}
+
 			.wrightmodule-imgfeatured {
 				position: relative;
 				z-index: -1;
 			}
+
 			.wrightmodule-content {
 				h3 {
-				position: relative;
-				z-index: -1;
+					position: relative;
+					z-index: -1;
 				}
 			}
 
