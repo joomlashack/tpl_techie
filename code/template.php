@@ -19,7 +19,7 @@ defined('_JEXEC') or die('Restricted access');
 		<head>
 			<w:head /> 
 			<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-			<link href='https://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
+			<link href='https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700' rel='stylesheet' type='text/css'>
 		</head>
 		<body class="<?php   echo $responsive ?>">
 			<!-- toolbar -->
