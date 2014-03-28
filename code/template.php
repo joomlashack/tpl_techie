@@ -135,6 +135,7 @@ defined('_JEXEC') or die('Restricted access');
 				</div>
 				</div>
 				<?php endif; ?>	
+				<div class="<?php echo $containerClass ?>">
 				<div id="main-content" class="<?php echo $gridMode; ?>">
 					<!-- sidebar1 -->
 					<aside id="sidebar1">
@@ -168,7 +169,8 @@ defined('_JEXEC') or die('Restricted access');
 					</aside>
 					<!-- sidebar2 end -->
 				</div>
-						</div>
+				</div>
+			</div>
 			<!-- main container end -->
 				<!-- grid-bottom -->
 				<?php if ($this->countModules('grid-bottom')) :	?> 
