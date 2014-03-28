@@ -33,7 +33,7 @@ h6 {
 	font-family: @altFontFamily;
 	border-radius: 0px;
 	border: 0px;
-	font-size: @baseFontSize + 6;
+	font-size: @baseFontSize + 4;
 	color: @textColor;
 	text-shadow: none;
 	padding: 10px 20px;
@@ -84,7 +84,7 @@ blockquote {
 	small {
 		color: white;
 		text-align: center;
-		font-size: @baseFontSize;
+		font-size: @baseFontSize - 2;
 		margin-top: 15px;
 		&:before {
 			content: none;
@@ -137,7 +137,7 @@ form {
 			background-color: @color_two;
 			color: @white;
 			font-family: @altFontFamily;
-			font-size: @baseFontSize + 2;
+			font-size: @baseFontSize;
 			a {
 				color: @white;
 			}
@@ -215,7 +215,7 @@ div {
 			background-color: @grayLighter;
 			border-radius: 0;
 			border: 0;
-			font-size: @baseFontSize;
+			font-size: @baseFontSize - 2;
 			font-family: @altFontFamily;
 			color: @textColor;
 			content: "EXAMPLE";
@@ -229,7 +229,7 @@ div {
 		background-color: transparent;
 		color: @linkColor;
 		border: 0;
-		font-size: @baseFontSize;
+		font-size: @baseFontSize -2;
 		font-family: @sansFontFamily;
 	}
 }
@@ -322,7 +322,7 @@ body {
 
 dl.tabs.nav h3 , dl.tabs.nav p {
 	margin-right: 1px;
-	font-size: @baseFontSize + 2;
+	font-size: @baseFontSize;
 	line-height: 42px;
 }
 
@@ -373,7 +373,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		float: left;
 		margin-top: 5px;
 		margin-right: 5px;
-		font-size: @baseFontSize;
+		font-size: @baseFontSize - 2;
 		color: @linkTopColor;
 		font-family: @altFontFamily;
 		font-weight: 400;
@@ -577,13 +577,13 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 						content: '\f054';
 						float: right;
 						font-family: FontAwesome;
-						font-size: @baseFontSize - 6;
+						font-size: @baseFontSize - 4;
 					}
 				}
 			}
 
 			a {
-				font-size: @baseFontSize + 4;
+				font-size: @baseFontSize + 2;
 				margin-left: 0px;
 				margin-right: 0px;
 				&:hover , &:focus {
@@ -605,7 +605,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 					a {
 						text-transform: none;
 						color: @color_one;
-						font-size: @baseFontSize + 2;
+						font-size: @baseFontSize;
 						&:hover , &:focus {
 							color: darken(@linkColor, 15%);
 							[class *= "icon-"] {
@@ -629,7 +629,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 							content: '\f107';
 							float: right;
 							font-family: FontAwesome;
-							font-size: @baseFontSize - 2;
+							font-size: @baseFontSize;
 						}
 					}
 				}
@@ -753,7 +753,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 			position: relative;
 			h4 {
 				position: relative;
-				font-size: @baseFontSize + 2;
+				font-size: @baseFontSize;
 				color: @topFuturedTextColor;
 				img {
 					margin: 0px 5px;
@@ -810,7 +810,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	float: left;
 	text-align: center;
 	color: @white;
-	font-size: @baseFontSize + 10.5;
+	font-size: @baseFontSize + 8;
 	font-family: @altFontFamily;
 	font-weight: 400;
 	margin-bottom: 40px;
@@ -899,7 +899,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	.module-inner {
 		padding: 15px;
 		color: @white;
-		font-size: @baseFontSize + 2;
+		font-size: @baseFontSize;
 		font-weight: normal;
 		background: @color_three;
 		> span {
@@ -920,7 +920,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	h3 {
 		color: @color_one;
 		padding-bottom: 5px;
-		font-size: @baseFontSize + 6;
+		font-size: @baseFontSize + 4;
 	}
 
 	.module-inner , .custom_ms2 {
@@ -929,7 +929,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		> a {
 			margin-top: 15px;
 			text-transform: uppercase;
-			font-size: @baseFontSize + 2;
+			font-size: @baseFontSize;
 			font-weight: bold;
 		}
 	}
@@ -949,7 +949,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		border-bottom: 1px solid @boderModuleStyleColor;
 		color: @color_one;
 		padding-bottom: 5px;
-		font-size: @baseFontSize + 6;
+		font-size: @baseFontSize + 4;
 	}
 
 	.module-inner {
@@ -1099,7 +1099,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	background: @white;
 	margin-bottom: 0px;
 	color: @activeTextColor;
-	font-size: @baseFontSize + 2;
+	font-size: @baseFontSize;
 	.breadcrumb {
 		margin-bottom: 0px;
 		border-radius: 0px;
