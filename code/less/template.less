@@ -236,7 +236,7 @@ div {
 
 body {
 	.prettyprint {
-		background-color: @btnPrimaryBoder;
+		background-color: @codeBackgroundColor;
 		border: 0;
 	}
 
@@ -832,6 +832,11 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	margin-top: 60px;
 }
 
+#grid-bottom {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
 #grid-bottom2 {
 	background-image: url(../images/botom-object.png);
 	background-repeat: no-repeat;
@@ -974,7 +979,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 
 .module_ms4 , .moduletable_ms4 , .moduletext_ms4 {
 	background-color: white;
-	padding: 15px 0px;
+	padding-top: 15px;
 	position: relative;
 	text-align: center;
 	.custom_ms4 {
@@ -1005,7 +1010,6 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	}
 
 	&.double {
-		padding-bottom: 15px;
 		.module-inner {
 			padding: 0;
 			.double h5 {
@@ -1063,7 +1067,6 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 
 		+ .module_ms4 , + .moduletable_ms4 , + .moduletext_ms4 {
 			margin-left: 0;
-			padding-bottom: 15px;
 			position: relative;
 			h5 {
 				&:first-child {
