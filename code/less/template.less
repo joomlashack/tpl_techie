@@ -799,11 +799,37 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	}
 }
 
-#grid-top2 {
-	
+#grid-top {
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
-#grid-top {
+#grid-top2 {
+	margin-bottom: 60px;
+}
+
+#content-wrapper {
+	background-image: url(../images/content-bg.png);
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-color: @content-background;
+	width: 100%;
+	margin-bottom: -1px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	#content {
+		.row {
+			.module_ms3 {
+				h3 {
+					color: @white;
+				}
+			}
+		}
+	}
+}
+
+#content2{
+	margin-top: 60px;
 }
 
 #grid-bottom2 {
@@ -814,24 +840,6 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	margin-bottom: 0px;
 	padding: 50px 0px;
 	width: 100%;
-}
-
-#content-wrapper {
-	background-image: url(../images/content-bg.png);
-	background-repeat: no-repeat;
-	background-position: bottom right;
-	background-color: @content-background;
-	width: 100%;
-	margin-bottom: -1px;
-	#content {
-		.row {
-			.module_ms3 {
-				h3 {
-					color: @white;
-				}
-			}
-		}
-	}
 }
 
 .jssocialicons-before {
