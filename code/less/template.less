@@ -395,7 +395,45 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	.nav {
 		> li {
 			padding: 5px 15px;
-			.dropdown-menu {
+			margin-right: 50px;
+			&.dropdown {
+				.dropdown-menu {
+					li {
+						a {
+							&:hover , &:focus {
+								.caret {
+									border-top-color: transparent;
+									border-bottom-color: transparent;
+								}
+							}
+
+							.caret {
+							}
+						}
+
+						.sub-menu {
+							background-color: @color_four;
+							margin-left: 0px;
+							box-shadow: none;
+							li {
+								border-bottom: 1px solid @color_three;
+								&:last-child {
+									border-bottom: none;
+								}
+
+								a {
+									&:hover , &:focus {
+										background-color: @color_three;
+									}
+								}
+							}
+
+							&:before , &:after {
+								content: none;
+							}
+						}
+					}
+				}
 			}
 
 			> a {
@@ -762,11 +800,9 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 }
 
 #grid-top2 {
-	margin: 40px 0px;
 }
 
 #grid-top {
-	margin-top: 40px;
 }
 
 #grid-bottom2 {
@@ -787,8 +823,6 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	width: 100%;
 	margin-bottom: -1px;
 	#content {
-		margin-top: 20px;
-		margin-bottom: 50px;
 		.row {
 			.module_ms3 {
 				h3 {
@@ -796,10 +830,6 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 				}
 			}
 		}
-	}
-
-	#content2 {
-		margin-bottom: 40px;
 	}
 }
 
@@ -1102,7 +1132,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		margin-bottom: 0px;
 		border-radius: 0px;
 		background: transparent;
-		padding: 15px 15px 15px 0px;
+		padding: 15px 15px 15px 15px;
 		> li {
 			text-shadow: none;
 			.hasTip {

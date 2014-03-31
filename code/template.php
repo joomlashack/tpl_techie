@@ -95,9 +95,9 @@ defined('_JEXEC') or die('Restricted access');
                 <?php endif; ?>	
                 <!-- Featured end -->
 				<!-- grid-top -->
-				<?php if ($this->countModules('grid-top')) : ?>
-				<div class="<?php echo $containerClass ?>">		
+				<?php if ($this->countModules('grid-top')) : ?>	
 				<div id="grid-top">
+				<div class="<?php echo $containerClass ?>">		
 					<w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" extradivs="module" />
 				</div>
 				</div>
@@ -106,8 +106,8 @@ defined('_JEXEC') or die('Restricted access');
 				<!-- grid-top2 -->
 				<?php if ($this->countModules('grid-top2')) : ?>
 				<!-- grid-top2 -->
-				<div class="<?php echo $containerClass ?>">	
 				<div id="grid-top2">
+					<div class="<?php echo $containerClass ?>">	
 					<w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" extradivs="module" />
 				</div>
 				</div>
@@ -115,28 +115,30 @@ defined('_JEXEC') or die('Restricted access');
 				<!-- grid-top2 end -->
 				<?php if ($this->countModules('content') || $this->countModules('content2')) : ?>
 				<div id="content-wrapper">
-				<div class="<?php echo $containerClass ?>">	
 				<?php endif; ?>	
 				<!-- content -->
 				<?php if ($this->countModules('content')) : ?>
 				<div id="content">
+					<div class="<?php echo $containerClass ?>">	
 					<w:module type="<?php echo $gridMode; ?>" name="content" chrome="wrightflexgrid" extradivs="module" />
+					</div>
 				</div>
 				<?php endif; ?>
 				<!-- content end -->
 				<!-- content2 -->
 				<?php if ($this->countModules('content2')) : ?>
 				<div id="content2">
+				<div class="<?php echo $containerClass ?>">	
 					<w:module type="<?php echo $gridMode; ?>" name="content2" chrome="wrightflexgrid" extradivs="module" />
+				</div>
 				</div>
 				<?php endif; ?>
 				<!-- content2 end -->
 				<?php if ($this->countModules('content') || $this->countModules('content2')) : ?>
 				</div>
-				</div>
 				<?php endif; ?>	
-				<div class="<?php echo $containerClass ?>">
 				<div id="main-content" class="<?php echo $gridMode; ?>">
+					<div class="<?php echo $containerClass ?>">
 					<!-- sidebar1 -->
 					<aside id="sidebar1">
 						<w:module name="sidebar1" chrome="xhtml" />
