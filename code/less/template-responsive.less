@@ -20,6 +20,10 @@
 		h1 {
 		}
 	}
+	.nav.nav-tabs + .current {
+		background-color: @white;
+		padding: 20px;
+	}
 }
 
 @media (max-width: 767px) {
@@ -46,7 +50,7 @@
 
 		.container {
 			.row {
-				[class^="module"] {
+				[class ^= "module"] {
 					text-align: center;
 					margin-top: 30px;
 					img {
@@ -85,7 +89,7 @@
 		}
 
 		&.double {
-			margin-top: 50px;		
+			margin-top: 50px;
 			.wrightmodule-imgfeatured {
 				width: 100%;
 				img {
@@ -156,6 +160,11 @@
 			margin-left: 20px;
 			margin-right: 20px;
 		}
+	}
+
+	.nav.nav-tabs + .current {
+		background-color: @white;
+		padding: 20px;
 	}
 }
 
