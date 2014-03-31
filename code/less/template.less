@@ -790,7 +790,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 			h4 {
 				position: relative;
 				font-size: @baseFontSize;
-				color: @topFuturedTextColor;
+				color: @activeTextColor;
 				img {
 					margin: 0px 5px;
 				}
@@ -966,7 +966,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		> a {
 			margin-top: 15px;
 			text-transform: uppercase;
-			font-size: @baseFontSize;
+			font-size: @baseFontSize - 2;
 			font-weight: bold;
 		}
 	}
@@ -978,7 +978,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	position: relative;
 	text-align: center;
 	.custom_ms4 {
-		padding: 12px 35px 0px 35px;
+		padding: 10px 15px;
 	}
 
 	h3 {
@@ -991,7 +991,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 
 	.module-inner {
 		margin-top: 20px;
-		padding: 0px 5px;
+		padding: 0px 10px;
 		h5 {
 			margin-top: 40px;
 			color: @doubleBackgroundColor;
@@ -1010,18 +1010,20 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 			padding: 0;
 			.double h5 {
 				&:first-child {
+					font-size: @baseFontSize - 2;
 					color: @color_four;
 					margin-top: 0;
+					margin-bottom: 15px;
 				}
 			}
 
 			h5 {
-				margin-top: 29px;
+				margin-top: 30px;
 			}
 		}
 
 		.custom_ms4 {
-			padding: 12px 30px 0px 30px;
+			padding:  10px 15px;
 		}
 
 		.wrightmodule-imgfeatured {
@@ -1046,7 +1048,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 			z-index: 1;
 			color: @white;
 			text-transform: uppercase;
-			font-size: @baseFontSize;
+			font-size: @baseFontSize - 2;
 		}
 
 		.wrightmodule-content {
@@ -1065,13 +1067,15 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 			position: relative;
 			h5 {
 				&:first-child {
+					font-size: @baseFontSize - 2;
 					color: @color_four;
 					margin-top: 0;
+					margin-bottom: 15px;
 				}
 			}
 
 			h5 {
-				margin-top: 29px;
+				margin-top: 30px;
 			}
 
 			.wrightmodule-imgfeatured {
@@ -1100,6 +1104,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		float: left;
 		text-align: center;
 		color: @headingTabColor;
+		font-size: @baseFontSize + 16;
 		&:after {
 			.heading-after ();
 			display: block;
