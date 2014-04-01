@@ -274,7 +274,7 @@ body {
 }
 
 .tabs {
-	h3 , span {
+	h3 , span , li {
 		a {
 			background: @tabBackground;
 			border-radius: 0px;
@@ -348,7 +348,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	}
 }
 
-.navbar-inverse {
+.navbar-inverse .navbar-inner {
 	background-image: none;
 	border-radius: 0;
 	border: 0;
@@ -391,7 +391,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	}
 }
 
-.navbar, .navbar-inner {
+.navbar {
 	.nav {
 		> li {
 			padding: 5px 15px;
@@ -440,8 +440,6 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 				color: @linkTopColor;
 				padding: 2px 0;
 				text-transform: uppercase;
-				
-							background-color: transparent;
 			}
 
 			.caret {
