@@ -25,5 +25,41 @@ if ($responsivePage == 0) {
 
 // get active menu item
 
+$bg = checkImage($this->params->get("backgroundImage", ""), "templates/js_techie/images/default-bg.jpg");
+
 $JoomlaApp = JFactory::getApplication(); 
 $menu_itemActive = $JoomlaApp->getMenu()->getActive()->title;
+
+// Slideshow
+function checkImage($img, $default) {
+        if ($img == "") {
+                $img = $default;
+        }
+        elseif ($img != "-1") {
+                $img = "images/" . $img;
+        }
+
+        if ($img != "-1") {
+                $img = JPATH_BASE . '/' . $img;
+                if (!file_exists($img)) {
+                        $img = "-1";
+                }
+        }
+
+        return $img;
+}
+$techieSlideshow = ($this->params->get('enableSlideshow', '0') == '1' ? true : false);
+$slideshowImageOne = checkImage($this->params->get("slideshowImageOne", ""), "templates/js_techie/images/default-bg-one.jpg");
+$slideshowImageTwo = checkImage($this->params->get("slideshowImageTwo", ""), "templates/js_techie/images/default-bg-two.jpg");
+$slideshowImageThree = checkImage($this->params->get("slideshowImageThree", ""), "templates/js_techie/images/default-bg-three.jpg");
+$slideshowImageFour = checkImage($this->params->get("slideshowImageFour", ""), "templates/js_techie/images/default-bg-four.jpg");
+
+function slideshowSetRutDefult($slideItem){
+    $slideItemRute = str_replace(JPATH_BASE,'',$slideItem);
+    return $slideItemRute;
+}
+
+$slideshowImageOneRute = slideshowSetRutDefult($slideshowImageOne);
+$slideshowImageTwoRute = slideshowSetRutDefult($slideshowImageTwo);
+$slideshowImageThreeRute = slideshowSetRutDefult($slideshowImageThree);
+$slideshowImageFourRute = slideshowSetRutDefult($slideshowImageFour);

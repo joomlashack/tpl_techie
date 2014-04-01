@@ -113,7 +113,21 @@
 					<option value="0">JNO</option>
 				</field>
                 <!-- End of default Wright params -->
-			</fieldset>
+                </fieldset>
+                <fieldset name="TPL_JS_TECHIE_OPTIONS">
+	            <field name="enableSlideshow" type="list" default="0" label="TPL_JS_TECHIE_ENABLE_SLIDESHOW" description="TPL_JS_TECHIE_ENABLE_SLIDESHOW_DESC">
+	                    <option value="1">JYES</option>
+	                    <option value="0">JNO</option>
+	            </field>
+	            <field name="slideshowImageOne" type="imagelist" default="" directory="images" label="TPL_JS_TECHIE_SLIDESHOW_IMAGE_ONE" description="TPL_JS_TECHIE_SLIDESHOW_IMAGE_ONE_DESC" />
+	            <field name="slideshowImageTwo" type="imagelist" default="" directory="images" label="TPL_JS_TECHIE_SLIDESHOW_IMAGE_TWO" description="TPL_JS_TECHIE_SLIDESHOW_IMAGE_TWO_DESC" />
+	            <field name="slideshowImageThree" type="imagelist" default="" directory="images" label="TPL_JS_TECHIE_SLIDESHOW_IMAGE_THREE" description="TPL_JS_TECHIE_SLIDESHOW_IMAGE_THREE_DESC" />
+	            <field name="slideshowImageFour" type="imagelist" default="" directory="images" label="TPL_JS_TECHIE_SLIDESHOW_IMAGE_FOUR" description="TPL_JS_TECHIE_SLIDESHOW_IMAGE_FOUR_DESC" />
+				<field name="techie_lateral_menu_displayed" type="radio" default="1" label="TPL_JS_TECHIE_LATERALMENU_DISPLAYED" description="TPL_JS_TECHIE_LATERALMENU_DISPLAYED_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+		    </fieldset>
 		</fields>
 	</config>
 </extension>
