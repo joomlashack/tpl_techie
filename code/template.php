@@ -40,8 +40,10 @@ defined('_JEXEC') or die('Restricted access');
 
 			     <?php if ($techieSlideshow) : ?>
 			            <!--Arrow Navigation-->
+			         <div class="<?php echo $containerClass ?>">
 			            <a id="prevslide" class="load-item"></a>
 			            <a id="nextslide" class="load-item"></a>
+			         </div>
 			     <?php endif ?>
 				
 				<!-- Place holder inner images end -->
@@ -59,7 +61,9 @@ defined('_JEXEC') or die('Restricted access');
 						</div>
 						<div class="clear"></div> 
 					</div>
+					<?php if (!$techieSlideshow) : ?>
 					<div id="current-menu-item"><h1><?php echo $menu_itemActive; ?></h1>
+					 <?php endif ?>
 					</div>		  
 					<!-- logo end -->
 				</div>
