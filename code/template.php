@@ -33,7 +33,7 @@ defined('_JEXEC') or die('Restricted access');
 				<?php if ($bg && !$techieSlideshow) : ?>
 	          		<div class="bg-wrapp">
 		                <div class="bg-wrapp-inner">
-		                	<img id="bg-header" src="<?php echo JURI::root(true) . $bg ?>" />
+		                	<img id="bg-header" src="<?php echo JURI::root(true) . $bg; ?>" />
 		                </div>
 	            	</div>
        			 <?php endif ?>

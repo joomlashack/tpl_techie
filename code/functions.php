@@ -27,6 +27,8 @@ if ($responsivePage == 0) {
 
 $bg = checkImage($this->params->get("backgroundImage", ""), "templates/js_techie/images/default-bg.jpg");
 
+if ($bg != "-1") $bg = str_replace(JPATH_BASE, '', $bg);
+
 $JoomlaApp = JFactory::getApplication(); 
 $menu_itemActive = $JoomlaApp->getMenu()->getActive()->title;
 
