@@ -36,16 +36,7 @@ defined('_JEXEC') or die('Restricted access');
 		                	<img id="bg-header" src="<?php echo JURI::root(true) . $bg; ?>" />
 		                </div>
 	            	</div>
-       			 <?php endif ?>
-
-			     <?php if ($techieSlideshow) : ?>
-			            <!--Arrow Navigation-->
-			         <div class="<?php echo $containerClass ?>">
-			            <a id="prevslide" class="load-item"></a>
-			            <a id="nextslide" class="load-item"></a>
-			         </div>
-			     <?php endif ?>
-				
+       			 <?php endif ?>				
 				<!-- Place holder inner images end -->
 				<!-- logo -->
 				<div class="<?php echo $containerClass ?>">
@@ -62,9 +53,21 @@ defined('_JEXEC') or die('Restricted access');
 						<div class="clear"></div> 
 					</div>
 					<?php if (!$techieSlideshow) : ?>
-					<div id="current-menu-item"><h1><?php echo $menu_itemActive; ?></h1>
-					 <?php endif ?>
-					</div>		  
+					<div id="current-menu-item"><h1><?php echo $menu_itemActive; ?></h1></div>	
+					 <?php else: ?>
+					 	<div class="<?php echo $containerClass ?> slide-arrows-container">
+					 	<a id="prevslide" class="load-item"></a>
+			            <a id="nextslide" class="load-item"></a>	
+					 	<div id="current-slide-item" class="item"><h1>Designed to make your life easier.</h1>
+					 	<p>
+					 	Since 2005, Joomlashack has been building cool templates.
+					 	We call them “Strictly Joomla” because in most cases you can 
+					 	install them using only the Joomla CMS’s built-in features, making it simple, quick, and easy.
+					 	</p>	
+					 	</div>
+					 	</div>	
+					<?php endif ?>
+						  
 					<!-- logo end -->
 				</div>
 			</header> 
