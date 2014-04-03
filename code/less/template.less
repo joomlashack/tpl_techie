@@ -81,6 +81,7 @@ h6 {
 	&.btn-link {
 		border-bottom: none;
 	}
+
 	+ btn {
 		margin-left: 10px;
 	}
@@ -791,7 +792,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 							> a {
 								text-transform: none;
 								color: @color_one;
-								font-size: @baseFontSize + 2;			
+								font-size: @baseFontSize + 2;
 								&:hover , &:focus {
 									color: darken(@linkColor, 15%);
 								}
@@ -889,13 +890,15 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		ul {
 			border-left: 0px;
 		}
+
 		li {
 			> a {
-				&:hover , &:focus { 
+				&:hover , &:focus {
 					border-left: 0;
-					margin-left: 1px;	
+					margin-left: 1px;
 				}
 			}
+
 			&.active {
 				> a {
 					cursor: pointer;
@@ -924,6 +927,18 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 						float: right;
 						font-family: FontAwesome;
 						font-size: @baseFontSize - 6;
+					}
+				}
+			}
+
+			&.dropdown {
+				.dropdown-menu {
+					li {
+						> a {
+							&:hover {
+								margin-left: 0px;
+							}
+						}
 					}
 				}
 			}
