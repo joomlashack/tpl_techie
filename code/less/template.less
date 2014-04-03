@@ -403,7 +403,6 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	}
 }
 
-
 .dropdown-menu {
 	padding: 0;
 	border-radius: 0;
@@ -434,7 +433,6 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		}
 	}
 }
-
 
 .navbar {
 	.nav {
@@ -622,6 +620,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 					background: none;
 					color: darken(@linkColor, 15%);
 				}
+
 				.caret {
 					display: none;
 				}
@@ -682,6 +681,20 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 							padding-bottom: 0px;
 						}
 					}
+
+					&.current , &.active {
+						> a {
+							color: @headingTabColor;
+							background-image: none;
+							background-color: transparent;
+							&:after {
+								content: '\f054';
+								float: right;
+								font-family: FontAwesome;
+								font-size: @baseFontSize - 6;
+							}
+						}
+					}
 				}
 
 				&.parent {
@@ -696,7 +709,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 				}
 			}
 
-			&.current, &.active {
+			&.current , &.active {
 				> a {
 					color: @headingTabColor;
 					background-image: none;
@@ -751,6 +764,19 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 								}
 							}
 						}
+						&.current , &.active {
+						> a {
+							color: @headingTabColor;
+							background-image: none;
+							background-color: transparent;
+							&:after {
+								content: '\f054';
+								float: right;
+								font-family: FontAwesome;
+								font-size: @baseFontSize - 6;
+							}
+						}
+					}
 					}
 
 					&.parent {
