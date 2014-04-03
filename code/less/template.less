@@ -41,7 +41,18 @@ h6 {
 	&:hover {
 		color: @textColor;
 	}
-
+	
+	&.btn-large {
+		font-size: @baseFontSize + 8;
+	}
+	
+	&.btn-small {
+		font-size: @baseFontSize + 2;
+	}
+	&.btn-mini {
+		font-size: @baseFontSize;
+	}
+		
 	&.btn-inverse {
 		color: @white;
 		border-bottom: 4px solid lighten(@grayDarker, 25%);
