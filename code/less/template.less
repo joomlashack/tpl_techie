@@ -81,10 +81,6 @@ h6 {
 	&.btn-link {
 		border-bottom: none;
 	}
-
-	+ btn {
-		margin-left: 10px;
-	}
 }
 
 blockquote {
@@ -971,6 +967,64 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 				}
 			}
 		}
+	}
+}
+
+.pagination {
+	.counter {
+		float: none;
+		font-size: @baseFontSize + 2;
+	}
+
+	ul {
+		border-radius: 0px;
+		box-shadow: none;
+		li {
+			a {
+				background-color: @color_two;
+				background-image: none;
+				text-transform: uppercase;
+				font-family: @altFontFamily;
+				border-radius: 0px;
+				border: 0px;
+				font-size: @baseFontSize + 4;
+				color: @textColor;
+				text-shadow: none;
+				padding: 10px 20px;
+				border-bottom: 4px solid @color_one;
+				margin-left: 5px;
+				&:hover {
+					color: @textColor;
+					background-color: @btnPrimaryBackgroundHighlight;
+				}
+			}
+
+			&.pagination-start {
+				a {
+					border-bottom-left-radius: 0px;
+					border-top-left-radius: 0px;
+				}
+			}
+
+			&.active {
+				a {
+					background-color: @btnPrimaryBackgroundHighlight;
+					color: @white;
+				}
+			}
+		}
+
+		> .disabled {
+			a {
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+.items-more {
+	h3 {
+		padding: 0;
 	}
 }
 
