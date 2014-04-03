@@ -41,18 +41,19 @@ h6 {
 	&:hover {
 		color: @textColor;
 	}
-	
+
 	&.btn-large {
 		font-size: @baseFontSize + 8;
 	}
-	
+
 	&.btn-small {
 		font-size: @baseFontSize + 2;
 	}
+
 	&.btn-mini {
 		font-size: @baseFontSize;
 	}
-		
+
 	&.btn-inverse {
 		color: @white;
 		border-bottom: 4px solid lighten(@grayDarker, 25%);
@@ -564,37 +565,6 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	}
 }
 
-.dropdown-menu {
-	padding: 0;
-	border-radius: 0;
-	.divider {
-		border: 1px solid @color_four;
-		background-color: @color_four;
-		margin: 0;
-		height: 0px;
-	}
-
-	li {
-		a {
-			text-transform: uppercase;
-			padding: 5px 15px;
-			&:hover {
-				background-image: none;
-				background-color: @color_four;
-			}
-		}
-
-		&.current {
-			&.active {
-				a {
-					background-color: @color_four;
-					background-image: none;
-				}
-			}
-		}
-	}
-}
-
 .well {
 	box-shadow: none;
 	padding: 20px 0px;
@@ -603,71 +573,81 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 }
 
 .module {
-	.nav , .nav.nav-stacked , .nav.nav-list {
+	.nav {
 		padding-left: 0px;
 		padding-right: 0px;
 		li {
 			padding-top: 5px;
 			padding-bottom: 5px;
 			border-bottom: 1px solid @boderModuleStyleColor;
-			&.active {
-				a {
-					background: none;
-					color: @headingTabColor;
-					&:hover , &:focus {
-						color: darken(@linkColor, 15%);
-						[class *= "icon-"] {
-							color: darken(@linkColor, 15%);
-						}
-					}
-
-					&:after {
-						content: '\f054';
-						float: right;
-						font-family: FontAwesome;
-						font-size: @baseFontSize - 6;
-					}
-				}
-			}
-
-			a {
-				font-size: @baseFontSize + 2;
+			> a {
+				font-size: @baseFontSize + 4;
+				font-weight: bold;
 				margin-left: 0px;
 				margin-right: 0px;
 				&:hover , &:focus {
 					background: none;
 					color: darken(@linkColor, 15%);
-					[class *= "icon-"] {
-						color: darken(@linkColor, 15%);
-					}
 				}
-
 				.caret {
 					display: none;
 				}
 			}
 
-			&.dropdown , .dropdown-menu {
-				li {
-					padding-left: 15px;
-					a {
-						text-transform: none;
-						color: @color_one;
-						font-size: @baseFontSize;
-						&:hover , &:focus {
-							color: darken(@linkColor, 15%);
-							[class *= "icon-"] {
+			&.dropdown {
+				.dropdown-menu {
+					position: relative;
+					display: block;
+					background-color: transparent;
+					float: none;
+					border: 0;
+					box-shadow: none;
+					border-radius: 0;
+					min-width: 0;
+					padding: 0;
+					ul {
+						margin: 0 5px;
+					}
+
+					li {
+						> a {
+							white-space: normal;
+							color: @linkColor;
+							padding-left: 15px;
+							&:hover , &:focus {
 								color: darken(@linkColor, 15%);
 							}
 						}
+					}
 
-						&:after {
-							content: ' ';
+					.sub-menu {
+						box-shadow: none;
+						margin: 0 10px;
+						position: relative;
+						visibility: visible;
+						margin-top: 0;
+						left: 0;
+						&:before , &:after {
+							display: none;
 						}
 					}
 
-					&:last-child {
-						border-bottom: none;
+					&.parent {
+						> a {
+							&:after {
+								content: '\f107';
+								float: right;
+								font-family: FontAwesome;
+								font-size: @baseFontSize;
+							}
+						}
+					}
+
+					li {
+						&:last-child {
+							border-bottom: none;
+							padding-bottom: 0px;
+						}
 					}
 				}
 
@@ -682,27 +662,118 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 					}
 				}
 			}
+
+			&.current {
+				> a {
+					color: @headingTabColor;
+					&:after {
+						content: '\f054';
+						float: right;
+						font-family: FontAwesome;
+						font-size: @baseFontSize - 6;
+					}
+				}
+			}
+		}
+
+		&.nav-stacked , &.nav-pills , &.nav-list {
+			li {
+				&.dropdown {
+					.dropdown-menu {
+						li {
+							> a {
+								text-transform: none;
+								color: @color_one;
+								font-size: @baseFontSize + 4;
+								font-weight: bold;
+								&:hover , &:focus {
+									color: darken(@linkColor, 15%);
+								}
+
+								&:after {
+									content: ' ';
+								}
+							}
+
+							&.active {
+								> a {
+									background: none;
+									color: @headingTabColor;
+									&:hover , &:focus {
+										color: @dropdownLinkColorHover;
+									}
+								}
+							}
+						}
+
+						&.parent {
+							> a {
+								&:after {
+									content: '\f107';
+									float: right;
+									font-family: FontAwesome;
+									font-size: @baseFontSize;
+								}
+							}
+						}
+					}
+
+					&.parent {
+						> a {
+							&:after {
+								content: '\f107';
+								float: right;
+								font-family: FontAwesome;
+								font-size: @baseFontSize;
+							}
+						}
+					}
+				}
+
+				&.active {
+					> a {
+						background-color: transparent;
+						color: @headingTabColor;
+						&:hover , &:focus {
+							color: darken(@linkColor, 15%);
+							&:after {
+								content: '\f054';
+								float: right;
+								font-family: FontAwesome;
+								font-size: @baseFontSize - 6;
+							}
+						}
+
+						&:hover , &:focus {
+							background-color: none;
+							color: darken(@linkColor, 15%);
+						}
+
+						&:after {
+							content: '\f054';
+							float: right;
+							font-family: FontAwesome;
+							font-size: @baseFontSize - 6;
+						}
+					}
+				}
+			}
 		}
 	}
 
-	.nav.nav-tabs , .nav.nav-pills {
+	.tabbable {
 		li {
-			padding-top: 5px;
-			padding-bottom: 5px;
-			a {
-				&:hover {
-					margin-left: 1px;
-					border-left: none;
-				}
-			}
-
 			&.active {
-				a {
-					margin-left: -1px;
-					border-left-color: @bodyBackground;
-					&:hover {
-						border-left: 1px solid @bodyBackground;
-						margin-left: -1px;
+				> a {
+					background-color: transparent;
+					color: darken(@linkColor, 15%);
+					border: none;
+					border-radius: 0px;
+					&:after {
+						content: '\f054';
+						float: right;
+						font-family: FontAwesome;
+						font-size: @baseFontSize - 6;
 					}
 				}
 			}
@@ -898,7 +969,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	}
 }
 
-#current-menu-item{
+#current-menu-item {
 	position: relative;
 	z-index: 1;
 	padding: 80px 0px 80px 100px;
@@ -909,6 +980,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		padding: 10px 20px;
 		display: table;
 	}
+
 	p {
 		font-size: @baseFontSize + 6;
 		color: @white;
@@ -928,6 +1000,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		display: table;
 		width: 55%;
 	}
+
 	p {
 		font-size: @baseFontSize + 6;
 		color: @white;
