@@ -81,6 +81,9 @@ h6 {
 	&.btn-link {
 		border-bottom: none;
 	}
+	+ btn {
+		margin-left: 10px;
+	}
 }
 
 blockquote {
@@ -639,8 +642,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 			padding-bottom: 5px;
 			border-bottom: 1px solid @boderModuleStyleColor;
 			> a {
-				font-size: @baseFontSize + 4;
-				font-weight: bold;
+				font-size: @baseFontSize + 2;
 				margin-left: 0px;
 				margin-right: 0px;
 				&:hover , &:focus {
@@ -673,6 +675,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 							white-space: normal;
 							color: @linkColor;
 							padding-left: 15px;
+							text-transform: none;
 							&:hover , &:focus {
 								color: darken(@linkColor, 15%);
 							}
@@ -788,8 +791,9 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 							> a {
 								text-transform: none;
 								color: @color_one;
-								font-size: @baseFontSize + 4;
+								font-size: @baseFontSize + 2;
 								font-weight: bold;
+								text-transform: none;
 								&:hover , &:focus {
 									color: darken(@linkColor, 15%);
 								}
