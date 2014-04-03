@@ -152,15 +152,14 @@ form {
 	}
 }
 
-
 .form-actions {
-		background-color: transparent;
-		padding-left: 0px;
-		border-top: 0px;
-		margin-top: 0px;
-		margin-bottom: 0px;
-		padding: 0px;
-	}
+	background-color: transparent;
+	padding-left: 0px;
+	border-top: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+}
 
 fieldset {
 	dl {
@@ -330,18 +329,28 @@ body {
 	}
 }
 
-.tabs {
-	h3 , span {
-		a {
-			background: @tabBackground;
-			border-radius: 0px;
-			color: @white;
-			text-transform: uppercase;
-			padding: 11px 15px;
-			&:hover {
-				text-decoration: none;
-				background: @linkColor;
+dl {
+	dt {
+		&.tabs {
+			h3 , span {
+				a {
+					background: @tabBackground;
+					border-radius: 0px;
+					color: @white;
+					text-transform: uppercase;
+					padding: 11px 15px;
+					font-weight: normal;
+					&:hover {
+						text-decoration: none;
+						background: @linkColor;
+					}
+				}
 			}
+		}
+	}
+	&.dl-horizontal{
+		dd {
+			margin-bottom: 10px;
 		}
 	}
 }
