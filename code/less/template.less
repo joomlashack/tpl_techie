@@ -403,6 +403,39 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	}
 }
 
+
+.dropdown-menu {
+	padding: 0;
+	border-radius: 0;
+	.divider {
+		border: 1px solid @color_four;
+		background-color: @color_four;
+		margin: 0;
+		height: 0px;
+	}
+
+	li {
+		a {
+			text-transform: uppercase;
+			padding: 5px 15px;
+			&:hover {
+				background-image: none;
+				background-color: @color_four;
+			}
+		}
+
+		&.current {
+			&.active {
+				a {
+					background-color: @color_four;
+					background-image: none;
+				}
+			}
+		}
+	}
+}
+
+
 .navbar {
 	.nav {
 		> li {
@@ -663,9 +696,11 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 				}
 			}
 
-			&.current {
+			&.current, &.active {
 				> a {
 					color: @headingTabColor;
+					background-image: none;
+					background-color: transparent;
 					&:after {
 						content: '\f054';
 						float: right;
