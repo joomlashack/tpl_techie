@@ -309,19 +309,25 @@ body {
 	}
 }
 
-.nav.nav-tabs + .current {
-	background-color: @white;
-	padding: 50px 50px 50px 100px;
-}
-
-.nav.nav-tabs {
-	margin-bottom: 0px;
-}
-
-.nav-tabs , .nav-pills {
-	> li {
-		> a {
+.nav {
+	&.nav-tabs {
+		margin-bottom: 0px;
+		&.nav-stacked {
+			li {
+				a {
+					border-top-left-radius: 0px;
+					border-top-right-radius: 0px;
+					border: none;
+					padding-left: 0px;
+					padding-right: 0px;
+				}
+			}
 		}
+	}
+
+	+ .current {
+		background-color: @white;
+		padding: 50px 50px 50px 100px;
 	}
 }
 
