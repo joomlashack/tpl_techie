@@ -1057,14 +1057,19 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 
 #header {
 	.top-properties ();
-	background-image: url(../images/top-logo-object.png);
-	background-repeat: no-repeat;
-	background-position: bottom right;
+	.top-object {
+		background-image: url(../images/top-logo-object.png);
+		background-repeat: no-repeat;
+		background-position: bottom right;
+	}
 	&.techieSlideshow {
-		.box-sizing (border-box);
 		height: 100%;
 		margin-bottom: 0;
 		background-position: bottom left;
+		z-index: 0;
+		.top-object { 
+			background-position: bottom left;
+		}
 	}
 }
 
@@ -1117,7 +1122,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	top: 0;
 	margin: 0;
 	overflow: hidden;
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	z-index: -999;
 }
@@ -1145,18 +1150,16 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 
 #supersized li {
 	display: block;
-	height: 97%;
+	height: 100%;
 	left: 0;
 	list-style: none;
 	overflow: hidden;
-	position: fixed;
-	top: 10px;
+	position: absolute;
 	width: 100%;
 	z-index: -30;
 }
 
 #supersized a {
-	border-radius: 15px;
 	display: block;
 	height: 100%;
 	overflow: hidden;
@@ -1202,7 +1205,6 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	&.show-lateral-menu {
 		z-index: 0;
 	}
-	
 }
 
 .navbar-fixed-top-menu-open {
@@ -1704,6 +1706,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		margin-top: 50px;
 		margin-bottom: 50px;
 	}
+
 	margin-bottom: 0;
 }
 

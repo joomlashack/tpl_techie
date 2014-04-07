@@ -32,6 +32,7 @@ defined('_JEXEC') or die('Restricted access');
 			<!-- toolbar end -->
 			<!-- header -->
 			<header id="header" class="<?php echo (!$techieSlideshow ? '' : 'techieSlideshow');  ?>">
+				<div class="top-object">
 				<!-- Place holder inner images -->
 				<?php if ($bg && !$techieSlideshow) : ?>
 	          		<div class="bg-wrapp">
@@ -74,6 +75,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php endif ?>
 						  
 					<!-- logo end -->
+				</div>
 				</div>
 			</header> 
 			<!-- header end -->
