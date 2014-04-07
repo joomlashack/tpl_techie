@@ -32,7 +32,7 @@ defined('_JEXEC') or die('Restricted access');
 			<!-- toolbar end -->
 			<!-- header -->
 			<header id="header" class="<?php echo (!$techieSlideshow ? '' : 'techieSlideshow');  ?>">
-				<div class="top-object">
+				<div class="top-object"></div>
 				<!-- Place holder inner images -->
 				<?php if ($bg && !$techieSlideshow) : ?>
 	          		<div class="bg-wrapp">
@@ -75,7 +75,6 @@ defined('_JEXEC') or die('Restricted access');
 					<?php endif ?>
 						  
 					<!-- logo end -->
-				</div>
 				</div>
 			</header> 
 			<!-- header end -->
@@ -289,9 +288,16 @@ defined('_JEXEC') or die('Restricted access');
                     mouse_scrub             :   0
                 });
             });
+            
+             <?php if ($bsMode) : ?>
+             var BsModeFluid = true;
+             <?php else: ?>
+             var BsModeFluid = false;
+             <?php endif; ?> 
+                        
+            
         </script>
   	  <?php endif; ?>
-
 			<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_techie/js/techie.js'></script>
 		</body>
 	</html>

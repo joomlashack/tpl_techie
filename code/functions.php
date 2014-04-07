@@ -71,3 +71,9 @@ $slideshowImageFourRute = slideshowSetRutDefult($slideshowImageFour);
 
 $techieLateralMenu = ($this->params->get('techie_lateral_menu_displayed', '0') == '1' ? true : false);
 
+//Bootstrap Mode
+
+$bsMode = ($this->params->get('bs_rowmode', '0') == 'row-fluid' ? true : false);
+
+
+

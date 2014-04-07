@@ -1061,6 +1061,10 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		background-image: url(../images/top-logo-object.png);
 		background-repeat: no-repeat;
 		background-position: bottom right;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
 	}
 	&.techieSlideshow {
 		height: 100%;
@@ -1292,15 +1296,16 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	}
 }
 
-.bg-wrapp-bottom {
-}
-
 #top-header {
 	background: @hedaer-top;
-	.container {
-		.row {
+	.container, .container-fluid {
+		.row, .row-fluid {
 			position: relative;
-			h4 {
+			&:first-child {
+				font-size: @baseFontSize;
+				h1,h2,h3,h4,h5,h6 {
+				font-size: @baseFontSize;
+				}
 				position: relative;
 				font-size: @baseFontSize;
 				color: @activeTextColor;
@@ -1331,7 +1336,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	padding-top: 30px;
 	padding-bottom: 30px;
 	#content {
-		.row {
+		.row, .row-fluid {
 			.module_ms3 {
 				h3 {
 					color: @white;
