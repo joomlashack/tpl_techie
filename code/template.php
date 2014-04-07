@@ -45,6 +45,7 @@ defined('_JEXEC') or die('Restricted access');
 				<div class="<?php echo $containerClass ?>">
 					<div class="header-inner"> 
 						<w:logo name="top"/>
+						<?php if ($techieLateralMenu) : ?>
 						<div class="toolbar-collapse-btn">
 						<div class="legend-menu">MENU</div>
 						<div class="menu-icons-container">
@@ -53,6 +54,7 @@ defined('_JEXEC') or die('Restricted access');
 						<span class="icon-bar"></span>
 						</div>
 						</div>
+						 <?php endif ?>			
 						<div class="clear"></div> 
 					</div>
 					<?php if (!$techieSlideshow) : ?>
@@ -231,7 +233,7 @@ defined('_JEXEC') or die('Restricted access');
 			<?php endif ?>
 			<!-- footer end -->
 			<!-- lateral-menu -->
-			<?php if ($this->countModules('lateral-menu')) : ?>
+			<?php if ($this->countModules('lateral-menu') && $techieLateralMenu) : ?>
 			<div id="lateral-menu">
 			<w:module type="single" name="lateral-menu" chrome="xhtml" extradivs="module" />
 			</div>
