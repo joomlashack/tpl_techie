@@ -23,6 +23,9 @@ defined('_JEXEC') or die('Restricted access');
 		</head>
 		<body class="<?php   echo $responsive ?>">
 			<!-- toolbar -->
+			<?php if ($techieLateralMenu) : ?>
+			<div class="techie-container">
+			<?php endif ?>
 			<?php if ($this->countModules('toolbar')) : ?>
 			<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode; ?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
 			<?php endif; ?>
@@ -54,7 +57,7 @@ defined('_JEXEC') or die('Restricted access');
 					</div>
 					<?php if (!$techieSlideshow) : ?>
 					<div id="current-menu-item"><h1><?php echo $menu_itemActive; ?></h1></div>	
-					 <?php else: ?>
+					<?php else: ?>
 					 	<div class="<?php echo $containerClass ?> slide-arrows-container">
 					 	<a id="prevslide" class="load-item"></a>
 			            <a id="nextslide" class="load-item"></a>	
@@ -75,12 +78,6 @@ defined('_JEXEC') or die('Restricted access');
 			<?php if ($techieSlideshow) : ?>
 			<div class="<?php echo (!$techieSlideshow ? '' : 'techieSlideshowContainer');  ?>">
 			<?php endif ?>
-			<?php if ($this->countModules('menu')) : ?>
-			<div class="<?php echo $containerClass ?>">
-			<w:module type="<?php echo $gridMode; ?>" name="lateral-menu" chrome="wrightflexgrid" extradivs="module" />
-			</div>
-			<?php endif; ?>
-			<!-- menu end -->
 			<!-- top -->
 			<?php if ($this->countModules('top')) : ?> 
 			<div id="top-header"> 
@@ -210,9 +207,6 @@ defined('_JEXEC') or die('Restricted access');
 				</div>  
 				<?php endif; ?>
 				<!-- grid-bottom2 end -->
-				<?php if ($techieSlideshow) : ?>
-				</div>
-				<?php endif ?>
 			<!-- footer -->
 			<div class="wrapper-footer">
 				<footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky" <?php endif; ?> >
@@ -229,7 +223,20 @@ defined('_JEXEC') or die('Restricted access');
 					</div>
 				</footer>
 			</div>
+			<?php if ($techieSlideshow) : ?>
+				</div>
+			<?php endif ?>
+			<?php if ($techieLateralMenu) : ?>
+			</div>
+			<?php endif ?>
 			<!-- footer end -->
+			<!-- lateral-menu -->
+			<?php if ($this->countModules('lateral-menu')) : ?>
+			<div id="lateral-menu">
+			<w:module type="single" name="lateral-menu" chrome="xhtml" extradivs="module" />
+			</div>
+			<?php endif; ?>
+			<!-- lateral-menu end -->
 		<?php if ($techieSlideshow) : ?>
         <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_techie/js/jquery.easing.min.js"></script>
         <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_techie/js/supersized.min.js"></script>

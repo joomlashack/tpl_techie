@@ -65,3 +65,9 @@ $slideshowImageOneRute = slideshowSetRutDefult($slideshowImageOne);
 $slideshowImageTwoRute = slideshowSetRutDefult($slideshowImageTwo);
 $slideshowImageThreeRute = slideshowSetRutDefult($slideshowImageThree);
 $slideshowImageFourRute = slideshowSetRutDefult($slideshowImageFour);
+
+
+//Lateral menu
+
+$techieLateralMenu = ($this->params->get('techie_lateral_menu_displayed', '0') == '1' ? true : false);
+

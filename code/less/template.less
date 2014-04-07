@@ -1189,13 +1189,38 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	.top-properties ();
 }
 
+#lateral-menu {
+	position: absolute;
+	width: 360px;
+	top: 0;
+	right: 0px;
+	padding: 0px 15px;
+	background-color: @color_four;
+	height: 100%;
+	z-index: -9;
+	display: none;
+	&.show-lateral-menu {
+		z-index: 0;
+	}
+	
+}
+
+.navbar-fixed-top-menu-open {
+	position: relative;
+}
+
+.techie-container {
+	position: relative;
+	background-color: @bodyBackground;
+}
+
 .bg-wrapp {
 	height: 100%;
 	left: 0;
 	position: absolute;
 	top: 0;
 	width: 100%;
-	z-index: -1;
+	z-index: 0;
 	.bg-wrapp-inner {
 		height: 100%;
 		overflow: hidden;
