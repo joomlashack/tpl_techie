@@ -207,6 +207,9 @@ defined('_JEXEC') or die('Restricted access');
 				</div>  
 				<?php endif; ?>
 				<!-- grid-bottom2 end -->
+			<?php if ($techieLateralMenu) : ?>
+			</div>
+			<?php endif ?>
 			<!-- footer -->
 			<div class="wrapper-footer">
 				<footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky" <?php endif; ?> >
@@ -223,9 +226,6 @@ defined('_JEXEC') or die('Restricted access');
 					</div>
 				</footer>
 			</div>
-			<?php if ($techieLateralMenu) : ?>
-			</div>
-			<?php endif ?>
 			<!-- footer end -->
 			<!-- lateral-menu -->
 			<?php if ($this->countModules('lateral-menu') && $techieLateralMenu) : ?>
