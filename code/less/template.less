@@ -667,6 +667,18 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 }
 
 #lateral-menu {
+	position: absolute;
+	width: 360px;
+	top: 0;
+	right: 0px;
+	background-color: @color_four;
+	height: 100%;
+	z-index: -9;
+	display: none;
+	&.show-lateral-menu {
+		z-index: 0;
+	}
+
 	.module {
 		font-family: @altFontFamily;
 		h3 {
@@ -851,6 +863,9 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 				&:hover , &:focus {
 					background: none;
 					color: darken(@linkColor, 15%);
+					[class ^= "icon-"] {
+						color: darken(@linkColor, 15%);
+					}
 				}
 
 				.caret {
@@ -1367,20 +1382,6 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	.top-properties ();
 }
 
-#lateral-menu {
-	position: absolute;
-	width: 360px;
-	top: 0;
-	right: 0px;
-	background-color: @color_four;
-	height: 100%;
-	z-index: -9;
-	display: none;
-	&.show-lateral-menu {
-		z-index: 0;
-	}
-}
-
 .navbar-fixed-top-menu-open {
 	position: relative;
 }
@@ -1478,7 +1479,6 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 				}
 
 				position: relative;
-				font-size: @baseFontSize;
 				color: @activeTextColor;
 				img {
 					margin: 0px 5px;
