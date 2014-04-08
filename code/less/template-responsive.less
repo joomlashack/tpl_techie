@@ -21,9 +21,11 @@
 		}
 	}
 
-	.nav.nav-tabs + .current {
-		background-color: @white;
-		padding: 20px;
+	.nav {
+		+ .current {
+			background-color: @white;
+			padding: 20px;
+		}
 	}
 }
 
@@ -64,8 +66,8 @@
 			margin-right: 20px;
 		}
 
-		.container, .container-fluid {
-			.row, .row-fluid {
+		.container , .container-fluid {
+			.row , .row-fluid {
 				[class ^= "module"] {
 					text-align: center;
 					margin-top: 30px;
@@ -96,14 +98,6 @@
 	}
 
 	.module_ms4 , .moduletable_ms4 , .moduletext_ms4 {
-		h3 {
-		}
-
-		.module-inner {
-			> a {
-			}
-		}
-
 		&.double {
 			margin-top: 50px;
 			.wrightmodule-imgfeatured {
@@ -153,18 +147,8 @@
 		}
 	}
 
-	#current-menu-item {
-		margin-right: 20px;
-	}
-
 	.breadcrumbs {
 		padding-left: 30px;
-	}
-
-	#current-menu-item {
-		padding-left: 20px;
-		h1 {
-		}
 	}
 
 	#content-wrapper {
@@ -178,14 +162,16 @@
 		}
 	}
 
-	.nav.nav-tabs + .current {
-		background-color: @white;
-		padding: 20px;
+	.nav {
+		+ .current {
+			background-color: @white;
+			padding: 20px;
+		}
 	}
 
 	#current-slide-item {
+		padding: 30px 0px;
 		position: relative;
-		padding: 30px 0px 30px 100px;
 		h1 {
 			font-family: @sansFontFamily;
 			color: @white;
