@@ -34,7 +34,7 @@ jQuery(function() {
 	
 	function lateralMenu(istMenuVisible) {
 		if (!istMenuVisible) {
-		var lateralMenuWidth = jQuery('#lateral-menu').width() + 30;
+		var lateralMenuWidth = jQuery('#lateral-menu').width();
 		jQuery('.techie-container').animate({right: lateralMenuWidth}, 500, animationFinishOpen);
 		jQuery('#lateral-menu').show();
 		jQuery('.navbar-fixed-top').addClass('navbar-fixed-top-menu-open');
@@ -57,7 +57,6 @@ jQuery(function() {
 		
 		function animationFinishOpen() {
 			jQuery('#lateral-menu').addClass('show-lateral-menu');
-			jQuery('.techie-container').bind('click', animationClose);
 		}
 		
 	}
