@@ -33,8 +33,9 @@ jQuery(function() {
 	});
 	
 	function lateralMenu(istMenuVisible) {
-		if (!istMenuVisible) {		
-		jQuery('.techie-container').animate({right: '390px'}, 500, animationFinishOpen);
+		if (!istMenuVisible) {
+		var lateralMenuWidth = jQuery('#lateral-menu').width() + 30;
+		jQuery('.techie-container').animate({right: lateralMenuWidth}, 500, animationFinishOpen);
 		jQuery('#lateral-menu').show();
 		jQuery('.navbar-fixed-top').addClass('navbar-fixed-top-menu-open');
 		jQuery('#lateral-menu').bind('mouseleave', animationClose);
@@ -51,10 +52,12 @@ jQuery(function() {
 			jQuery('#lateral-menu').hide();
 			jQuery('.navbar-fixed-top').removeClass('navbar-fixed-top-menu-open');
 			jQuery('#lateral-menu').unbind('mouseleave');
+			jQuery('.techie-container').unbind('click', animationClose);
 		}
 		
 		function animationFinishOpen() {
 			jQuery('#lateral-menu').addClass('show-lateral-menu');
+			jQuery('.techie-container').bind('click', animationClose);
 		}
 		
 	}
