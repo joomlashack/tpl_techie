@@ -78,9 +78,6 @@ defined('_JEXEC') or die('Restricted access');
 				</div>
 			</header> 
 			<!-- header end -->
-			<?php if ($techieSlideshow) : ?>
-			<div class="<?php echo (!$techieSlideshow ? '' : 'techieSlideshowContainer');  ?>">
-			<?php endif ?>
 			<!-- top -->
 			<?php if ($this->countModules('top')) : ?> 
 			<div id="top-header"> 
@@ -226,9 +223,6 @@ defined('_JEXEC') or die('Restricted access');
 					</div>
 				</footer>
 			</div>
-			<?php if ($techieSlideshow) : ?>
-				</div>
-			<?php endif ?>
 			<?php if ($techieLateralMenu) : ?>
 			</div>
 			<?php endif ?>
