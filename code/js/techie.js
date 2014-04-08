@@ -37,7 +37,12 @@ jQuery(function() {
 		jQuery('.techie-container').animate({right: '390px'}, 500, animationFinishOpen);
 		jQuery('#lateral-menu').show();
 		jQuery('.navbar-fixed-top').addClass('navbar-fixed-top-menu-open');
+		jQuery('#lateral-menu').bind('mouseleave', animationClose);
 		} else {
+			animationClose();
+		}
+		
+		function animationClose () {
 			jQuery('.techie-container').animate({right: '0px'}, 500, animationFinishClose);	
 			jQuery('#lateral-menu').removeClass('show-lateral-menu');
 		}
@@ -45,6 +50,7 @@ jQuery(function() {
 		function animationFinishClose() {
 			jQuery('#lateral-menu').hide();
 			jQuery('.navbar-fixed-top').removeClass('navbar-fixed-top-menu-open');
+			jQuery('#lateral-menu').unbind('mouseleave');
 		}
 		
 		function animationFinishOpen() {
