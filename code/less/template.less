@@ -739,14 +739,10 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 							&.active {
 								> a {
 									background-color: transparent;
-									color: @headingTabColor;
-									&:hover , &:focus {
-										color: @tabBackground;
-									}
-
+									color: @tabBackground;
 									&:hover , &:focus {
 										background-color: none;
-										color: @tabBackground;
+										color: darken(@linkColor, 15%);
 									}
 
 									&:before {
@@ -754,9 +750,16 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 									}
 								}
 							}
+
 							&.current {
 								> a {
-									color: @headingTabColor;
+									color: @tabBackground;
+								}
+							}
+
+							&.deeper {
+								> a {
+									text-transform: uppercase;
 								}
 							}
 						}
