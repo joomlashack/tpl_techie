@@ -496,13 +496,47 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 .navbar {
 	.nav {
 		> li {
-			padding: 5px 15px;
+			padding: 10px 15px;
 			margin-right: 50px;
 			font-family: @altFontFamily;
+			> a {
+				color: @linkTopColor;
+				padding: 2px 0;
+				text-transform: uppercase;
+				.caret {
+					border-bottom-color: @linkTopColor;
+					border-top-color: @linkTopColor;
+					margin-top: 8px;
+					margin-left: 10px;
+					position: relative;
+				}
+			}
+
+			&.active {
+				background-color: @color_three;
+				> a {
+					box-shadow: none;
+					&:hover {
+						box-shadow: none;
+					}
+				}
+			}
+
 			&.dropdown {
 				.dropdown-menu {
+					border-radius: 0px;
+					box-shadow: none;
+					padding: 0px;
+					&:before , &:after {
+						content: none;
+					}
+
 					li {
+						border-top: 1px solid @color_four;
 						a {
+							padding: 10px 25px;
+							color: @linkTopColor;
+							text-transform: none;
 							&:hover , &:focus {
 								.caret {
 									border-top-color: transparent;
@@ -511,6 +545,15 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 							}
 
 							.caret {
+								border-top-color: transparent;
+								border-left-color: @dropdownLinkColor;
+							}
+
+							&:hover , &:focus {
+								background: @color_four;
+								.caret {
+									border-left-color: @dropdownLinkColorHover;
+								}
 							}
 						}
 
@@ -536,21 +579,40 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 								content: none;
 							}
 						}
+
+						&.active {
+							> a {
+								background-image: none;
+								background: @color_four;
+								.caret {
+									border-left-color: @dropdownLinkColorActive;
+								}
+
+								&:hover , &:focus {
+									.caret {
+										border-left-color: @dropdownLinkColorActive;
+									}
+								}
+							}
+						}
+					}
+
+					&.active {
+						&.deeper {
+							li {
+								background-color: @color_four;
+							}
+						}
 					}
 				}
-			}
 
-			> a {
-				color: @linkTopColor;
-				padding: 2px 0;
-				text-transform: uppercase;
-			}
-
-			.caret {
-				border-bottom-color: @linkTopColor;
-				border-top-color: @linkTopColor;
-				margin-top: 5px;
-				margin-left: 5px;
+				li {
+					&.deeper {
+						> a {
+							text-transform: uppercase;
+						}
+					}
+				}
 			}
 
 			&:focus , &:hover {
@@ -575,82 +637,10 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 				}
 			}
 
-			&.active {
-				background: @color_three;
-				> a {
-					position: relative;
-					box-shadow: none;
-					&:before , &:after {
-						content: '';
-						height: 0;
-						left: 0;
-						position: absolute;
-						width: 100%;
-					}
-
-					&:before {
-						top: 0;
-					}
-
-					&:after {
-						bottom: 0;
-					}
-
-					&:hover , &:focus {
-						background: @color_three;
-						box-shadow: none;
-					}
-				}
-			}
-
 			&.divider-vertical {
 				border-left-color: @grayLight;
 				margin-top: 0;
 				padding-bottom: 3px;
-			}
-		}
-	}
-}
-
-.navbar .nav > li > .dropdown-menu {
-	border-radius: 0px;
-	box-shadow: none;
-	padding: 0px;
-	&:before , &:after {
-		content: none;
-	}
-
-	> li {
-		border-top: 1px solid @color_four;
-		> a {
-			padding: 5px 15px;
-			color: @linkTopColor;
-			text-transform: uppercase;
-			.caret {
-				border-top-color: transparent;
-				border-left-color: @dropdownLinkColor;
-			}
-
-			&:hover , &:focus {
-				background: @color_four;
-				.caret {
-					border-left-color: @dropdownLinkColorHover;
-				}
-			}
-		}
-
-		&.active {
-			background: @color_four;
-			> a {
-				.caret {
-					border-left-color: @dropdownLinkColorActive;
-				}
-
-				&:hover , &:focus {
-					.caret {
-						border-left-color: @dropdownLinkColorActive;
-					}
-				}
 			}
 		}
 	}
@@ -689,7 +679,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 			color: @color_four;
 			margin: 0px;
 			text-align: center;
-			padding: 5px 0px;
+			padding: 11px 0px;
 			&:after {
 				content: none;
 			}
@@ -705,7 +695,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 				padding-bottom: 0px;
 				border-bottom: 1px solid @color_three;
 				> a {
-					font-size: @baseFontSize;
+					font-size: @baseFontSize + 2;
 					margin-left: 0px;
 					margin-right: 0px;
 					text-transform: uppercase;
