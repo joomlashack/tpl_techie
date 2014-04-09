@@ -404,10 +404,13 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	font-family: @altFontFamily;
 	text-transform: uppercase;
 	border-radius: 0;
-	padding: 5px 10px;
 	margin-right: 5px;
 	margin-bottom: 5px;
+	text-shadow: none;
+	font-size: @baseFontSize - 2;
+	line-height: 90%;
 	&.label-info {
+		padding: 5px 5px;
 		background-color: @color_three;
 		font-weight: normal;
 	}
@@ -1192,7 +1195,8 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 .pagination {
 	.counter {
 		float: none;
-		font-size: @baseFontSize + 2;
+		font-size: @baseFontSize;
+		color: @textColor;
 	}
 
 	ul {
@@ -1209,33 +1213,95 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 				font-size: @baseFontSize + 4;
 				color: @textColor;
 				text-shadow: none;
-				padding: 10px 20px;
-				border-bottom: 4px solid @color_one;
+				padding: 8px 13px;
 				margin-left: 5px;
 				&:hover {
 					color: @textColor;
 					background-color: @btnPrimaryBackgroundHighlight;
 				}
 			}
+			
+			
 
 			&.pagination-start {
 				a {
+					line-height: 95%;
 					border-bottom-left-radius: 0px;
 					border-top-left-radius: 0px;
+					&:before {
+						font-family: FontAwesome; 
+						content: '\f100';
+						margin-right: 10px;
+						font-size: 20px;
+					}
+				}
+			}
+			
+			&.pagination-prev {
+				a {
+					line-height: 95%;
+					border-bottom-left-radius: 0px;
+					border-top-left-radius: 0px;
+					&:before {
+						font-family: FontAwesome; 
+						content: '\f104';
+						margin-right: 10px;
+						font-size: 20px;
+					}
+				}
+			}
+			
+			&.pagination-next {
+				a {
+					line-height: 95%;
+					border-bottom-left-radius: 0px;
+					border-top-left-radius: 0px;
+					&:after {
+						font-family: FontAwesome; 
+						content: '\f105';
+						margin-left: 10px;
+						font-size: 20px;
+					}
+				}
+			}
+			
+			&.pagination-end {
+				a {
+					line-height: 95%;
+					border-bottom-left-radius: 0px;
+					border-top-left-radius: 0px;
+					&:after {
+						font-family: FontAwesome; 
+						content: '\f101';
+						margin-left: 10px;
+						font-size: 20px;
+					}
 				}
 			}
 
 			&.active {
 				a {
-					background-color: @btnPrimaryBackgroundHighlight;
-					color: @white;
+					background-color: @white;
+					color: @color_four;
 				}
 			}
-		}
 
-		> .disabled {
-			a {
-				border-bottom: none;
+			&:last-child {
+				a {
+					border-top-right-radius: 0px;
+					border-bottom-right-radius: 0px;
+				}
+			}
+
+			&.disabled {
+				> a {
+					background-color: @btnPrimaryBoder;
+					color: @white;
+					&:hover , &:focus {
+						background-color: @btnPrimaryBoder;
+						color: @white;
+					}
+				}
 			}
 		}
 	}
