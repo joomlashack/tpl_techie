@@ -495,6 +495,32 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 
 .navbar {
 	.nav {
+		li {
+			&.deeper {
+				> a {
+					.caret {
+						display: none;
+					}
+
+					&:after {
+						font-family: FontAwesome;
+						margin-left: 10px;
+						font-size: @baseFontSize - 2;
+						content: '\f0d7';
+					}
+
+					&:hover , &:focus {
+						&:after {
+							font-family: FontAwesome;
+							margin-left: 10px;
+							font-size: @baseFontSize - 2;
+							content: '\f0d7';
+						}
+					}
+				}
+			}
+		}
+
 		> li {
 			padding: 5px 15px;
 			margin-right: 50px;
@@ -510,6 +536,30 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 					margin-top: 8px;
 					margin-left: 10px;
 					position: relative;
+				}
+			}
+
+			&.deeper {
+				> a {
+					.caret {
+						display: none;
+					}
+
+					&:after {
+						font-family: FontAwesome;
+						margin-left: 10px;
+						font-size: @baseFontSize - 2;
+						content: '\f0d7';
+					}
+
+					&:hover , &:focus {
+						&:after {
+							font-family: FontAwesome;
+							margin-left: 10px;
+							font-size: @baseFontSize - 2;
+							content: '\f0d7';
+						}
+					}
 				}
 			}
 
@@ -535,7 +585,6 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 					li {
 						border-top: 1px solid @color_four;
 						a {
-							padding: 10px 25px;
 							color: @linkTopColor;
 							text-transform: none;
 							&:hover , &:focus {
@@ -554,6 +603,15 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 								background: @color_four;
 								.caret {
 									border-left-color: @dropdownLinkColorHover;
+								}
+							}
+						}
+
+						&.deeper {
+							> a {
+								&:after {
+									content: '\f0da';
+									float: right;
 								}
 							}
 						}
@@ -618,24 +676,6 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 
 			&:focus , &:hover {
 				background: @color_three;
-				> a {
-					position: relative;
-					&:before , &:after {
-						content: '';
-						height: 0;
-						left: 0;
-						position: absolute;
-						width: 100%;
-					}
-
-					&:before {
-						top: 0;
-					}
-
-					&:after {
-						bottom: 0;
-					}
-				}
 			}
 
 			&.divider-vertical {
