@@ -13,8 +13,14 @@ jQuery(function() {
 			}
 			jQuerySubChildren = jQuery(this).children();
 			jQuerySubChildren.each(function() {
+				var systemMessageChild = false;
 				jQueryHasChildren = jQuery(this).children();
-				if (jQueryHasChildren.length) {
+				jQueryHasChildren.each(function () {
+					if (jQuery(this).is('#system-message'))
+						if (jQuery(this).is('#system-message').childre().lenght)
+						systemMessageChild = true;
+				});
+				if (jQueryHasChildren.length && !systemMessageChild) {
 					jQuery('#main-content').addClass('content');
 					return;
 				}
