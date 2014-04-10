@@ -1253,6 +1253,12 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	}
 }
 
+.tooltip {
+	.tooltip-inner {
+		color: @white;
+	}
+}
+
 .pagination {
 	.counter {
 		float: none;
@@ -1264,7 +1270,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		border-radius: 0px;
 		box-shadow: none;
 		li {
-			a {
+			a , span {
 				background-color: @color_two;
 				background-image: none;
 				filter: none;
@@ -1272,11 +1278,12 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 				font-family: @altFontFamily;
 				border-radius: 0px;
 				border: 0px;
-				font-size: @baseFontSize + 4;
+				font-size: @baseFontSize + 2;
 				color: @textColor;
 				text-shadow: none;
-				padding: 8px 13px;
+				padding: 6px 10px;
 				margin-left: 5px;
+				line-height: 90%;
 				&:hover {
 					color: @textColor;
 					background-color: @btnPrimaryBackgroundHighlight;
@@ -1295,6 +1302,24 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 						font-size: 20px;
 					}
 				}
+
+				span {
+					background-color: @btnPrimaryBoder;
+					color: @white;
+					border-top-left-radius: 0px;
+					border-bottom-left-radius: 0px;
+					&:hover , &:focus {
+						background-color: @btnPrimaryBoder;
+						color: @white;
+					}
+
+					&:before {
+						font-family: FontAwesome;
+						content: '\f100';
+						margin-right: 10px;
+						font-size: 20px;
+					}
+				}
 			}
 
 			&.pagination-prev {
@@ -1302,6 +1327,22 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 					line-height: 95%;
 					border-bottom-left-radius: 0px;
 					border-top-left-radius: 0px;
+					&:before {
+						font-family: FontAwesome;
+						content: '\f104';
+						margin-right: 10px;
+						font-size: 20px;
+					}
+				}
+
+				span {
+					background-color: @btnPrimaryBoder;
+					color: @white;
+					&:hover , &:focus {
+						background-color: @btnPrimaryBoder;
+						color: @white;
+					}
+
 					&:before {
 						font-family: FontAwesome;
 						content: '\f104';
@@ -1340,6 +1381,13 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 			}
 
 			&.active {
+				a {
+					background-color: @white;
+					color: @color_four;
+				}
+			}
+
+			&.pagenav {
 				a {
 					background-color: @white;
 					color: @color_four;
