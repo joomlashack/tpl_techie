@@ -83,6 +83,10 @@ h6 {
 	&.btn-link {
 		border-bottom: none;
 	}
+
+	+ .btn {
+		margin-left: 5px;
+	}
 }
 
 blockquote {
@@ -114,6 +118,16 @@ blockquote {
 	}
 }
 
+.form-inline {
+	li {
+		list-style: none;
+	}
+}
+
+.finder {
+	margin-left: 5px;
+}
+
 .pagenav {
 	&.pager {
 		li {
@@ -134,18 +148,6 @@ blockquote {
 					background-color: @btnPrimaryBackgroundHighlight;
 				}
 			}
-		}
-	}
-}
-
-form {
-	.input-append , .input-prepend {
-		input[type="text"] {
-			height: 34px;
-		}
-
-		> .add-on {
-			padding: 11px 11px;
 		}
 	}
 }
@@ -323,7 +325,7 @@ body {
 					border: none;
 					padding-left: 0px;
 					padding-right: 0px;
-					&:hover, &:focus {
+					&:hover , &:focus {
 						text-decoration: underline;
 					}
 				}
