@@ -532,6 +532,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 				> a {
 					color: @color_four;
 				}
+
 				&:hover , &:focus {
 					background-color: @color_three;
 					> a {
@@ -770,6 +771,21 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 
 					.caret {
 						display: none;
+					}
+				}
+
+				&.highlight-parent {
+					background-color: @content-background;
+					padding-top: 0px;
+					> a {
+						color: @color_four;
+					}
+
+					&:hover , &:focus {
+						background-color: @color_three;
+						> a {
+							color: @linkTopColor;
+						}
 					}
 				}
 
@@ -1780,6 +1796,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 			font-weight: bold;
 		}
 	}
+
 	p {
 		&.readmore {
 			float: none;
