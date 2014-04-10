@@ -526,6 +526,19 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 					}
 				}
 			}
+
+			&.highlight-parent {
+				background-color: @content-background;
+				> a {
+					color: @color_four;
+				}
+				&:hover , &:focus {
+					background-color: @color_three;
+					> a {
+						color: @linkTopColor;
+					}
+				}
+			}
 		}
 
 		> li {
@@ -1229,8 +1242,6 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 					background-color: @btnPrimaryBackgroundHighlight;
 				}
 			}
-			
-			
 
 			&.pagination-start {
 				a {
@@ -1238,49 +1249,49 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 					border-bottom-left-radius: 0px;
 					border-top-left-radius: 0px;
 					&:before {
-						font-family: FontAwesome; 
+						font-family: FontAwesome;
 						content: '\f100';
 						margin-right: 10px;
 						font-size: 20px;
 					}
 				}
 			}
-			
+
 			&.pagination-prev {
 				a {
 					line-height: 95%;
 					border-bottom-left-radius: 0px;
 					border-top-left-radius: 0px;
 					&:before {
-						font-family: FontAwesome; 
+						font-family: FontAwesome;
 						content: '\f104';
 						margin-right: 10px;
 						font-size: 20px;
 					}
 				}
 			}
-			
+
 			&.pagination-next {
 				a {
 					line-height: 95%;
 					border-bottom-left-radius: 0px;
 					border-top-left-radius: 0px;
 					&:after {
-						font-family: FontAwesome; 
+						font-family: FontAwesome;
 						content: '\f105';
 						margin-left: 10px;
 						font-size: 20px;
 					}
 				}
 			}
-			
+
 			&.pagination-end {
 				a {
 					line-height: 95%;
 					border-bottom-left-radius: 0px;
 					border-top-left-radius: 0px;
 					&:after {
-						font-family: FontAwesome; 
+						font-family: FontAwesome;
 						content: '\f101';
 						margin-left: 10px;
 						font-size: 20px;
