@@ -938,6 +938,21 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 				}
 			}
 
+			&.highlight-parent {
+				background-color: @content-background;
+				padding-top: 0px;
+				> a {
+					color: @color_four;
+				}
+
+				&:hover , &:focus {
+					background-color: @color_three;
+					> a {
+						color: @linkTopColor;
+					}
+				}
+			}
+
 			&.dropdown {
 				.dropdown-menu {
 					position: relative;
