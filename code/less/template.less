@@ -34,25 +34,26 @@ h6 {
 	font-family: @altFontFamily;
 	border-radius: 0px;
 	border: 0px;
-	font-size: @baseFontSize + 4;
+	font-size: @baseFontSize + 2;
+	line-height: 90%;
 	color: @textColor;
 	text-shadow: none;
-	padding: 10px 20px;
+	padding: 6px 10px;
 	border-bottom: 4px solid @color_one;
 	&:hover {
 		color: @textColor;
 	}
 
 	&.btn-large {
-		font-size: @baseFontSize + 8;
+		font-size: @baseFontSize + 6;
 	}
 
 	&.btn-small {
-		font-size: @baseFontSize + 2;
+		font-size: @baseFontSize;
 	}
 
 	&.btn-mini {
-		font-size: @baseFontSize;
+		font-size: @baseFontSize - 2;
 	}
 
 	&.btn-inverse {
@@ -322,6 +323,9 @@ body {
 					border: none;
 					padding-left: 0px;
 					padding-right: 0px;
+					&:hover, &:focus {
+						text-decoration: underline;
+					}
 				}
 			}
 		}
@@ -410,8 +414,10 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 	text-shadow: none;
 	font-size: @baseFontSize - 2;
 	line-height: 90%;
+	padding: 8px;
+	font-weight: normal;
 	&.label-info {
-		padding: 5px 5px;
+		padding: 8px;
 		background-color: @color_three;
 		font-weight: normal;
 	}
