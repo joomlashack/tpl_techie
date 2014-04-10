@@ -3,6 +3,7 @@ jQuery(function() {
 	// Content on the main page
 
 	function contentHasContent() {
+		
 		jQueryContentChildren = jQuery('#main-content').children();
 		jQueryContentChildren.each(function() {
 			if (jQuery(this).is('aside')) {
@@ -13,21 +14,26 @@ jQuery(function() {
 			}
 			jQuerySubChildren = jQuery(this).children();
 			jQuerySubChildren.each(function() {
-				var messageHasChildren = false;
+			
 				if (jQuery(this).is('#system-message-container')) {
 					var jQuerySystemMessageChildren = jQuery(this).children();
-					jQuerySystemMessageChildren.each(function() {
-						if (jQuery(this).is('#system-message')) {
-							if (jQuery(this).children().length) {
-								messageHasChildren = true;
+					var hasSystemMessageChildren = false;
+					if (jQuerySystemMessageChildren.length) {
+						hasSystemMessageChildren = true;
+						jQuerySystemMessageChildren.each(function() {
+							if (jQuery(this).is('#system-message')) {
+								if (jQuery(this).children().length) {
+									jQuery('#main-content').addClass('content');
+									return;
+								}
 							}
-						}
-							
-					});
+								
+						});
+					} 
 				}
 								
 				jQueryHasChildren = jQuery(this).children();
-				if (jQueryHasChildren.length || messageHasChildren) {
+				if (jQueryHasChildren.length && !hasSystemMessageChildren) {
 					jQuery('#main-content').addClass('content');
 					return;
 				}
