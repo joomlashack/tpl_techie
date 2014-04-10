@@ -89,6 +89,22 @@ h6 {
 	}
 }
 
+.inputbox {
+	+ .btn {
+		margin-left: 5px;
+	}	
+}
+
+.item-page, .blog {
+	.page-header {
+	h2 {
+		font-size: @baseFontSize + 24;
+	}
+	margin-top: 0px;
+	margin-bottom: 0px;
+	}
+}
+
 blockquote {
 	padding: 20px 25px;
 	background: @color_three;
@@ -422,6 +438,9 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		padding: 8px;
 		background-color: @color_three;
 		font-weight: normal;
+		dt {
+			font-weight: normal;
+		}
 	}
 }
 
@@ -1588,6 +1607,7 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 
 .techie-container {
 	position: relative;
+	background-color: @bodyBackground;
 }
 
 .bg-wrapp {
