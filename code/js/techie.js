@@ -13,14 +13,21 @@ jQuery(function() {
 			}
 			jQuerySubChildren = jQuery(this).children();
 			jQuerySubChildren.each(function() {
-				var systemMessageChild = false;
+				var messageHasChildren = false;
+				if (jQuery(this).is('#system-message-container')) {
+					var jQuerySystemMessageChildren = jQuery(this).children();
+					jQuerySystemMessageChildren.each(function() {
+						if (jQuery(this).is('#system-message')) {
+							if (jQuery(this).children().length) {
+								messageHasChildren = true;
+							}
+						}
+							
+					});
+				}
+								
 				jQueryHasChildren = jQuery(this).children();
-				jQueryHasChildren.each(function () {
-					if (jQuery(this).is('#system-message'))
-						if (jQuery(this).is('#system-message').childre().lenght)
-						systemMessageChild = true;
-				});
-				if (jQueryHasChildren.length && !systemMessageChild) {
+				if (jQueryHasChildren.length || messageHasChildren) {
 					jQuery('#main-content').addClass('content');
 					return;
 				}
