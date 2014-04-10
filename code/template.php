@@ -46,7 +46,7 @@ defined('_JEXEC') or die('Restricted access');
 				<div class="<?php echo $containerClass ?>">
 					<div class="header-inner"> 
 						<w:logo name="top"/>
-						<?php if ($techieLateralMenu) : ?>
+						<?php if ($techieLateralMenu && $this->countModules('lateral-menu') ) : ?>
 						<div class="toolbar-collapse-btn">
 						<div class="legend-menu">MENU</div>
 						<div class="menu-icons-container">
