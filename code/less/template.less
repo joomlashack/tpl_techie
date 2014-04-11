@@ -128,6 +128,15 @@ h6 {
 	}
 }
 
+.item-page {
+	div {
+		img {
+			margin-top: 25px;
+			margin-bottom: 25px;
+		}
+	}
+}
+
 blockquote {
 	padding: 20px 25px;
 	background: @color_three;
@@ -169,6 +178,7 @@ blockquote {
 
 .pagenav {
 	&.pager {
+		margin: 50px 0px 0px 0px;
 		li {
 			a {
 				background-color: @color_two;
@@ -1729,6 +1739,25 @@ dl {
 
 #above-content {
 	margin-bottom: 50px;
+}
+
+dl {
+	&.article-info {
+		margin: 15px 0px 35px 0px;
+		font-size: @baseFontSize - 2;
+		[class ^= "icon-"] , [class *= " icon-"] {
+			margin-right: 3px;
+			text-decoration: none;
+			width: auto;
+		}
+
+		dd > div:hover , dd:hover {
+			background-color: transparent;
+			> i {
+				font-size: 1.2em;
+			}
+		}
+	}
 }
 
 #top-header {
