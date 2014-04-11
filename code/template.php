@@ -233,18 +233,16 @@ defined('_JEXEC') or die('Restricted access');
         <script type="text/javascript">
             jQuery(function(){
            	<?php if (!$techieSlideshow) : ?>
-             var BsModeFluid = true;
              var SlideShow = 0;
              slidesImgs = [{image : '<?php echo JURI::root(true) . $bg; ?>'}];
              <?php else: ?>
-             var BsModeFluid = false;
              var SlideShow = 1;
              var slidesImgs = [{image : '<?php echo JURI::root(true) . $slideshowImageOneRute; ?>'},
                                {image : '<?php echo JURI::root(true) . $slideshowImageTwoRute; ?>'},
                                {image : '<?php echo JURI::root(true) . $slideshowImageThreeRute ?>'},
                                {image : '<?php echo JURI::root(true) . $slideshowImageFourRute ?>'}]; 
              <?php endif; ?> 
-            	
+
                 jQuery.supersized({
                     // Functionality
                     slideshow               :    SlideShow,          // Slideshow on/off
@@ -280,7 +278,13 @@ defined('_JEXEC') or die('Restricted access');
                     progress_bar            :   0,          // Timer for each slide
                     mouse_scrub             :   0
                 });
-            });                    
+            });  
+             
+             <?php if ($bsMode) : ?>
+             var BsModeFluid = true;
+             <?php else: ?>
+             var BsModeFluid = false;
+             <?php endif; ?>                   
             
         </script>
  
