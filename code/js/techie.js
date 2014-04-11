@@ -58,7 +58,6 @@ jQuery(function() {
 			}, 500, animationFinishOpen);
 			jQuery('#lateral-menu').show();
 			jQuery('.navbar-fixed-top').addClass('navbar-fixed-top-menu-open');
-			jQuery('#lateral-menu').bind('mouseleave', animationClose);
 		} else {
 			animationClose();
 		}
@@ -75,7 +74,6 @@ jQuery(function() {
 			jQuery('.navbar-fixed-top').removeClass(
 					'navbar-fixed-top-menu-open');
 			jQuery('#lateral-menu').unbind('mouseleave');
-			jQuery('.techie-container').unbind('click', animationClose);
 		}
 
 		function animationFinishOpen() {
