@@ -50,10 +50,16 @@ h6 {
 
 	&.btn-small {
 		font-size: @baseFontSize;
+		.caret {
+			margin-top: 5px;
+		}
 	}
 
 	&.btn-mini {
 		font-size: @baseFontSize - 2;
+		.caret {
+			margin-top: 4px;
+		}
 	}
 
 	&.btn-inverse {
@@ -87,21 +93,38 @@ h6 {
 	+ .btn {
 		margin-left: 5px;
 	}
+
+	.caret {
+		margin-top: 5px;
+	}
+}
+
+.tab-pane {
+	&.active {
+		p {
+			margin-top: 10px;
+		}
+	}
+}
+
+.badge {
+	font-weight: normal;
 }
 
 .inputbox {
 	+ .btn {
 		margin-left: 5px;
-	}	
+	}
 }
 
-.item-page, .blog {
+.item-page , .blog {
 	.page-header {
-	h2 {
-		font-size: @baseFontSize + 24;
-	}
-	margin-top: 0px;
-	margin-bottom: 0px;
+		h2 {
+			font-size: @baseFontSize + 24;
+		}
+
+		margin-top: 0px;
+		margin-bottom: 0px;
 	}
 }
 
@@ -438,9 +461,19 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 		padding: 8px;
 		background-color: @color_three;
 		font-weight: normal;
-		dt {
+	}
+}
+
+dl {
+	&.label {
+		&.label-info {
+			padding: 8px;
 			font-weight: normal;
+			fonz-size: @baseFontSize;
 		}
+	}
+	dt {
+		font-weight: normal;
 	}
 }
 
@@ -1308,17 +1341,23 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 					background-color: @btnPrimaryBackgroundHighlight;
 				}
 			}
+			
+			span { 
+				&.pagenav {
+					background-color: @white;
+					color: @color_four;
+				}
+			}
 
 			&.pagination-start {
 				a {
-					line-height: 95%;
 					border-bottom-left-radius: 0px;
 					border-top-left-radius: 0px;
 					&:before {
 						font-family: FontAwesome;
 						content: '\f100';
 						margin-right: 10px;
-						font-size: 20px;
+						font-size: 18px;
 					}
 				}
 
@@ -1336,21 +1375,20 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 						font-family: FontAwesome;
 						content: '\f100';
 						margin-right: 10px;
-						font-size: 20px;
+						font-size: 18px;
 					}
 				}
 			}
 
 			&.pagination-prev {
 				a {
-					line-height: 95%;
 					border-bottom-left-radius: 0px;
 					border-top-left-radius: 0px;
 					&:before {
 						font-family: FontAwesome;
 						content: '\f104';
 						margin-right: 10px;
-						font-size: 20px;
+						font-size: 18px;
 					}
 				}
 
@@ -1366,35 +1404,33 @@ dl.tabs.nav h3 , dl.tabs.nav p {
 						font-family: FontAwesome;
 						content: '\f104';
 						margin-right: 10px;
-						font-size: 20px;
+						font-size: 18px;
 					}
 				}
 			}
 
 			&.pagination-next {
 				a {
-					line-height: 95%;
 					border-bottom-left-radius: 0px;
 					border-top-left-radius: 0px;
 					&:after {
 						font-family: FontAwesome;
 						content: '\f105';
 						margin-left: 10px;
-						font-size: 20px;
+						font-size: 18px;
 					}
 				}
 			}
 
 			&.pagination-end {
 				a {
-					line-height: 95%;
 					border-bottom-left-radius: 0px;
 					border-top-left-radius: 0px;
 					&:after {
 						font-family: FontAwesome;
 						content: '\f101';
 						margin-left: 10px;
-						font-size: 20px;
+						font-size: 18px;
 					}
 				}
 			}
