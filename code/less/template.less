@@ -472,6 +472,7 @@ dl {
 			fonz-size: @baseFontSize;
 		}
 	}
+
 	dt {
 		font-weight: normal;
 	}
@@ -1341,8 +1342,8 @@ dl {
 					background-color: @btnPrimaryBackgroundHighlight;
 				}
 			}
-			
-			span { 
+
+			span {
 				&.pagenav {
 					background-color: @white;
 					color: @color_four;
@@ -1722,6 +1723,14 @@ dl {
 	}
 }
 
+#below-content {
+	margin-top: 50px;
+}
+
+#above-content {
+	margin-bottom: 50px;
+}
+
 #top-header {
 	background: @hedaer-top;
 	.container , .container-fluid {
@@ -1737,6 +1746,12 @@ dl {
 				color: @activeTextColor;
 				img {
 					margin: 0px 5px;
+				}
+			}
+
+			.mod_1 {
+				&.span12 {
+					padding: 15px 0px;
 				}
 			}
 		}
