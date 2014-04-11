@@ -31,17 +31,8 @@ defined('_JEXEC') or die('Restricted access');
 			<?php endif; ?>
 			<!-- toolbar end -->
 			<!-- header -->
-			<header id="header" class="<?php echo (!$techieSlideshow ? '' : 'techieSlideshow');  ?>">
+			<header id="header" class="techieBackground <?php echo (!$techieSlideshow ? '' : 'techieSlideshow');  ?>">
 				<div class="top-object"></div>
-				<!-- Place holder inner images -->
-				<?php if ($bg && !$techieSlideshow) : ?>
-	          		<div class="bg-wrapp">
-		                <div class="bg-wrapp-inner">
-		                	<img id="bg-header" src="<?php echo JURI::root(true) . $bg; ?>" />
-		                </div>
-	            	</div>
-       			 <?php endif ?>				
-				<!-- Place holder inner images end -->
 				<!-- logo -->
 				<div class="<?php echo $containerClass ?>">
 					<div class="header-inner"> 
@@ -234,16 +225,29 @@ defined('_JEXEC') or die('Restricted access');
 			</div>
 			<?php endif; ?>
 			<!-- lateral-menu end -->
-		<?php if ($techieSlideshow) : ?>
+		
         <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_techie/js/jquery.easing.min.js"></script>
         <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_techie/js/supersized.min.js"></script>
         <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_techie/js/supersized.shutter.min.js"></script>
 
         <script type="text/javascript">
             jQuery(function(){
+           	<?php if (!$techieSlideshow) : ?>
+             var BsModeFluid = true;
+             var SlideShow = 0;
+             slidesImgs = [{image : '<?php echo JURI::root(true) . $bg; ?>'}];
+             <?php else: ?>
+             var BsModeFluid = false;
+             var SlideShow = 1;
+             var slidesImgs = [{image : '<?php echo JURI::root(true) . $slideshowImageOneRute; ?>'},
+                               {image : '<?php echo JURI::root(true) . $slideshowImageTwoRute; ?>'},
+                               {image : '<?php echo JURI::root(true) . $slideshowImageThreeRute ?>'},
+                               {image : '<?php echo JURI::root(true) . $slideshowImageFourRute ?>'}]; 
+             <?php endif; ?> 
+            	
                 jQuery.supersized({
                     // Functionality
-                    slideshow               :   1,          // Slideshow on/off
+                    slideshow               :    SlideShow,          // Slideshow on/off
                     autoplay                :   1,          // Slideshow starts playing automatically
                     start_slide             :   1,          // Start slide (0 is random)
                     stop_loop               :   0,          // Pauses slideshow on last slide
@@ -271,27 +275,15 @@ defined('_JEXEC') or die('Restricted access');
                     thumb_links             :   0,          // Individual thumb links for each slide
                     thumbnail_navigation    :   0,          // Thumbnail navigation
 
-                    slides                  :   [           // Slideshow Images
-                                                        {image : '<?php echo JURI::root(true) . $slideshowImageOneRute; ?>'},
-                                                        {image : '<?php echo JURI::root(true) . $slideshowImageTwoRute; ?>'},
-                                                        {image : '<?php echo JURI::root(true) . $slideshowImageThreeRute ?>'},
-                                                        {image : '<?php echo JURI::root(true) . $slideshowImageFourRute ?>'}
-                                                ],
+                    slides                  :   slidesImgs,
                     // Theme Options
                     progress_bar            :   0,          // Timer for each slide
                     mouse_scrub             :   0
                 });
-            });
-            
-             <?php if ($bsMode) : ?>
-             var BsModeFluid = true;
-             <?php else: ?>
-             var BsModeFluid = false;
-             <?php endif; ?> 
-                        
+            });                    
             
         </script>
-  	  	<?php endif; ?>
+ 
 		<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_techie/js/techie.js'></script>
 		</body>
 	</html>

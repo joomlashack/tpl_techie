@@ -123,9 +123,11 @@ h6 {
 		h2 {
 			font-size: @baseFontSize + 24;
 		}
+
 		margin-top: 0px;
 		margin-bottom: 0px;
 	}
+
 	div {
 		img {
 			margin-top: 25px;
@@ -1505,21 +1507,22 @@ dl {
 
 #header {
 	.top-properties ();
-	.top-object {
-		background-image: url(../images/top-logo-object.png);
-		background-repeat: no-repeat;
-		background-position: bottom right;
-		position: absolute;
-		width: 100%;
+	&.techieBackground {
 		height: 100%;
-		z-index: 1;
+		margin-bottom: 0;
+		z-index: 0;
+		.top-object {
+			background-image: url(../images/top-logo-object.png);
+			background-repeat: no-repeat;
+			background-position: bottom right;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+		}
 	}
 
 	&.techieSlideshow {
-		height: 100%;
-		margin-bottom: 0;
-		background-position: bottom left;
-		z-index: 0;
 		.top-object {
 			background-position: bottom left;
 		}
@@ -2223,7 +2226,7 @@ dl {
 
 .button {
 	&.finder {
-		margin: 0 0 10px;	
+		margin: 0 0 10px;
 	}
 }
 
