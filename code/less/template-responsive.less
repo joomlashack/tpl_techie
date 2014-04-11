@@ -284,10 +284,9 @@
 		}
 
 		&.techieBackground {
-			.top-object { 
+			.top-object {
 				background-image: none;
 			}
-			
 		}
 	}
 
@@ -503,7 +502,8 @@
 			.icon-bar {
 				height: 1px;
 			}
-		} 
+		}
+
 		.nav {
 			padding-left: 0px;
 			padding-right: 0px;
@@ -751,6 +751,73 @@
 		padding-left: 20px;
 		padding-right: 20px;
 		width: auto;
+	}
+
+	[class ^= "item"] {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.pagination {
+		.counter {
+		}
+
+		ul {
+			li {
+				a , span {
+					font-size: @baseFontSize - 2;
+				}
+
+				&.pagination-start {
+					a {
+						border-bottom-left-radius: 0px;
+						border-top-left-radius: 0px;
+						&:before {
+							font-family: FontAwesome;
+							content: '\f100';
+							margin-right: 10px;
+							font-size: @baseFontSize - 2;
+						}
+					}
+
+					span {
+						&:before {
+							font-size: @baseFontSize - 2;
+						}
+					}
+				}
+
+				&.pagination-prev {
+					a {
+						&:before {
+							font-size: @baseFontSize - 2;
+						}
+					}
+
+					span {
+						&:before {
+							font-size: @baseFontSize - 2;
+						}
+					}
+				}
+
+				&.pagination-next {
+					a {
+						&:after {
+							font-size: @baseFontSize - 2;
+						}
+					}
+				}
+
+				&.pagination-end {
+					a {
+						&:after {
+							font-size: @baseFontSize - 2;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
