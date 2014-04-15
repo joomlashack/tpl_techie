@@ -38,6 +38,13 @@ div , form {
 
 #top-header {
 	color: @white;
+	.container , .container-fluid {
+		.row , .row-fluid {
+			&:first-child {
+				color: @white;
+			}
+		}
+	}
 }
 
 #breadcrumbs {
