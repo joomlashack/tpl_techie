@@ -4,26 +4,32 @@
 // ------------------------
 h1 {
 	font-size: 40px;
+	color: @headingTabColor;
 }
 
 h2 {
 	font-size: 30px;
+	color: @headingTabColor;
 }
 
 h3 {
 	font-size: 24px;
+	color: @headingTabColor;
 }
 
 h4 {
 	font-size: 20px;
+	color: @headingTabColor;
 }
 
 h5 {
 	font-size: 16px;
+	color: @headingTabColor;
 }
 
 h6 {
 	font-size: 14px;
+	color: @headingTabColor;
 }
 
 a {
@@ -35,6 +41,10 @@ a {
 
 p {
 	margin: 0 0 20px;
+}
+
+.hero-unit {
+	margin-top: 50px;
 }
 
 .btn {
@@ -181,6 +191,7 @@ blockquote {
 	}
 
 	&.pull-right {
+		border-right: 0px;
 		small {
 			&:after {
 				content: none;
@@ -329,6 +340,7 @@ fieldset {
 
 .page-header {
 	margin-top: 30px;
+	border-bottom: 0px;
 }
 
 div {
@@ -2180,8 +2192,16 @@ dl {
 	margin-top: 10px;
 }
 
+div {
+	&.bs-docs-example {
+		&:after {
+			font-weight: normal;
+		}
+	}
+}
+
 #breadcrumbs {
-	background: @white;
+	background-color: @white;
 	margin-bottom: 0px;
 	color: @activeTextColor;
 	font-size: @baseFontSize;
@@ -2284,6 +2304,13 @@ label {
 .cat-children {
 	ul {
 		padding: 0px;
+	}
+}
+
+.list-striped li:nth-child(odd) , .list-striped dd:nth-child(odd) , .row-striped .row:nth-child(odd) , .row-striped .row-fluid:nth-child(odd) {
+	background-color: transparent;
+	&:hover {
+		background-color: transparent;
 	}
 }
 
