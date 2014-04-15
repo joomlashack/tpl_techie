@@ -8,6 +8,23 @@
 	}
 }
 
+.nav-tabs {
+	border-bottom: 1px solid @color_one;
+	.open {
+		h3 a , span a {
+			border-top: 2px solid @hedaer-top;
+			border-bottom: 1px solid @hedaer-top;
+			background-color: @hedaer-top;
+			&:hover {
+				background: @btnHoverBackground;
+				border-top: 2px solid @btnHoverBackground;
+				border-bottom: 1px solid @btnHoverBackground;
+				color: @white ! important;
+			}
+		}
+	}
+}
+
 div , form {
 	&.bs-docs-example {
 		background-color: @bodyBackground;
@@ -122,6 +139,7 @@ body {
 					color: @topHeaderColor;
 				}
 			}
+
 			> tr:nth-child(2n) {
 				> td , > th {
 					background-color: @color_five;
