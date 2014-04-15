@@ -1,6 +1,5 @@
  // Typografhy styles
 
-@import 'variables-bamboo-light.less';
 // Headings
 // ------------------------
 h1 {
@@ -53,6 +52,7 @@ p {
 	border-bottom: 4px solid @color_one;
 	&:hover {
 		color: @textColor;
+		background-color: @btnHoverBackground;
 	}
 
 	&.btn-large {
@@ -78,27 +78,43 @@ p {
 		border-bottom: 4px solid lighten(@grayDarker, 25%);
 		&:hover {
 			color: @white;
+			background-color: @btnInverseBackgroundHighlight;
 		}
 	}
 
 	&.btn-info {
 		border-bottom: 4px solid darken(@btnInfoBackground, 25%);
+		&:hover {
+			background-color: @btnInfoBackgroundHighlight;
+		}
 	}
 
 	&.btn-success {
 		border-bottom: 4px solid darken(@btnSuccessBackground, 25%);
+		&:hover {
+			background-color: @btnSuccessBackgroundHighlight;
+		}
 	}
 
 	&.btn-warning {
 		border-bottom: 4px solid darken(@btnWarningBackground, 25%);
+		&:hover {
+			background-color: @btnWarningBackgroundHighlight;
+		}
 	}
 
 	&.btn-danger {
 		border-bottom: 4px solid darken(@btnDangerBackground, 25%);
+		&:hover {
+			background-color: @btnDangerBackgroundHighlight;
+		}
 	}
 
 	&.btn-link {
 		border-bottom: none;
+		&:hover {
+			background-color: transparent;
+		}
 	}
 
 	+ .btn {
@@ -408,7 +424,8 @@ dl {
 					font-weight: normal;
 					&:hover {
 						text-decoration: none;
-						background: @linkColor;
+						background: @tableBackgroundHover;
+						color: @color_one;
 					}
 				}
 			}
