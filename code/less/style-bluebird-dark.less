@@ -1,0 +1,159 @@
+.module_ms4 , .moduletable_ms4 , .moduletext_ms4 {
+	color: @moduleStyleTextColor;
+}
+
+.nav {
+	+ .current {
+		background-color: @hedaer-top;
+	}
+}
+
+.nav-tabs {
+	border-bottom: 1px solid @color_one;
+	.open {
+		h3 a , span a {
+			border-top: 2px solid @hedaer-top;
+			border-bottom: 1px solid @hedaer-top;
+			background-color: @hedaer-top;
+			color: @white ! important;
+			&:hover {
+				background: @hedaer-top;
+				border-top: 2px solid @hedaer-top;
+				border-bottom: 1px solid @hedaer-top;
+			}
+		}
+	}
+}
+
+div , form {
+	&.bs-docs-example {
+		background-color: @bodyBackground;
+		border: 0px;
+		&:after {
+			font-weight: normal;
+			color: @hedaer-top;
+		}
+	}
+}
+
+#top-header {
+	color: @white;
+	.container , .container-fluid {
+		.row , .row-fluid {
+			&:first-child {
+				color: @white;
+			}
+		}
+	}
+}
+
+#breadcrumbs {
+	background-color: @hedaer-top;
+	color: @white;
+	.breadcrumb {
+		> li {
+			[class ^= "icon-"] , [class *= " icon-"] {
+				&:before {
+					color: @white;
+				}
+			}
+		}
+	}
+}
+
+.hero-unit {
+	background-color: @hedaer-top;
+	color: @white;
+	h1 , h2 , h3 , h4 , h5 , h6 {
+		color: @headingTabColor;
+	}
+}
+
+.btn {
+	color: @color_four;
+	&:hover {
+		color: @color_four;
+	}
+}
+
+#content-wrapper {
+	#content {
+		.row , .row-fluid {
+			.module_ms3 {
+				h3 {
+					color: @white;
+				}
+			}
+		}
+	}
+}
+
+.list-striped li {
+	&:hover {
+		background-color: transparent;
+	}
+}
+
+body {
+	ol.linenums li {
+		text-shadow: none;
+		color: @white;
+	}
+}
+
+#content-wrapper {
+	#content {
+		.row , .row-fluid {
+			.module_ms3 {
+				color: @moduleStyleTextColor;
+			}
+		}
+	}
+}
+
+#top-header {
+	.container , .container-fluid {
+		.row , .row-fluid {
+			&:first-child {
+				h1 , h2 , h3 , h4 , h5 , h6 {
+					color: @topHeaderColor;
+				}
+			}
+
+			.mod_1 {
+				&.span12 {
+					padding: 15px 0px;
+				}
+			}
+		}
+	}
+}
+
+.table {
+	td {
+		color: @topHeaderColor;
+	}
+
+	thead {
+		color: @white;
+	}
+
+	&.table-striped {
+		tbody {
+			> tr:nth-child(2n + 1) {
+				> td , > th {
+					background-color: @stripedFirst;
+					color: @topHeaderColor;
+				}
+			}
+
+			> tr:nth-child(2n) {
+				> td , > th {
+					background-color: @color_five;
+					color: @topHeaderColor;
+				}
+			}
+		}
+	}
+}
+
