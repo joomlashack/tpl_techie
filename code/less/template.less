@@ -403,7 +403,7 @@ body {
 		&.nav-stacked {
 			li {
 				border-bottom: 0px;
-				a {
+				> a {
 					border-top-left-radius: 0px;
 					border-top-right-radius: 0px;
 					border: none;
@@ -412,6 +412,13 @@ body {
 					&:hover , &:focus {
 						text-decoration: underline;
 					}
+					&:last-child {
+					border-bottom-left-radius: 0px;
+					border-bottom-right-radius: 0px;
+					&:hover {
+						background-color: transparent;
+					}
+				}
 				}
 			}
 		}
@@ -473,6 +480,17 @@ dl {
 			text-decoration: none;
 			&:hover {
 				background: @white;
+			}
+		}
+	}
+	
+	li {
+		&.active {
+			> a {
+				background-color: @white;
+				&:hover {
+					background-color: @white;
+				}
 			}
 		}
 	}
@@ -1314,9 +1332,12 @@ legend {
 
 		li {
 			> a {
+				border: none;
 				&:hover , &:focus {
 					border-left: 0;
-					margin-left: 1px;
+					font-size: @baseFontSize + 2;
+					border-radius: 0px;
+					border: none;
 				}
 			}
 
@@ -1394,21 +1415,21 @@ legend {
 				border-radius: 0px;
 				border: 0px;
 				font-size: @baseFontSize + 2;
-				color: @textColor;
+				color: @paginationColor;
 				text-shadow: none;
 				padding: 6px 10px;
 				margin-left: 5px;
 				line-height: 90%;
 				&:hover {
-					color: @textColor;
-					background-color: @btnPrimaryBackgroundHighlight;
+					color: @paginationColor;
+					background-color: @btnHoverBackground;
 				}
 			}
 
 			span {
 				&.pagenav {
-					background-color: @white;
-					color: @color_four;
+					background-color: @paginationActiveHoverBackground;
+					color: @pagintaionActiveColor;
 				}
 			}
 
@@ -1425,12 +1446,12 @@ legend {
 				}
 
 				span {
-					background-color: @btnPrimaryBoder;
+					background-color: @paginationDisableBackground;
 					color: @white;
 					border-top-left-radius: 0px;
 					border-bottom-left-radius: 0px;
 					&:hover , &:focus {
-						background-color: @btnPrimaryBoder;
+						background-color: @paginationDisableBackground;
 						color: @white;
 					}
 
@@ -1456,10 +1477,10 @@ legend {
 				}
 
 				span {
-					background-color: @btnPrimaryBoder;
+					background-color: @paginationDisableBackground;
 					color: @white;
 					&:hover , &:focus {
-						background-color: @btnPrimaryBoder;
+						background-color: @paginationDisableBackground;
 						color: @white;
 					}
 
@@ -1483,6 +1504,21 @@ legend {
 						font-size: 18px;
 					}
 				}
+				span {
+					background-color: @paginationDisableBackground;
+					color: @white;
+					&:hover , &:focus {
+						background-color: @paginationDisableBackground;
+						color: @white;
+					}
+
+					&:before {
+						font-family: FontAwesome;
+						content: '\f104';
+						margin-right: 10px;
+						font-size: 18px;
+					}
+				}
 			}
 
 			&.pagination-end {
@@ -1496,12 +1532,27 @@ legend {
 						font-size: 18px;
 					}
 				}
+				span {
+					background-color: @paginationDisableBackground;
+					color: @white;
+					&:hover , &:focus {
+						background-color: @paginationDisableBackground;
+						color: @white;
+					}
+
+					&:before {
+						font-family: FontAwesome;
+						content: '\f104';
+						margin-right: 10px;
+						font-size: 18px;
+					}
+				}
 			}
 
 			&.active {
 				a {
-					background-color: @white;
-					color: @color_four;
+					background-color: @paginationActiveHoverBackground;
+					color: @pagintaionActiveColor;
 				}
 			}
 
@@ -1521,10 +1572,10 @@ legend {
 
 			&.disabled {
 				> a {
-					background-color: @btnPrimaryBoder;
+					background-color: @paginationDisableBackground;
 					color: @white;
 					&:hover , &:focus {
-						background-color: @btnPrimaryBoder;
+						background-color: @paginationDisableBackground;
 						color: @white;
 					}
 				}
