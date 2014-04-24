@@ -1,7 +1,3 @@
- // Typografhy styles
-
-// Headings
-// ------------------------
 h1 {
 	font-size: 40px;
 	color: @headingTabColor;
@@ -838,6 +834,19 @@ legend {
 				border-left-color: @grayLight;
 				margin-top: 0;
 				padding-bottom: 3px;
+			}
+		}
+	}
+}
+
+ul {
+	&.actions {
+		&.dropdown-menu {
+			min-width: 25px;
+			> li {
+				> a {
+					padding: 5px 14px;
+				}
 			}
 		}
 	}
