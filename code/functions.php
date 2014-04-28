@@ -10,6 +10,12 @@
 // Restrict Access to within Joomla
 defined('_JEXEC') or die('Restricted access');
 
+
+//Temporal debugger
+
+require_once($_SERVER['DOCUMENT_ROOT']."/debugger/FirePHPCore/FirePHP.class.php");
+$firephp = FirePHP::getInstance(true);
+
 // get the bootstrap row mode ( row / row-fluid )
 $gridMode = $this->params->get('bs_rowmode','row-fluid');
 $containerClass = 'container';
@@ -76,4 +82,34 @@ $techieLateralMenu = ($this->params->get('techie_lateral_menu_displayed', '0') =
 $bsMode = ($this->params->get('bs_rowmode', '0') == 'row-fluid' ? true : false);
 
 
+// Dynamic slideshow 
+
+$techieCategorySlideShow = $this->params->get('slideshow_category','');
+
+function  getSectionItems($itemsCategory) {
+    $database = &JFactory::getDBO();
+    $sql = "SELECT * FROM #__content WHERE catid = $itemsCategory";
+    $database->setQuery( $sql );
+    return $database->loadAssocList();
+}
+
+function getSlideItems($activeCategory) {
+
+    $categoryItems = getSectionItems($activeCategory);
+
+    $itemOptions = array();
+
+    foreach ($categoryItems as $key => $item ) {
+          $itemOptions[$key]['id'] = $item['id'];
+          $itemOptions[$key]['content'] = strip_tags($item['fulltext']);
+          $itemOptions[$key]['title'] = $item['title'];
+          $itemOptions[$key]['image'] = JURI::root(true) . "/" .json_decode($item['images'], true)['image_intro'];
+          $itemOptions[$key]['slide'] = 'slide-' . $key;
+    }
+
+    $slides  =  json_encode($itemOptions);
+
+    return $slides;
+
+}
 
