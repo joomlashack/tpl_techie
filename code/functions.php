@@ -89,7 +89,7 @@ $techieCategorySlideShow = $this->params->get('slideshow_category','');
 function  getSectionItems($itemsCategory) {
     $database = &JFactory::getDBO();
     $sql = "SELECT * FROM #__content WHERE catid = $itemsCategory";
-    $database->setQuery( $sql );
+    $database->setQuery($sql);
     return $database->loadAssocList();
 }
 
@@ -101,13 +101,15 @@ function getSlideItems($activeCategory) {
 
     foreach ($categoryItems as $key => $item ) {
           $itemOptions[$key]['id'] = $item['id'];
-          $itemOptions[$key]['content'] = strip_tags($item['fulltext']);
+          $itemOptions[$key]['content'] = strip_tags($item['introtext']);
           $itemOptions[$key]['title'] = $item['title'];
           $itemOptions[$key]['image'] = JURI::root(true) . "/" .json_decode($item['images'], true)['image_intro'];
           $itemOptions[$key]['slide'] = 'slide-' . $key;
     }
 
     $slides  =  json_encode($itemOptions);
+
+
 
     return $slides;
 

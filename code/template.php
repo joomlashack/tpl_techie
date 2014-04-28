@@ -54,13 +54,8 @@ defined('_JEXEC') or die('Restricted access');
 					<?php else: ?>
 					 	<div class="<?php echo $containerClass ?> slide-arrows-container">
 					 	<a id="prevslide" class="load-item"></a>
-			            <a id="nextslide" class="load-item"></a>	
-					 	<div id="current-slide-item" class="item"><h1>Designed to make your life easier.</h1>
-					 	<p>
-					 	Since 2005, Joomlashack has been building cool templates.
-					 	We call them “Strictly Joomla” because in most cases you can 
-					 	install them using only the Joomla CMS’s built-in features, making it simple, quick, and easy.
-					 	</p>	
+			            <a id="nextslide" class="load-item"></a>
+			            <div id="slide-text-element">	
 					 	</div>
 					 	</div>	
 					<?php endif ?>

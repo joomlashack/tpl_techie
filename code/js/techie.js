@@ -6,34 +6,25 @@ jQuery(function() {
 
         var renderElment = [];
         var slideItem = [];
+        var showSlideContentClass = 'show-slide-content';
 
         for (var i = 0; i < slidesImgs.length; i++) {
-        	renderElment.push('<div class="container">');
-            renderElment.push('<div class="item current-slide-item-inner">');
+
+            if (i > 0) {
+                showSlideContentClass = 'hide-slide-content';
+            }
+
+            renderElment.push('<div class="current-slide-item item ' + showSlideContentClass + '" id ="slide-text-' + i + '">');
             renderElment.push('<h1>' + slidesImgs[i].title + '</h1>');
             renderElment.push('<p>' + slidesImgs[i].content + '</p>');
             renderElment.push('</div>');
-            renderElment.push('</div>');
             var stringArray = renderElment.join("");
-            slideItem.push({
-                slide: 'slide-' + i,
-                item: stringArray
-            });
         };
 
-        return slideItem;
+        jQuery('#slide-text-element').html(stringArray);
 
     }
 
-    function itemElements() {
-
-        var kollektionItem = RenderElements();
-
-        for (var i = 0; i < kollektionItem.length; i++) {
-            jQuery(kollektionItem[i].item).appendTo('.' + kollektionItem[i].slide + ' > a');
-        };
-
-    }
 
     jQuery.supersized({
         // Functionality
@@ -54,7 +45,7 @@ jQuery(function() {
         // Size & Position
         min_width: 0, // Min width allowed (in pixels)
         min_height: 0, // Min height allowed (in pixels)
-        vertical_center: 0, // Vertically center background
+        vertical_center: 1, // Vertically center background
         horizontal_center: 1, // Horizontally center background
         fit_always: 0, // Image will never exceed browser width or height (Ignores min. dimensions)
         fit_portrait: 0, // Portrait images will not exceed browser height
@@ -71,7 +62,33 @@ jQuery(function() {
         mouse_scrub: 0
     });
 
-	itemElements();
+    if (SlideShow == 1) {
+
+        jQuery('#prevslide').click(function() {
+            api.prevSlide();
+        });
+
+
+        jQuery('#nextslide').click(function() {
+            api.nextSlide();
+        });
+
+        theme = {
+            _init: function() {
+                jQuery('#slide-text-' + vars.current_slide).show('fast').addClass('current-content');
+            },
+            afterAnimation: function() {
+                jQuery('.current-content').hide().removeClass('current-content');
+                jQuery('#slide-text-' + vars.current_slide).fadeIn('fast').addClass('current-content');
+            }
+        }
+
+    }
+
+
+    RenderElements();
+
+    jQuery(document).change(function () { console.log('ja');});
 
     // Content on the main page
 
