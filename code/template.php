@@ -15,7 +15,7 @@
 defined('_JEXEC') or die('Restricted access');
 ?>
 <doctype>
-	<html>
+	<html> 
 		<head>
 			<w:head /> 
 			<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
