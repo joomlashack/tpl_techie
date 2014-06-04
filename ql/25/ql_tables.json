@@ -187,9 +187,6 @@
     },
     {
       "table_name": "y7fiv_wf_profiles"
-    },
-    {
-      "table_name": "y7fiv_lifestream_feeds"
     }
   ]
 }
