@@ -10,12 +10,6 @@
 // Restrict Access to within Joomla
 defined('_JEXEC') or die('Restricted access');
 
-
-//Temporal debugger
-
-require_once($_SERVER['DOCUMENT_ROOT']."/debugger/FirePHPCore/FirePHP.class.php");
-$firephp = FirePHP::getInstance(true);
-
 // get the bootstrap row mode ( row / row-fluid )
 $gridMode = $this->params->get('bs_rowmode','row-fluid');
 $containerClass = 'container';
@@ -57,20 +51,11 @@ function checkImage($img, $default) {
         return $img;
 }
 $techieSlideshow = ($this->params->get('enableSlideshow', '0') == '1' ? true : false);
-$slideshowImageOne = checkImage($this->params->get("slideshowImageOne", ""), "templates/js_techie/images/default-bg-one.jpg");
-$slideshowImageTwo = checkImage($this->params->get("slideshowImageTwo", ""), "templates/js_techie/images/default-bg-two.jpg");
-$slideshowImageThree = checkImage($this->params->get("slideshowImageThree", ""), "templates/js_techie/images/default-bg-three.jpg");
-$slideshowImageFour = checkImage($this->params->get("slideshowImageFour", ""), "templates/js_techie/images/default-bg-four.jpg");
 
 function slideshowSetRutDefult($slideItem){
     $slideItemRute = str_replace(JPATH_BASE,'',$slideItem);
     return $slideItemRute;
 }
-
-$slideshowImageOneRute = slideshowSetRutDefult($slideshowImageOne);
-$slideshowImageTwoRute = slideshowSetRutDefult($slideshowImageTwo);
-$slideshowImageThreeRute = slideshowSetRutDefult($slideshowImageThree);
-$slideshowImageFourRute = slideshowSetRutDefult($slideshowImageFour);
 
 
 //Lateral menu
@@ -87,7 +72,7 @@ $bsMode = ($this->params->get('bs_rowmode', '0') == 'row-fluid' ? true : false);
 $techieCategorySlideShow = $this->params->get('slideshow_category','');
 
 function  getSectionItems($itemsCategory) {
-    $database = &JFactory::getDBO();
+    $database = JFactory::getDBO();
     $sql = "SELECT * FROM #__content WHERE catid = $itemsCategory";
     $database->setQuery($sql);
     return $database->loadAssocList();
@@ -103,7 +88,8 @@ function getSlideItems($activeCategory) {
           $itemOptions[$key]['id'] = $item['id'];
           $itemOptions[$key]['content'] = strip_tags($item['introtext']);
           $itemOptions[$key]['title'] = $item['title'];
-          $itemOptions[$key]['image'] = JURI::root(true) . "/" .json_decode($item['images'], true)['image_intro'];
+          $images = json_decode($item['images'], true);
+          $itemOptions[$key]['image'] = JURI::root(true) . "/" .$images['image_intro'];
           $itemOptions[$key]['slide'] = 'slide-' . $key;
     }
 
