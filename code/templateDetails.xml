@@ -8,7 +8,7 @@
     <authorUrl>http://www.joomlashack.com</authorUrl>
     <copyright>Copyright Joomlashack 2014. All rights reserved</copyright>
     <license>GNU GPLv2</license>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
     <description>TPL_JS_TECHIE_XML_DESCRIPTION</description>
 
     <languages folder="language">
@@ -124,6 +124,7 @@
                     <option value="1">JYES</option>
                 </field>
                 <field name="slideshow_category" type="category" extension="com_content" default="" label="TPL_JS_TECHIE_SLIDESHOW_CATEGORY" description="TPL_JS_TECHIE_SLIDESHOW_CATEGORY_DESC" />
+                <field name="slideshow_character_count" type="text" default="100" label="TPL_JS_TECHIE_SLIDESHOW_CHARACTER_NUMBER" description="TPL_JS_TECHIE_SLIDESHOW_CHARACTER_DESC" />
             </fieldset>
         </fields>
     </config>
