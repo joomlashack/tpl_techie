@@ -50,10 +50,7 @@ function checkImage($img, $default) {
 
         return $img;
 }
-
 $techieSlideshow = ($this->params->get('enableSlideshow', '0') == '1' ? true : false);
-$techieCharacterNumberSlideShow = $this->params->get('slideshow_character_count');
-$characterNumber = intval($techieCharacterNumberSlideShow);
 
 function slideshowSetRutDefult($slideItem){
     $slideItemRute = str_replace(JPATH_BASE,'',$slideItem);
@@ -84,13 +81,12 @@ function  getSectionItems($itemsCategory) {
 function getSlideItems($activeCategory) {
 
     $categoryItems = getSectionItems($activeCategory);
-    $characterValue = (int)$techieCharacterNumberSlideShow;
 
     $itemOptions = array();
 
     foreach ($categoryItems as $key => $item ) {
           $itemOptions[$key]['id'] = $item['id'];
-          $itemOptions[$key]['content'] = getTextforSlide(strip_tags($item['introtext']));
+          $itemOptions[$key]['content'] = strip_tags($item['introtext']);
           $itemOptions[$key]['title'] = $item['title'];
           $images = json_decode($item['images'], true);
           $itemOptions[$key]['image'] = JURI::root(true) . "/" .$images['image_intro'];
@@ -99,19 +95,9 @@ function getSlideItems($activeCategory) {
 
     $slides  =  json_encode($itemOptions);
 
+
+
     return $slides;
-}
-
-//Default character number
-
-function getTextforSlide ($cleanText) {
-
-    $contentToString = (string)$cleanText;
-
-    $returnStringIndex = substr($contentToString, 0, $characterNumber);
-
-    return $returnStringIndex;
 
 }
-
 
