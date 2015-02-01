@@ -2392,3 +2392,41 @@ label {
 	}
 }
 
+
+// ----------------------------------------------------------------------------------
+// Shackslides 3
+
+#featured , #above-content{
+    div.jss-slider .jss-navigation {
+        .jss-navigation-buttons {
+            [class*='owl-'] {
+                .rotate(0deg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                border: 0;
+                height: 68px;
+            }
+
+            .owl-prev {
+                background-image: url("../images/slideshow-nav-prev.png");
+            }
+
+            .owl-next {
+                background-image: url("../images/slideshow-nav-next.png");
+            }
+        }
+
+        .jss-navigation-dots {
+            .owl-dot {
+                &.active {
+                    > div {
+                        &:after {
+                            background-color: @color_one;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
