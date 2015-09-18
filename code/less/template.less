@@ -1056,130 +1056,285 @@ ul {
 	}
 }
 
-.module {
-	.nav {
-		padding-left: 0px;
-		padding-right: 0px;
-		li {
-			padding-top: 5px;
-			padding-bottom: 5px;
-			border-bottom: 1px solid @boderModuleStyleColor;
-			> a {
-				font-size: @baseFontSize + 2;
-				margin-left: 0px;
-				margin-right: 0px;
-				&:hover , &:focus {
-					background: none;
+.nav-list {
+	padding-left: 0px;
+	padding-right: 0px;
+	li {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid @boderModuleStyleColor;
+		> a {
+			font-size: @baseFontSize + 2;
+
+			&:hover , &:focus {
+				background: none;
+				color: darken(@linkColor, 15%);
+				[class ^= "icon-"] {
 					color: darken(@linkColor, 15%);
-					[class ^= "icon-"] {
-						color: darken(@linkColor, 15%);
-					}
-				}
-
-				.caret {
-					display: none;
 				}
 			}
 
-			&.highlight-parent {
-				background-color: @content-background;
-				padding-top: 0px;
+			.caret {
+				display: none;
+			}
+		}
+
+		&.highlight-parent {
+			background-color: @content-background;
+			padding-top: 0px;
+			> a {
+				color: @color_four;
+			}
+
+			&:hover , &:focus {
+				background-color: @color_three;
 				> a {
-					color: @color_four;
-				}
-
-				&:hover , &:focus {
-					background-color: @color_three;
-					> a {
-						color: @linkTopColor;
-					}
+					color: @linkTopColor;
 				}
 			}
+		}
 
-			&.dropdown {
-				.dropdown-menu {
-					position: relative;
-					display: block;
-					background-color: transparent;
-					float: none;
-					border: 0;
-					box-shadow: none;
-					border-radius: 0;
-					min-width: 0;
-					padding: 0;
-					ul {
-						margin: 0 5px;
+		&.dropdown {
+			.dropdown-menu {
+				position: relative;
+				display: block;
+				background-color: transparent;
+				float: none;
+				border: 0;
+				box-shadow: none;
+				border-radius: 0;
+				min-width: 0;
+				padding: 0;
+				ul {
+					margin: 0 5px;
+				}
+
+				li {
+					> a {
+						white-space: normal;
+						color: @linkColor;
+						padding-left: 15px;
+						text-transform: none;
+						&:hover , &:focus {
+							color: darken(@linkColor, 15%);
+						}
 					}
 
-					li {
+					&.active {
 						> a {
-							white-space: normal;
-							color: @linkColor;
-							padding-left: 15px;
-							text-transform: none;
+							background-color: transparent;
+							color: @headingTabColor;
 							&:hover , &:focus {
 								color: darken(@linkColor, 15%);
-							}
-						}
-
-						&.active {
-							> a {
-								background-color: transparent;
-								color: @headingTabColor;
-								&:hover , &:focus {
-									color: darken(@linkColor, 15%);
-									&:after {
-										content: '\f054';
-										float: right;
-										font-family: FontAwesome;
-										font-size: @baseFontSize - 7;
-										color: darken(@linkColor, 15%);
-									}
-								}
-
-								&:hover , &:focus {
-									background-color: none;
-									color: darken(@linkColor, 15%);
-								}
-
 								&:after {
 									content: '\f054';
 									float: right;
 									font-family: FontAwesome;
 									font-size: @baseFontSize - 7;
-									color: @navAfterColorElement;
+									color: darken(@linkColor, 15%);
 								}
 							}
-						}
-					}
 
-					.sub-menu {
-						box-shadow: none;
-						margin: 0 10px;
-						position: relative;
-						visibility: visible;
-						margin-top: 0;
-						left: 0;
-						&:before , &:after {
-							display: none;
-						}
-					}
+							&:hover , &:focus {
+								background-color: none;
+								color: darken(@linkColor, 15%);
+							}
 
-					&.parent {
-						> a {
 							&:after {
-								content: '\f107';
+								content: '\f054';
 								float: right;
 								font-family: FontAwesome;
-								font-size: @baseFontSize;
+								font-size: @baseFontSize - 7;
+								color: @navAfterColorElement;
 							}
 						}
 					}
+				}
 
-					li {
-						&:last-child {
-							border-bottom: none;
-							padding-bottom: 0px;
+				.sub-menu {
+					box-shadow: none;
+					margin: 0 10px;
+					position: relative;
+					visibility: visible;
+					margin-top: 0;
+					left: 0;
+					&:before , &:after {
+						display: none;
+					}
+				}
+
+				&.parent {
+					> a {
+						&:after {
+							content: '\f107';
+							float: right;
+							font-family: FontAwesome;
+							font-size: @baseFontSize;
+						}
+					}
+				}
+
+				li {
+					&:last-child {
+						border-bottom: none;
+						padding-bottom: 0px;
+					}
+				}
+			}
+
+			&.parent {
+				> a {
+					&:after {
+						content: '\f107';
+						float: right;
+						font-family: FontAwesome;
+						font-size: @baseFontSize;
+					}
+				}
+			}
+		}
+
+		&.active {
+			> a {
+				background-image: none;
+				filter: none;
+				color: @headingTabColor;
+				&:hover , &:focus {
+					color: darken(@linkColor, 15%);
+					&:after {
+						content: '\f054';
+						float: right;
+						font-family: FontAwesome;
+						font-size: @baseFontSize - 7;
+						color: darken(@linkColor, 15%);
+					}
+				}
+
+				&:hover , &:focus {
+					background-color: none;
+					color: darken(@linkColor, 15%);
+				}
+
+				&:after {
+					content: '\f054';
+					float: right;
+					font-family: FontAwesome;
+					font-size: @baseFontSize - 7;
+					color: @navAfterColorElement;
+				}
+			}
+		}
+	}
+}
+
+.tabbable {
+	ul {
+		border-left: 0px;
+	}
+
+	li {
+		> a {
+			border: none;
+			&:hover , &:focus {
+				border-left: 0;
+				font-size: @baseFontSize + 2;
+				border-radius: 0px;
+				border: none;
+			}
+		}
+
+		&.active {
+			> a {
+				cursor: pointer;
+				background-color: transparent;
+				background-image: none;
+				filter: none;
+				border: none;
+				color: @headingTabColor;
+				&:hover , &:focus {
+					color: darken(@linkColor, 15%);
+					margin-left: 0;
+					&:after {
+						content: '\f054';
+						float: right;
+						font-family: FontAwesome;
+						font-size: @baseFontSize - 6;
+					}
+				}
+
+				&:hover , &:focus {
+					background-color: none;
+					color: darken(@linkColor, 15%);
+				}
+
+				&:after {
+					content: '\f054';
+					float: right;
+					font-family: FontAwesome;
+					font-size: @baseFontSize - 6;
+				}
+			}
+		}
+
+		&.dropdown {
+			.dropdown-menu {
+				li {
+					> a {
+						&:hover {
+							margin-left: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.nav-list {
+	li {
+		&.dropdown {
+			.dropdown-menu {
+				li {
+					> a {
+						text-transform: none;
+						color: @color_one;
+						font-size: @baseFontSize + 2;
+						&:hover , &:focus {
+							color: darken(@linkColor, 15%);
+						}
+
+						&:after {
+							content: ' ';
+						}
+					}
+
+					&.active {
+						> a {
+							background-color: transparent;
+							color: @headingTabColor;
+							&:hover , &:focus {
+								color: darken(@linkColor, 15%);
+								&:after {
+									content: '\f054';
+									float: right;
+									font-family: FontAwesome;
+									font-size: @baseFontSize - 7;
+									color: darken(@linkColor, 15%);
+								}
+							}
+
+							&:hover , &:focus {
+								background-color: none;
+								color: darken(@linkColor, 15%);
+							}
+
+							&:after {
+								content: '\f054';
+								float: right;
+								font-family: FontAwesome;
+								font-size: @baseFontSize - 7;
+								color: @navAfterColorElement;
+							}
 						}
 					}
 				}
@@ -1196,203 +1351,44 @@ ul {
 				}
 			}
 
-			&.active {
+			&.parent {
 				> a {
-					background-color: transparent;
-					background-image: none;
-					filter: none;
-					color: @headingTabColor;
-					&:hover , &:focus {
-						color: darken(@linkColor, 15%);
-						&:after {
-							content: '\f054';
-							float: right;
-							font-family: FontAwesome;
-							font-size: @baseFontSize - 7;
-							color: darken(@linkColor, 15%);
-						}
+					&:after {
+						content: '\f107';
+						float: right;
+						font-family: FontAwesome;
+						font-size: @baseFontSize;
 					}
+				}
+			}
+		}
 
-					&:hover , &:focus {
-						background-color: none;
-						color: darken(@linkColor, 15%);
-					}
-
+		&.active {
+			> a {
+				background-color: transparent;
+				color: @headingTabColor;
+				&:hover , &:focus {
+					color: darken(@linkColor, 15%);
 					&:after {
 						content: '\f054';
 						float: right;
 						font-family: FontAwesome;
 						font-size: @baseFontSize - 7;
-						color: @navAfterColorElement;
-					}
-				}
-			}
-		}
-
-		&.nav-stacked , &.nav-pills , &.nav-list {
-			li {
-				&.dropdown {
-					.dropdown-menu {
-						li {
-							> a {
-								text-transform: none;
-								color: @color_one;
-								font-size: @baseFontSize + 2;
-								&:hover , &:focus {
-									color: darken(@linkColor, 15%);
-								}
-
-								&:after {
-									content: ' ';
-								}
-							}
-
-							&.active {
-								> a {
-									background-color: transparent;
-									color: @headingTabColor;
-									&:hover , &:focus {
-										color: darken(@linkColor, 15%);
-										&:after {
-											content: '\f054';
-											float: right;
-											font-family: FontAwesome;
-											font-size: @baseFontSize - 7;
-											color: darken(@linkColor, 15%);
-										}
-									}
-
-									&:hover , &:focus {
-										background-color: none;
-										color: darken(@linkColor, 15%);
-									}
-
-									&:after {
-										content: '\f054';
-										float: right;
-										font-family: FontAwesome;
-										font-size: @baseFontSize - 7;
-										color: @navAfterColorElement;
-									}
-								}
-							}
-						}
-
-						&.parent {
-							> a {
-								&:after {
-									content: '\f107';
-									float: right;
-									font-family: FontAwesome;
-									font-size: @baseFontSize;
-								}
-							}
-						}
-					}
-
-					&.parent {
-						> a {
-							&:after {
-								content: '\f107';
-								float: right;
-								font-family: FontAwesome;
-								font-size: @baseFontSize;
-							}
-						}
+						color: darken(@linkColor, 15%);
 					}
 				}
 
-				&.active {
-					> a {
-						background-color: transparent;
-						color: @headingTabColor;
-						&:hover , &:focus {
-							color: darken(@linkColor, 15%);
-							&:after {
-								content: '\f054';
-								float: right;
-								font-family: FontAwesome;
-								font-size: @baseFontSize - 7;
-								color: darken(@linkColor, 15%);
-							}
-						}
-
-						&:hover , &:focus {
-							background-color: none;
-							color: darken(@linkColor, 15%);
-						}
-
-						&:after {
-							content: '\f054';
-							float: right;
-							font-family: FontAwesome;
-							font-size: @baseFontSize - 7;
-							color: @navAfterColorElement;
-						}
-					}
-				}
-			}
-		}
-	}
-
-	.tabbable {
-		ul {
-			border-left: 0px;
-		}
-
-		li {
-			> a {
-				border: none;
 				&:hover , &:focus {
-					border-left: 0;
-					font-size: @baseFontSize + 2;
-					border-radius: 0px;
-					border: none;
+					background-color: none;
+					color: darken(@linkColor, 15%);
 				}
-			}
 
-			&.active {
-				> a {
-					cursor: pointer;
-					background-color: transparent;
-					background-image: none;
-					filter: none;
-					border: none;
-					color: @headingTabColor;
-					&:hover , &:focus {
-						color: darken(@linkColor, 15%);
-						margin-left: 0;
-						&:after {
-							content: '\f054';
-							float: right;
-							font-family: FontAwesome;
-							font-size: @baseFontSize - 6;
-						}
-					}
-
-					&:hover , &:focus {
-						background-color: none;
-						color: darken(@linkColor, 15%);
-					}
-
-					&:after {
-						content: '\f054';
-						float: right;
-						font-family: FontAwesome;
-						font-size: @baseFontSize - 6;
-					}
-				}
-			}
-
-			&.dropdown {
-				.dropdown-menu {
-					li {
-						> a {
-							&:hover {
-								margin-left: 0px;
-							}
-						}
-					}
+				&:after {
+					content: '\f054';
+					float: right;
+					font-family: FontAwesome;
+					font-size: @baseFontSize - 7;
+					color: @navAfterColorElement;
 				}
 			}
 		}
@@ -2022,9 +2018,6 @@ dl {
 		&:after {
 			.heading-after ();
 		}
-	}
-
-	.custom {
 	}
 }
 
