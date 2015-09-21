@@ -1056,22 +1056,16 @@ ul {
 	}
 }
 
-.nav-list {
-	padding-left: 0px;
-	padding-right: 0px;
+.nav-list, .nav-pills {
 	li {
 		padding-top: 5px;
 		padding-bottom: 5px;
 		border-bottom: 1px solid @boderModuleStyleColor;
-		> a {
-			font-size: @baseFontSize + 2;
 
+		a {
 			&:hover , &:focus {
 				background: none;
 				color: darken(@linkColor, 15%);
-				[class ^= "icon-"] {
-					color: darken(@linkColor, 15%);
-				}
 			}
 
 			.caret {
@@ -1082,6 +1076,7 @@ ul {
 		&.highlight-parent {
 			background-color: @content-background;
 			padding-top: 0px;
+
 			> a {
 				color: @color_four;
 			}
@@ -1093,91 +1088,189 @@ ul {
 				}
 			}
 		}
+	}
 
-		&.dropdown {
-			.dropdown-menu {
-				position: relative;
-				display: block;
-				background-color: transparent;
-				float: none;
-				border: 0;
-				box-shadow: none;
-				border-radius: 0;
-				min-width: 0;
-				padding: 0;
-				ul {
-					margin: 0 5px;
+	> li {
+		> a {
+			font-size: @baseFontSize + 2;
+		}
+
+		&.parent {
+			> a {
+				&:after {
+					content: '\f107';
+					float: right;
+					font-family: FontAwesome;
+					font-size: @baseFontSize;
+				}
+			}
+		}
+
+		&.active {
+			> a {
+				background-image: none;
+				color: @headingTabColor;
+				filter: none;
+
+				&:after {
+					color: @headingTabColor;
+					content: '\f107';
+					float: right;
+					font-family: FontAwesome;
+					font-size: @baseFontSize - 7;
 				}
 
-				li {
-					> a {
-						white-space: normal;
-						color: @linkColor;
-						padding-left: 15px;
-						text-transform: none;
-						&:hover , &:focus {
-							color: darken(@linkColor, 15%);
-						}
+				&:hover , &:focus {
+					color: @headingTabColor;
+
+					&:after {
+						color: @headingTabColor;
+						content: '\f107';
+						float: right;
+						font-family: FontAwesome;
+						font-size: @baseFontSize - 7;
+					}
+				}
+
+			}
+		}
+	}
+
+	ul.submenu {
+		li {
+			> a {
+				white-space: normal;
+				color: @linkColor;
+				padding-left: 15px;
+				text-transform: none;
+
+				&:hover , &:focus {
+					color: darken(@linkColor, 15%);
+				}
+			}
+
+			&.active {
+				> a {
+					background-color: transparent;
+					color: @headingTabColor;
+
+					&:after {
+						color: @headingTabColor;
+						content: '\f054';
+						float: right;
+						font-family: FontAwesome;
+						font-size: @baseFontSize - 7;
 					}
 
-					&.active {
-						> a {
+					&:hover , &:focus {
+						color: @headingTabColor;
+
+						&:after {
+							content: '\f054';
+							float: right;
+							font-family: FontAwesome;
+							color: @headingTabColor;
+							font-size: @baseFontSize - 7;
+						}
+					}
+				}
+			}
+		}
+
+		&.parent {
+			> a {
+				&:after {
+					content: '\f107';
+					float: right;
+					font-family: FontAwesome;
+					font-size: @baseFontSize;
+				}
+			}
+		}
+
+		li {
+			&:last-child {
+				border-bottom: none;
+				padding-bottom: 0px;
+			}
+		}
+	}
+}
+
+.nav-list {
+	padding-left: 0px;
+	padding-right: 0px;
+
+	> li {
+		&.active {
+			> a {
+				background-color: transparent;
+
+				&:hover, &:focus {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+
+	li {
+		.dropdown-menu {
+			position: relative;
+			display: block;
+			background-color: transparent;
+			float: none;
+			border: 0;
+			box-shadow: none;
+			border-radius: 0;
+			min-width: 0;
+			padding: 0;
+
+			ul {
+				margin: 0 5px;
+			}
+
+			li {
+				> a {
+					color: @linkColor;
+					font-size: @baseFontSize + 2;
+					padding-left: 15px;
+					text-transform: none;
+					white-space: normal;
+
+					&:hover , &:focus {
+						color: darken(@linkColor, 15%);
+					}
+
+					&:after {
+						content: ' ';
+					}
+				}
+
+				&.active {
+					> a {
+						background-color: transparent;
+						color: @headingTabColor;
+
+						&:hover , &:focus {
 							background-color: transparent;
 							color: @headingTabColor;
-							&:hover , &:focus {
-								color: darken(@linkColor, 15%);
-								&:after {
-									content: '\f054';
-									float: right;
-									font-family: FontAwesome;
-									font-size: @baseFontSize - 7;
-									color: darken(@linkColor, 15%);
-								}
-							}
-
-							&:hover , &:focus {
-								background-color: none;
-								color: darken(@linkColor, 15%);
-							}
 
 							&:after {
 								content: '\f054';
 								float: right;
 								font-family: FontAwesome;
 								font-size: @baseFontSize - 7;
-								color: @navAfterColorElement;
+								color: @headingTabColor;
 							}
 						}
-					}
-				}
 
-				.sub-menu {
-					box-shadow: none;
-					margin: 0 10px;
-					position: relative;
-					visibility: visible;
-					margin-top: 0;
-					left: 0;
-					&:before , &:after {
-						display: none;
-					}
-				}
-
-				&.parent {
-					> a {
 						&:after {
-							content: '\f107';
+							content: '\f054';
 							float: right;
 							font-family: FontAwesome;
-							font-size: @baseFontSize;
+							font-size: @baseFontSize - 7;
+							color: @navAfterColorElement;
 						}
-					}
-				}
-
-				li {
-					&:last-child {
-						border-bottom: none;
-						padding-bottom: 0px;
 					}
 				}
 			}
@@ -1192,68 +1285,54 @@ ul {
 					}
 				}
 			}
+
+			li {
+				&:last-child {
+					border-bottom: none;
+					padding-bottom: 0px;
+				}
+			}
 		}
 
+	}
+}
+
+.nav-pills {
+	> li {
 		&.active {
 			> a {
-				background-image: none;
-				filter: none;
-				color: @headingTabColor;
+				color: @white;
+
+				&:after {
+					color: @white;
+				}
+
 				&:hover , &:focus {
-					color: darken(@linkColor, 15%);
+					color: @white;
+
 					&:after {
-						content: '\f054';
-						float: right;
-						font-family: FontAwesome;
-						font-size: @baseFontSize - 7;
-						color: darken(@linkColor, 15%);
+						color: @white;
 					}
 				}
 
-				&:hover , &:focus {
-					background-color: none;
-					color: darken(@linkColor, 15%);
-				}
-
-				&:after {
-					content: '\f054';
-					float: right;
-					font-family: FontAwesome;
-					font-size: @baseFontSize - 7;
-					color: @navAfterColorElement;
-				}
 			}
 		}
 	}
 }
 
 .tabbable {
-	ul {
-		border-left: 0px;
-	}
-
 	li {
-		> a {
-			border: none;
-			&:hover , &:focus {
-				border-left: 0;
-				font-size: @baseFontSize + 2;
-				border-radius: 0px;
-				border: none;
-			}
-		}
-
 		&.active {
 			> a {
 				cursor: pointer;
-				background-color: transparent;
 				background-image: none;
 				filter: none;
-				border: none;
 				color: @headingTabColor;
+
 				&:hover , &:focus {
 					color: darken(@linkColor, 15%);
 					margin-left: 0;
+
 					&:after {
 						content: '\f054';
 						float: right;
@@ -1263,7 +1342,7 @@ ul {
 				}
 
 				&:hover , &:focus {
-					background-color: none;
+					background-color: transparent;
 					color: darken(@linkColor, 15%);
 				}
 
@@ -1284,111 +1363,6 @@ ul {
 							margin-left: 0px;
 						}
 					}
-				}
-			}
-		}
-	}
-}
-
-.nav-list {
-	li {
-		&.dropdown {
-			.dropdown-menu {
-				li {
-					> a {
-						text-transform: none;
-						color: @color_one;
-						font-size: @baseFontSize + 2;
-						&:hover , &:focus {
-							color: darken(@linkColor, 15%);
-						}
-
-						&:after {
-							content: ' ';
-						}
-					}
-
-					&.active {
-						> a {
-							background-color: transparent;
-							color: @headingTabColor;
-							&:hover , &:focus {
-								color: darken(@linkColor, 15%);
-								&:after {
-									content: '\f054';
-									float: right;
-									font-family: FontAwesome;
-									font-size: @baseFontSize - 7;
-									color: darken(@linkColor, 15%);
-								}
-							}
-
-							&:hover , &:focus {
-								background-color: none;
-								color: darken(@linkColor, 15%);
-							}
-
-							&:after {
-								content: '\f054';
-								float: right;
-								font-family: FontAwesome;
-								font-size: @baseFontSize - 7;
-								color: @navAfterColorElement;
-							}
-						}
-					}
-				}
-
-				&.parent {
-					> a {
-						&:after {
-							content: '\f107';
-							float: right;
-							font-family: FontAwesome;
-							font-size: @baseFontSize;
-						}
-					}
-				}
-			}
-
-			&.parent {
-				> a {
-					&:after {
-						content: '\f107';
-						float: right;
-						font-family: FontAwesome;
-						font-size: @baseFontSize;
-					}
-				}
-			}
-		}
-
-		&.active {
-			> a {
-				background-color: transparent;
-				color: @headingTabColor;
-				&:hover , &:focus {
-					color: darken(@linkColor, 15%);
-					&:after {
-						content: '\f054';
-						float: right;
-						font-family: FontAwesome;
-						font-size: @baseFontSize - 7;
-						color: darken(@linkColor, 15%);
-					}
-				}
-
-				&:hover , &:focus {
-					background-color: none;
-					color: darken(@linkColor, 15%);
-				}
-
-				&:after {
-					content: '\f054';
-					float: right;
-					font-family: FontAwesome;
-					font-size: @baseFontSize - 7;
-					color: @navAfterColorElement;
 				}
 			}
 		}
