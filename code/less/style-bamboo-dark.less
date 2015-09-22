@@ -25,6 +25,34 @@
 	}
 }
 
+.tabs-right {
+	.nav-tabs {
+		border-left-color: @hedaer-top;
+
+		> li {
+			> a {
+				&:hover, &:focus {
+					border-color: @hedaer-top @hedaer-top @hedaer-top transparent;
+				}
+			}
+
+			&.active {
+				> a {
+					border-color: @hedaer-top @hedaer-top @hedaer-top transparent;
+
+					&:hover, &:focus {
+						border-color: @hedaer-top @hedaer-top @hedaer-top transparent;
+					}
+				}
+			}
+		}
+	}
+}
+
+.nav-list li, .nav-pills li, .nav-stacked li {
+    border-bottom-color: @hedaer-top;
+}
+
 div , form {
 	&.bs-docs-example {
 		background-color: @bodyBackground;

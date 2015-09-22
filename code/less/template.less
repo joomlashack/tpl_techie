@@ -481,6 +481,12 @@ dl {
 	}
 
 	> li {
+		> a {
+			&:hover, &:focus {
+				background-color: @bodyBackground;
+			}
+		}
+
 		&.active {
 			> a {
 				background-color: @bodyBackground;
@@ -549,16 +555,6 @@ dl {
 	filter: none;
 	border-radius: 0;
 	border: 0;
-}
-
-.nav {
-	li {
-		> a {
-			&:focus , &:hover {
-				background-color: none;
-			}
-		}
-	}
 }
 
 legend {
@@ -1058,18 +1054,11 @@ ul {
 	}
 }
 
-.nav-list, .nav-stacked {
+.nav-list, .nav-pills, .nav-stacked {
 	li {
-		padding-top: 5px;
-		padding-bottom: 5px;
 		border-bottom: 1px solid @boderModuleStyleColor;
 
 		a {
-			&:hover , &:focus {
-				background: none;
-				color: darken(@linkColor, 15%);
-			}
-
 			.caret {
 				display: none;
 			}
@@ -1095,6 +1084,10 @@ ul {
 	> li {
 		> a {
 			font-size: @baseFontSize + 2;
+
+			&:hover, &:focus {
+				background-color: transparent;
+			}
 		}
 
 		&.parent {
@@ -1104,6 +1097,7 @@ ul {
 					float: right;
 					font-family: FontAwesome;
 					font-size: @baseFontSize;
+					margin-left: 4px;
 				}
 			}
 		}
@@ -1318,6 +1312,12 @@ ul {
 				}
 
 			}
+		}
+	}
+
+	&.no-collapse {
+		li {
+			border-bottom: 0;
 		}
 	}
 }
