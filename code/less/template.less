@@ -457,7 +457,6 @@ dl {
 
 .tabs-right > .nav-tabs {
 	margin-left: 0;
-	float: none;
 }
 
 .nav-tabs {
@@ -481,12 +480,12 @@ dl {
 		}
 	}
 
-	li {
+	> li {
 		&.active {
 			> a {
-				background-color: @white;
+				background-color: @bodyBackground;
 				&:hover {
-					background-color: @white;
+					background-color: @bodyBackground;
 				}
 			}
 		}
@@ -608,10 +607,10 @@ legend {
 		a {
 			text-transform: uppercase;
 			padding: 5px 15px;
+
 			&:hover {
 				background-image: none;
 				filter: none;
-				background-color: @color_four;
 			}
 		}
 
@@ -624,7 +623,33 @@ legend {
 				}
 			}
 		}
+
+		.dropdown-menu {
+			background-color: @dropdownLinkBackgroundHover;
+
+			li {
+				a {
+					&:hover {
+						background-color: @dropdownBackground;
+					}
+				}
+
+				&.active {
+					> a {
+						background-color: @dropdownBackground;
+
+						&:hover, &:focus {
+							background-color: @dropdownBackground;
+						}
+					}
+				}
+			}
+		}
 	}
+}
+
+.dropdown-submenu>.dropdown-menu {
+	top: -1px;
 }
 
 .navbar {
@@ -696,18 +721,8 @@ legend {
 
 					&:after {
 						font-family: FontAwesome;
-						margin-left: 10px;
 						font-size: @baseFontSize - 2;
 						content: '\f0d7';
-					}
-
-					&:hover , &:focus {
-						&:after {
-							font-family: FontAwesome;
-							margin-left: 10px;
-							font-size: @baseFontSize - 2;
-							content: '\f0d7';
-						}
 					}
 				}
 			}
@@ -727,16 +742,18 @@ legend {
 					border-radius: 0px;
 					box-shadow: none;
 					padding: 0px;
+
 					&:before , &:after {
 						content: none;
 					}
 
-					li {
+					> li {
 						border-top: 1px solid @color_four;
 						text-shadow: none;
-						a {
+						> a {
 							color: @linkTopColor;
 							text-transform: uppercase;
+
 							&:hover , &:focus {
 								.caret {
 									border-top-color: transparent;
@@ -750,7 +767,6 @@ legend {
 							}
 
 							&:hover , &:focus {
-								background: @color_four;
 								.caret {
 									border-left-color: @dropdownLinkColorHover;
 								}
@@ -762,31 +778,9 @@ legend {
 								&:after {
 									content: '\f0da';
 									position: absolute;
-									right: 12px;
+									right: 20px;
+									top: 0;
 								}
-							}
-						}
-
-						.sub-menu {
-							background-color: @color_four;
-							margin-left: 0px;
-							box-shadow: none;
-							li {
-								border-bottom: 1px solid @color_three;
-								&:last-child {
-									border-bottom: none;
-								}
-
-								a {
-									text-transform: none;
-									&:hover , &:focus {
-										background-color: @color_three;
-									}
-								}
-							}
-
-							&:before , &:after {
-								content: none;
 							}
 						}
 
@@ -794,7 +788,7 @@ legend {
 							> a {
 								background-image: none;
 								filter: none;
-								background: @color_four;
+
 								.caret {
 									border-left-color: @dropdownLinkColorActive;
 								}
@@ -836,6 +830,14 @@ legend {
 				padding-bottom: 3px;
 			}
 		}
+	}
+
+	.dropdown-submenu>a:after {
+		border: 0;
+	}
+
+	.dropdown-submenu>.dropdown-menu {
+		top: -2px;
 	}
 }
 
@@ -1056,7 +1058,7 @@ ul {
 	}
 }
 
-.nav-list, .nav-pills {
+.nav-list, .nav-stacked {
 	li {
 		padding-top: 5px;
 		padding-bottom: 5px;
@@ -1320,8 +1322,30 @@ ul {
 	}
 }
 
+.nav-tabs.no-collapse>.active>a,
+.nav-tabs.no-collapse>li>a:hover,
+.nav-tabs.no-collapse>.active>a:hover,
+.nav-tabs.no-collapse>.active>a:focus {
+	border-color: @linkColor @linkColor transparent @linkColor;
+}
+
 .tabbable {
 	li {
+		.caret {
+			display: none;
+		}
+
+		&.parent {
+			> a {
+				&:after {
+					content: '\f107';
+					float: right;
+					font-family: FontAwesome;
+					font-size: @baseFontSize;
+				}
+			}
+		}
+
 		&.active {
 			> a {
 				cursor: pointer;
@@ -1330,8 +1354,7 @@ ul {
 				color: @headingTabColor;
 
 				&:hover , &:focus {
-					color: darken(@linkColor, 15%);
-					margin-left: 0;
+					color: @headingTabColor;
 
 					&:after {
 						content: '\f054';
@@ -1339,11 +1362,6 @@ ul {
 						font-family: FontAwesome;
 						font-size: @baseFontSize - 6;
 					}
-				}
-
-				&:hover , &:focus {
-					background-color: transparent;
-					color: darken(@linkColor, 15%);
 				}
 
 				&:after {
@@ -1355,12 +1373,14 @@ ul {
 			}
 		}
 
-		&.dropdown {
-			.dropdown-menu {
-				li {
+		ul.submenu {
+			> li {
+				&.active {
 					> a {
-						&:hover {
-							margin-left: 0px;
+						color: @headingTabColor;
+
+						&:after {
+							color: @headingTabColor;
 						}
 					}
 				}
@@ -1368,6 +1388,13 @@ ul {
 		}
 	}
 }
+
+.nav-pills .dropdown-menu {
+	box-shadow: none;
+	border-radius: 0;
+	padding: 0;
+}
+
 
 .tooltip {
 	.tooltip-inner {
