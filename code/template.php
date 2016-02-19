@@ -223,10 +223,13 @@ defined('_JEXEC') or die('Restricted access');
 			<?php endif; ?>
 			<!-- lateral-menu end -->
 
-			<?php if (!$techieSlideshow && $headerHeight != '328'): ?>
+			<?php if (!$techieSlideshow): ?>
 			<style type="text/css">
 			#header {
-				min-height: <?php echo $headerHeight . 'px'; ?>;
+				min-height: <?php echo $headerHeight; ?>;
+			}
+			#current-menu-item {
+				padding: <?php echo $titlePageMargin; ?>;
 			}
 			</style>
 			<?php endif; ?>

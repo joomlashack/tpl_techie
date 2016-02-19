@@ -143,7 +143,8 @@
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
-                <field name="headerHeight" type="text" default="328" label="TPL_JS_TECHIE_HEADER_HEIGHT" description="TPL_JS_TECHIE_HEADER_HEIGHT_DESC" />
+                <field name="headerHeight" type="text" default="328px" label="TPL_JS_TECHIE_HEADER_HEIGHT" description="TPL_JS_TECHIE_HEADER_HEIGHT_DESC" />
+                <field name="titlePageMargin" type="text" default="80px 0px 80px 100px" label="TPL_JS_TECHIE_TITLE_PAGE_MARGIN" description="TPL_JS_TECHIE_TITLE_PAGE_MARGIN_DESC" />
             </fieldset>
         </fields>
     </config>
