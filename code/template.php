@@ -49,16 +49,18 @@ defined('_JEXEC') or die('Restricted access');
 						 <?php endif ?>
 						<div class="clear"></div>
 					</div>
-					<?php if (!$techieSlideshow && $showTitlePage) : ?>
-					<div id="current-menu-item"><h1><?php echo $menu_itemActive; ?></h1></div>
+					<?php if (!$techieSlideshow) : ?>
+						<?php if ($showTitlePage) : ?>
+							<div id="current-menu-item"><h1><?php echo $menu_itemActive; ?></h1></div>
+						<?php endif; ?>
 					<?php else: ?>
-					 	<div class="<?php echo $containerClass ?> slide-arrows-container">
-					 	<a id="prevslide" class="load-item"></a>
-			            <a id="nextslide" class="load-item"></a>
-			            <div id="slide-text-element">
-					 	</div>
-					 	</div>
-					<?php endif ?>
+						<div class="<?php echo $containerClass ?> slide-arrows-container">
+							<a id="prevslide" class="load-item"></a>
+				            <a id="nextslide" class="load-item"></a>
+				            <div id="slide-text-element">
+							</div>
+						</div>
+					<?php endif; ?>
 
 					<!-- logo end -->
 				</div>
