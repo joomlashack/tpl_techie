@@ -126,21 +126,24 @@
                 <field name="browsercompatibility" label="TPL_JS_WRIGHT_BROWSER_COMPATIBILITY" description="TPL_JS_WRIGHT_BROWSER_COMPATIBILITY_DESC" type="browsercompatibility" />
                 <!-- End of default Wright params -->
             </fieldset>
-            <fieldset name="TPL_JS_TECHIE_OPTIONS">
+            <fieldset name="TPL_JS_TECHIE_SLIDER_OPTIONS">
                 <field name="enableSlideshow" type="list" default="0" label="TPL_JS_TECHIE_ENABLE_SLIDESHOW" description="TPL_JS_TECHIE_ENABLE_SLIDESHOW_DESC">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
+                <field name="slideshow_category" type="category" extension="com_content" default="" label="TPL_JS_TECHIE_SLIDESHOW_CATEGORY" description="TPL_JS_TECHIE_SLIDESHOW_CATEGORY_DESC" />
+            </fieldset>
+            <fieldset name="TPL_JS_TECHIE_OPTIONS">
                 <field name="backgroundImage" type="imagelist" default="" directory="images" label="TPL_JS_TECHIE_BACKGROUND_IMAGE" description="TPL_JS_TECHIE_BACKGROUND_IMAGE_DESC" />
                 <field name="techie_lateral_menu_displayed" type="list" default="1" label="TPL_JS_TECHIE_LATERALMENU_DISPLAYED" description="TPL_JS_TECHIE_LATERALMENU_DISPLAYED_DESC">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
-                <field name="slideshow_category" type="category" extension="com_content" default="" label="TPL_JS_TECHIE_SLIDESHOW_CATEGORY" description="TPL_JS_TECHIE_SLIDESHOW_CATEGORY_DESC" />
                 <field name="showTitlePage" type="list" default="1" label="TPL_JS_TECHIE_SHOW_TITLE_PAGE" description="TPL_JS_TECHIE_SHOW_TITLE_PAGE_DESC">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
+                <field name="headerHeight" type="text" default="328" label="TPL_JS_TECHIE_HEADER_HEIGHT" description="TPL_JS_TECHIE_HEADER_HEIGHT_DESC" />
             </fieldset>
         </fields>
     </config>

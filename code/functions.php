@@ -104,3 +104,4 @@ function getSlideItems($activeCategory) {
 // Show title page in header
 
 $showTitlePage = ($this->params->get('showTitlePage', '1') == '0' ? false : true);
+$headerHeight = $this->params->get('headerHeight', '328');

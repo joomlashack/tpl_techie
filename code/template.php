@@ -223,29 +223,36 @@ defined('_JEXEC') or die('Restricted access');
 			<?php endif; ?>
 			<!-- lateral-menu end -->
 
-        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_techie/js/jquery.easing.min.js"></script>
-        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_techie/js/supersized.min.js"></script>
-        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_techie/js/supersized.shutter.min.js"></script>
+			<?php if (!$techieSlideshow && $headerHeight != '328'): ?>
+			<style type="text/css">
+			#header {
+				min-height: <?php echo $headerHeight . 'px'; ?>;
+			}
+			</style>
+			<?php endif; ?>
+	        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_techie/js/jquery.easing.min.js"></script>
+	        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_techie/js/supersized.min.js"></script>
+	        <script type="text/javascript" src="<?php echo JURI::root(true) ?>/templates/js_techie/js/supersized.shutter.min.js"></script>
 
-        <script type="text/javascript">
-             <?php if ($bsMode) : ?>
-             var BsModeFluid = true;
-             <?php else: ?>
-             var BsModeFluid = false;
-             <?php endif; ?>
+	        <script type="text/javascript">
+	             <?php if ($bsMode) : ?>
+	             var BsModeFluid = true;
+	             <?php else: ?>
+	             var BsModeFluid = false;
+	             <?php endif; ?>
 
-             <?php if ($techieSlideshow) : ?>
- 			 var SlideShow = 1;
-             var slidesImgs =  <?php echo getSlideItems($techieCategorySlideShow); ?>;
+	             <?php if ($techieSlideshow) : ?>
+	 			 var SlideShow = 1;
+	             var slidesImgs =  <?php echo getSlideItems($techieCategorySlideShow); ?>;
 
-             <?php else: ?>
-             var SlideShow = 0;
-             slidesImgs = [{image : '<?php echo JURI::root(true) . $bg; ?>'}];
-             <?php endif; ?>
+	             <?php else: ?>
+	             var SlideShow = 0;
+	             slidesImgs = [{image : '<?php echo JURI::root(true) . $bg; ?>'}];
+	             <?php endif; ?>
 
-        </script>
+	        </script>
 
-		<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_techie/js/techie.js'></script>
+			<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_techie/js/techie.js'></script>
 		</body>
 	</html>
 </doctype>
