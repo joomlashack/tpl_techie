@@ -100,3 +100,7 @@ function getSlideItems($activeCategory) {
     return $slides;
 
 }
+
+// Show title page in header
+
+$showTitlePage = ($this->params->get('showTitlePage', '1') == '0' ? false : true);

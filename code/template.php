@@ -39,17 +39,17 @@ defined('_JEXEC') or die('Restricted access');
 						<w:logo name="top"/>
 						<?php if ($techieLateralMenu && $this->countModules('lateral-menu') ) : ?>
 						<div class="toolbar-collapse-btn">
-						<div class="legend-menu">MENU</div>
-						<div class="menu-icons-container">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+							<div class="legend-menu">MENU</div>
+							<div class="menu-icons-container">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
 						</div>
 						</div>
 						 <?php endif ?>
 						<div class="clear"></div>
 					</div>
-					<?php if (!$techieSlideshow) : ?>
+					<?php if (!$techieSlideshow && $showTitlePage) : ?>
 					<div id="current-menu-item"><h1><?php echo $menu_itemActive; ?></h1></div>
 					<?php else: ?>
 					 	<div class="<?php echo $containerClass ?> slide-arrows-container">
