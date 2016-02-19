@@ -86,7 +86,7 @@ function getSlideItems($activeCategory) {
 
     foreach ($categoryItems as $key => $item ) {
           $itemOptions[$key]['id'] = $item['id'];
-          $itemOptions[$key]['content'] = strip_tags($item['introtext']);
+          $itemOptions[$key]['content'] = $item['introtext'];
           $itemOptions[$key]['title'] = $item['title'];
           $images = json_decode($item['images'], true);
           $itemOptions[$key]['image'] = JURI::root(true) . "/" .$images['image_intro'];
