@@ -21,6 +21,7 @@
     </languages>
 
     <files>
+        <filename>component.php</filename>
         <filename>favicon.ico</filename>
         <filename>functions.php</filename>
         <filename>wrighttemplate.php</filename>
