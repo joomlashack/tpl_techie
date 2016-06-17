@@ -770,7 +770,6 @@ legend {
 						text-shadow: none;
 						> a {
 							color: @linkTopColor;
-							text-transform: uppercase;
 
 							&:hover , &:focus {
 								.caret {
@@ -825,14 +824,6 @@ legend {
 							li {
 								background-color: @color_four;
 							}
-						}
-					}
-				}
-
-				li {
-					&.deeper {
-						> a {
-							text-transform: uppercase;
 						}
 					}
 				}
@@ -916,7 +907,7 @@ ul {
 			padding-right: 0px;
 			margin-top: 15px;
 			padding: 0px 25px;
-			li {
+			> li {
 				padding-top: 20px;
 				padding-bottom: 0px;
 				border-bottom: 1px solid @color_three;
