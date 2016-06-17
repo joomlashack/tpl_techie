@@ -29,6 +29,7 @@
         <filename>template.php</filename>
         <filename>templateDetails.xml</filename>
         <filename>template_thumbnail.png</filename>
+        <folder>less</folder>
         <folder>css</folder>
         <folder>html</folder>
         <folder>images</folder>
@@ -72,7 +73,7 @@
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
-                <field name="style" type="styles" default="generic" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
+                <field name="style" type="styles" default="bamboo-dark" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
                 <field name="modal" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_LABEL" description="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_DESC">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
