@@ -71,10 +71,6 @@
                 <field name="helper" type="help" label="TPL_JS_WRIGHT_FIELD_NEED_HELP_LABEL" description="TPL_JS_WRIGHT_FIELD_NEED_HELP_DESC"/>
                 <field name="rebrand" type="rebrand" default="no" label="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_LABEL" description="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_DESC" />
                 <field name="style" type="styles" default="generic" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
-                <field name="lesscompile" type="list" default="0" label="TPL_JS_WRIGHT_LESS_COMPILE" description="TPL_JS_WRIGHT_LESS_COMPILE_DESC">
-                    <option value="1">JYES</option>
-                    <option value="0">JNO</option>
-                </field>
                 <field name="modal" type="list" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_LABEL" description="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_DESC">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
@@ -123,7 +119,6 @@
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
-                <field name="browsercompatibility" label="TPL_JS_WRIGHT_BROWSER_COMPATIBILITY" description="TPL_JS_WRIGHT_BROWSER_COMPATIBILITY_DESC" type="browsercompatibility" />
                 <!-- End of default Wright params -->
             </fieldset>
             <fieldset name="TPL_JS_TECHIE_SLIDER_OPTIONS">
