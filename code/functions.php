@@ -3,7 +3,7 @@
  * @package     Techie
  * @subpackage  Functions
  *
- * @copyright   Copyright (C) 2005 - 2014 Joomlashack. Meritage Assets.  All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2016 Joomlashack. Meritage Assets.  All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -29,7 +29,7 @@ $bg = checkImage($this->params->get("backgroundImage", ""), "templates/js_techie
 
 if ($bg != "-1") $bg = str_replace(JPATH_BASE, '', $bg);
 
-$JoomlaApp = JFactory::getApplication(); 
+$JoomlaApp = JFactory::getApplication();
 $menu_itemActive = $JoomlaApp->getMenu()->getActive()->title;
 
 // Slideshow
@@ -67,7 +67,7 @@ $techieLateralMenu = ($this->params->get('techie_lateral_menu_displayed', '0') =
 $bsMode = ($this->params->get('bs_rowmode', '0') == 'row-fluid' ? true : false);
 
 
-// Dynamic slideshow 
+// Dynamic slideshow
 
 $techieCategorySlideShow = $this->params->get('slideshow_category','');
 
@@ -86,7 +86,7 @@ function getSlideItems($activeCategory) {
 
     foreach ($categoryItems as $key => $item ) {
           $itemOptions[$key]['id'] = $item['id'];
-          $itemOptions[$key]['content'] = strip_tags($item['introtext']);
+          $itemOptions[$key]['content'] = $item['introtext'];
           $itemOptions[$key]['title'] = $item['title'];
           $images = json_decode($item['images'], true);
           $itemOptions[$key]['image'] = JURI::root(true) . "/" .$images['image_intro'];
@@ -101,3 +101,8 @@ function getSlideItems($activeCategory) {
 
 }
 
+// Show title page in header
+
+$showTitlePage = ($this->params->get('showTitlePage', '1') == '0' ? false : true);
+$headerHeight = $this->params->get('headerHeight', '328px');
+$titlePageMargin = $this->params->get('titlePageMargin', '80px 0px 80px 100px');

@@ -1,6 +1,34 @@
 //
 // Variables
 // --------------------------------------------------
+
+
+// Options dropdown-submenu , this is a element parent with arrow for submenu
+// You can use true/false for show arrow
+// -------------------------
+@dropdownSubmenuLinkArrow : true;
+@navbarInverseDropdownSubmenuLinkArrow : true;
+
+
+// Gradient options of dropdown links
+// You can use true/false for add gradient
+// -------------------------
+
+@dropdownLinkGradient : false;
+@navbarInverseDropdownLinkGradient : false;
+
+
+// Dropdown For navbar-inverse
+// -------------------------
+@navbarInverseDropdownBackground : @dropdownBackground;
+@navbarInverseDropdownBorderFallback : #ccc;
+@navbarInverseDropdownBorder : @dropdownBorder;
+@navbarInverseDropdownLinkColor : @dropdownLinkColor;
+@navbarInverseDropdownLinkColorHover : @dropdownLinkColorHover;
+@navbarInverseDropdownLinkColorActive : @dropdownLinkColorActive;
+@navbarInverseDropdownLinkBackgroundHover : @dropdownLinkBackgroundHover;
+@navbarInverseDropdownLinkBackgroundActive : @dropdownLinkBackgroundActive;
+
 @color_one: #0FA3BD;
 @color_two: #01CCC9;
 @color_three: #252531;
@@ -11,7 +39,7 @@
 // --------------------------------------------------
 @hedaer-top: @white;
 
-// Code background color 
+// Code background color
 @codeBackgroundColor: @btnHoverBackground;
 
 //Lateral-Menu font color
@@ -45,7 +73,7 @@
 
 // Content Background
 @content-background: @color_two;
-// 
+//
 
 @activeTextColor: #777;
 
@@ -68,7 +96,7 @@
 // -------------------------
 @blue:                  #049cdb;
 @blueDark:              #0064cd;
-@green:                 #46a546; 
+@green:                 #46a546;
 @red:                   #9d261d;
 @yellow:                #ffc40d;
 @orange:                #f89406;
@@ -84,7 +112,7 @@
 
 // Links
 // -------------------------
-@linkTopColor: 			#ebebeb;	
+@linkTopColor: 			#ebebeb;
 @linkColor:            	@color_one;
 @linkColorHover:        darken(@linkColor, 15%);
 
@@ -92,11 +120,11 @@
 // Typography
 // -------------------------
 @sansFontFamily:        'Quattrocento Sans', sans-serif;
-@serifFontFamily:       Georgia, "Times New Roman", Times, serif; 
+@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 @baseFontSize:          16px;
-@baseFontFamily:        @sansFontFamily; 
+@baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        20px;
 @altFontFamily:         'Varela Round', sans-serif;
 
@@ -176,7 +204,7 @@
 @dropdownLinkColorHover:        @linkTopColor;
 @dropdownLinkColorActive:       @linkTopColor;
 
-@dropdownLinkBackgroundActive:  @color_three;
+@dropdownLinkBackgroundActive:  @color_four;
 @dropdownLinkBackgroundHover:   @dropdownLinkBackgroundActive;
 
 
@@ -269,7 +297,7 @@
 @paginationActiveBackground:          @color_one;
 @paginationColor:					  #4A3A53;
 @paginationActiveHoverBackground:	  @white;
-@paginationDisableBackground: 		  #12A3BE; 	
+@paginationDisableBackground: 		  #12A3BE;
 @pagintaionActiveColor:				  @color_four;
 
 
@@ -329,7 +357,7 @@
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
 // 1200px min
-@gridColumnWidth1200:     70px; 
+@gridColumnWidth1200:     70px;
 @gridGutterWidth1200:     30px;
 @gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
 

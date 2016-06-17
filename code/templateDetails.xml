@@ -2,13 +2,13 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
     <name>js_techie</name>
-    <creationDate>December 2014</creationDate>
+    <creationDate>February 2016</creationDate>
     <author>Joomlashack</author>
     <authorEmail>support@joomlashack.com</authorEmail>
     <authorUrl>http://www.joomlashack.com</authorUrl>
-    <copyright>Copyright Joomlashack 2014. All rights reserved</copyright>
+    <copyright>Copyright Joomlashack 2015. All rights reserved</copyright>
     <license>GNU GPLv2</license>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <description>TPL_JS_TECHIE_XML_DESCRIPTION</description>
 
     <languages folder="language">
@@ -29,6 +29,7 @@
         <filename>template.php</filename>
         <filename>templateDetails.xml</filename>
         <filename>template_thumbnail.png</filename>
+        <folder>less</folder>
         <folder>css</folder>
         <folder>html</folder>
         <folder>images</folder>
@@ -68,19 +69,21 @@
             <fieldset name="basic">
                 <!-- Start of default Wright params -->
                 <field name="wright" type="wright"/>
-                <field name="helper" type="help" label="TPL_JS_WRIGHT_FIELD_NEED_HELP_LABEL" description="TPL_JS_WRIGHT_FIELD_NEED_HELP_DESC" />
-                <field name="rebrand" type="rebrand" default="no" label="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_LABEL" description="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_DESC" />
-                <field name="style" type="styles" default="bamboo-light" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
-                <field name="modal" type="list" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_LABEL" description="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_DESC">
+                <field name="rebrand" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_LABEL" description="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_DESC">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
-                <field name="jquery" type="list" default="1" label="TPL_JS_WRIGHT_FIELD_LOAD_JQUERY_LABEL" description="TPL_JS_WRIGHT_FIELD_LOAD_JQUERY_DESC">
+                <field name="style" type="styles" default="bamboo-dark" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
+                <field name="modal" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_LABEL" description="TPL_JS_WRIGHT_FIELD_ENABLE_MODAL_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="jquery" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_LOAD_JQUERY_LABEL" description="TPL_JS_WRIGHT_FIELD_LOAD_JQUERY_DESC">
                     <option value="0">JNO</option>
                     <option value="1">TPL_JS_WRIGHT_FIELD_LOAD_JQUERY_YES_LOCALLY</option>
                     <option value="2">TPL_JS_WRIGHT_FIELD_LOAD_JQUERY_YES_GOOGLE</option>
                 </field>
-                <field name="javascriptBottom" type="list" default="1" label="TPL_JS_WRIGHT_FIELD_JAVASCRIPT_BOTTOM" description="TPL_JS_WRIGHT_FIELD_JAVASCRIPT_BOTTOM_DESC">
+                <field name="javascriptBottom" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_JAVASCRIPT_BOTTOM" description="TPL_JS_WRIGHT_FIELD_JAVASCRIPT_BOTTOM_DESC">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
@@ -89,42 +92,50 @@
                 <field name="body_font" type="typography" default="default" label="TPL_JS_WRIGHT_FIELD_BODY_FONT_LABEL" description="TPL_JS_WRIGHT_FIELD_BODY_FONT_DESC" />
                 <field name="header_font" type="typography" default="default" label="TPL_JS_WRIGHT_FIELD_HEADING_FONT_LABEL" description="TPL_JS_WRIGHT_FIELD_HEADING_FONT_DESC" />
                 <field name="columns" type="columns" default="sidebar1:3;main:6;sidebar2:3" sidebars="2" label="TPL_JS_WRIGHT_FIELD_COLUMNS_LABEL" description="TPL_JS_WRIGHT_FIELD_COLUMNS_DESC" />
-                <field name="buttonspacer" label="TPL_JS_WRIGHT_BOOTSTRAP_TITLE_LABEL" description="TPL_JS_WRIGHT_BOOTSTRAP_TITLE_DESC" type="spacer" />
-                <field name="bs_rowmode" type="list" default="row" label="TPL_JS_WRIGHT_FIELD_BOOTSTRAP_ROW_MODE_LABEL" description="TPL_JS_WRIGHT_FIELD_BOOTSTRAP_ROW_MODE_DESC">
+                <field name="documentationMode" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_WRIGHT_DOCUMENTATION_MODE" description="TPL_JS_WRIGHT_DOCUMENTATION_MODE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="bootstrapspacer" label="TPL_JS_WRIGHT_BOOTSTRAP_TITLE_LABEL" description="TPL_JS_WRIGHT_BOOTSTRAP_TITLE_DESC" type="spacer" />
+                <field name="bs_rowmode" type="radio" class="btn-group btn-group-yesno" default="row" label="TPL_JS_WRIGHT_FIELD_BOOTSTRAP_ROW_MODE_LABEL" description="TPL_JS_WRIGHT_FIELD_BOOTSTRAP_ROW_MODE_DESC">
                     <option value="row-fluid">TPL_JS_WRIGHT_FIELD_BOOTSTRAP_ROW_MODE_FLUID</option>
                     <option value="row">TPL_JS_WRIGHT_FIELD_BOOTSTRAP_ROW_MODE_DEFAULT</option>
                 </field>
-                <field name="responsive" type="list" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_RESPONSIVE" description="TPL_JS_WRIGHT_FIELD_ENABLE_RESPONSIVE_DESC">
+                <field name="responsive" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_ENABLE_RESPONSIVE" description="TPL_JS_WRIGHT_FIELD_ENABLE_RESPONSIVE_DESC">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
-                <field name="stickyFooter" type="list" default="1" label="TPL_JS_WRIGHT_FIELD_STICKY_FOOTER" description="TPL_JS_WRIGHT_FIELD_STICKY_FOOTER_DESC">
+                <field name="stickyFooter" type="radio" class="btn-group btn-group-yesno" default="1" label="TPL_JS_WRIGHT_FIELD_STICKY_FOOTER" description="TPL_JS_WRIGHT_FIELD_STICKY_FOOTER_DESC">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
-                <field name="wright_bootstrap_images" type="list" default="" label="TPL_JS_WRIGHT_BOOTSTRAP_IMAGES" description="TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_DESC">
+                <field name="wright_bootstrap_images" type="radio" class="btn-group btn-group-yesno" default="" label="TPL_JS_WRIGHT_BOOTSTRAP_IMAGES" description="TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_DESC">
                     <option value="">TPL_JS_WRIGHT_NONE</option>
                     <option value="img-rounded">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_ROUNDED</option>
                     <option value="img-circle">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_CIRCLE</option>
                     <option value="img-polaroid">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_POLAROID</option>
                 </field>
-                <field name="documentationMode" type="list" default="0" label="TPL_JS_WRIGHT_DOCUMENTATION_MODE" description="TPL_JS_WRIGHT_DOCUMENTATION_MODE_DESC">
-                    <option value="1">JYES</option>
-                    <option value="0">JNO</option>
-                </field>
                 <!-- End of default Wright params -->
             </fieldset>
-            <fieldset name="TPL_JS_TECHIE_OPTIONS">
+            <fieldset name="TPL_JS_TECHIE_SLIDER_OPTIONS">
                 <field name="enableSlideshow" type="list" default="0" label="TPL_JS_TECHIE_ENABLE_SLIDESHOW" description="TPL_JS_TECHIE_ENABLE_SLIDESHOW_DESC">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
+                <field name="slideshow_category" type="category" extension="com_content" default="" label="TPL_JS_TECHIE_SLIDESHOW_CATEGORY" description="TPL_JS_TECHIE_SLIDESHOW_CATEGORY_DESC" />
+            </fieldset>
+            <fieldset name="TPL_JS_TECHIE_OPTIONS">
                 <field name="backgroundImage" type="imagelist" default="" directory="images" label="TPL_JS_TECHIE_BACKGROUND_IMAGE" description="TPL_JS_TECHIE_BACKGROUND_IMAGE_DESC" />
                 <field name="techie_lateral_menu_displayed" type="list" default="1" label="TPL_JS_TECHIE_LATERALMENU_DISPLAYED" description="TPL_JS_TECHIE_LATERALMENU_DISPLAYED_DESC">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
-                <field name="slideshow_category" type="category" extension="com_content" default="" label="TPL_JS_TECHIE_SLIDESHOW_CATEGORY" description="TPL_JS_TECHIE_SLIDESHOW_CATEGORY_DESC" />
+                <field name="showTitlePage" type="list" default="1" label="TPL_JS_TECHIE_SHOW_TITLE_PAGE" description="TPL_JS_TECHIE_SHOW_TITLE_PAGE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="headerHeight" type="text" default="328px" label="TPL_JS_TECHIE_HEADER_HEIGHT" description="TPL_JS_TECHIE_HEADER_HEIGHT_DESC" />
+                <field name="titlePageMargin" type="text" default="80px 0px 80px 100px" label="TPL_JS_TECHIE_TITLE_PAGE_MARGIN" description="TPL_JS_TECHIE_TITLE_PAGE_MARGIN_DESC" />
             </fieldset>
         </fields>
     </config>

@@ -1,6 +1,23 @@
 jQuery(function() {
 
-    // Slideshow 
+
+    function resizeHeader () {
+
+        jQuery('#header.techieSlideshow').css('min-height', (jQuery(window).height() - 170) + 'px' );
+
+        if (jQuery(window).width() < 767) {
+            jQuery('#header.techieSlideshow').css('min-height', 'auto');
+        }
+
+    }
+
+    resizeHeader();
+
+    jQuery(window).resize(function () {
+        resizeHeader();
+    });
+
+    // Slideshow
 
     function RenderElements() {
 
