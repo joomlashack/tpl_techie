@@ -46,7 +46,6 @@ p {
 .btn {
 	background-image: none;
 	filter: none;
-	text-transform: uppercase;
 	font-family: @altFontFamily;
 	border-radius: 0px;
 	border: 0px;
@@ -90,6 +89,7 @@ p {
 
 	&.btn-info {
 		border-bottom: 4px solid darken(@btnInfoBackground, 25%);
+	  	color: @white;
 		&:hover {
 			background-color: @btnInfoBackgroundHighlight;
 		}
@@ -97,6 +97,7 @@ p {
 
 	&.btn-success {
 		border-bottom: 4px solid darken(@btnSuccessBackground, 25%);
+	  	color: @white;
 		&:hover {
 			background-color: @btnSuccessBackgroundHighlight;
 		}
@@ -104,6 +105,7 @@ p {
 
 	&.btn-warning {
 		border-bottom: 4px solid darken(@btnWarningBackground, 25%);
+	  	color: @white;
 		&:hover {
 			background-color: @btnWarningBackgroundHighlight;
 		}
@@ -111,6 +113,7 @@ p {
 
 	&.btn-danger {
 		border-bottom: 4px solid darken(@btnDangerBackground, 25%);
+	  	color: @white;
 		&:hover {
 			background-color: @btnDangerBackgroundHighlight;
 		}
@@ -430,6 +433,7 @@ body {
 dl {
 	dt {
 		&.tabs {
+		  	margin-bottom: 0;
 			h3 , span {
 				a {
 					background: @tabBackground;
@@ -459,6 +463,23 @@ dl {
 	margin-left: 0;
 }
 
+[id*="article"].nav-tabs {
+  	border-bottom: none;
+	.tabs h3 {
+	  	margin-top: 0;
+	  	line-height: 30px;
+		a {
+		  	.border-radius(0);
+		}
+	}
+	.open span {
+	  	top: 0;
+	}
+	+ .current {
+	  	padding: 50px;
+	}
+}
+
 .nav-tabs {
 	border-bottom: 1px solid @color_one;
 	.open {
@@ -467,13 +488,15 @@ dl {
 			top: 1px;
 		}
 
-		h3 a , span a {
+		h3 a,
+		span a {
 			color: @linkColor ! important;
 			border-top: 2px solid @white;
 			border-left: none;
 			border-right: none;
 			border-bottom: 1px solid @white;
 			text-decoration: none;
+		  	background: @white;
 			&:hover {
 				background: @white;
 			}
@@ -601,7 +624,6 @@ legend {
 
 	li {
 		a {
-			text-transform: uppercase;
 			padding: 5px 15px;
 
 			&:hover {
@@ -1389,12 +1411,16 @@ ul {
 	}
 }
 
-.nav-pills .dropdown-menu {
-	box-shadow: none;
-	border-radius: 0;
-	padding: 0;
+.nav-pills {
+	.dropdown-menu {
+	  	box-shadow: none;
+	  	border-radius: 0;
+	  	padding: 0;
+	}
+	li a {
+	  	.border-radius(0);
+	}
 }
-
 
 .tooltip {
 	.tooltip-inner {
@@ -1614,7 +1640,7 @@ ul {
 }
 
 .btn-primary .caret, .btn-warning .caret, .btn-danger .caret, .btn-info .caret, .btn-success .caret{
-	border-top-color: #525261;
+	border-top-color: @white;
 }
 
 .top-properties {
@@ -1817,7 +1843,7 @@ ul {
 	padding: 80px 0px 80px 100px;
 	h1 {
 		font-family: @sansFontFamily;
-		color: @white;
+		color: @black;
 		background: @headerTitleBackground;
 		padding: 10px 20px;
 		display: table;
@@ -1917,6 +1943,9 @@ dl {
 	}
   	.mounted[class^="module"] .module-inner {
 		margin-left: -15px;
+	}
+  	.module-inner {
+	  	margin-top: 20px;
 	}
 }
 
@@ -2279,8 +2308,10 @@ dl {
 
 div {
 	&.bs-docs-example {
+	  	padding: 40px 30px;
 		&:after {
 			font-weight: normal;
+		  	padding: 3px 5px 2px;
 		}
 	}
 }
