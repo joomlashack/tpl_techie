@@ -1844,9 +1844,10 @@ ul {
 	padding: 150px 0px 250px 100px;
 	z-index: 1;
 	display: none;
+  	background: rgba(0, 0, 0, 0.4);
 	h1 {
 		font-family: @sansFontFamily;
-		color: @white;
+		color: @black;
 		background: @headerTitleBackground;
 		padding: 10px 20px;
 		display: table;
@@ -1913,6 +1914,9 @@ dl {
 				}
 			}
 		}
+	}
+  	.mounted[class^="module"] .module-inner {
+		margin-left: -15px;
 	}
 }
 
