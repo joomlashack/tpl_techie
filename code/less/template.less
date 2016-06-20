@@ -465,11 +465,15 @@ dl {
 
 [id*="article"].nav-tabs {
   	border-bottom: none;
-	.tabs h3 {
-	  	margin-top: 0;
-	  	line-height: 30px;
-		a {
-		  	.border-radius(0);
+	.tabs {
+	  	margin-bottom: 2px;
+		h3 {
+			margin-top: 0;
+		  	margin-bottom: 0;
+			line-height: 30px;
+			a {
+			  	.border-radius(0);
+			}
 		}
 	}
 	.open span {
@@ -491,10 +495,7 @@ dl {
 		h3 a,
 		span a {
 			color: @linkColor ! important;
-			border-top: 2px solid @white;
-			border-left: none;
-			border-right: none;
-			border-bottom: 1px solid @white;
+		  	border-color: @white;
 			text-decoration: none;
 		  	background: @white;
 			&:hover {
@@ -512,7 +513,7 @@ dl {
 
 		&.active {
 			> a {
-				background-color: @bodyBackground;
+				background-color: @white;
 				&:hover {
 					background-color: @bodyBackground;
 				}
@@ -526,7 +527,7 @@ dl {
 }
 
 dl.tabs.nav h3 , dl.tabs.nav p {
-	margin-right: 1px;
+	margin-right: 2px;
 	font-size: @baseFontSize;
 	line-height: 42px;
 }
@@ -670,7 +671,14 @@ legend {
 	top: -1px;
 }
 
+.alert {
+	.border-radius(0);
+}
+
 .navbar {
+  	.brand {
+	  	padding: 10px 20px;
+	}
 	.nav {
 		li {
 			&.deeper {
@@ -714,7 +722,7 @@ legend {
 
 		> li {
 			padding: 8px 15px;
-			margin-right: 50px;
+			margin-right: 30px;
 			font-family: @altFontFamily;
 			font-size: @baseFontSize - 2;
 			> a {
@@ -866,6 +874,24 @@ ul {
 .well {
 	box-shadow: none;
 	padding: 20px 0px;
+}
+
+.show-grid {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	[class*="span"] {
+		background: @grayLighter;
+		line-height: 40px;
+		min-height: 40px;
+		text-align: center;
+		[class*="span"] {
+		  	background-color: @gray;
+		  	color: @white;
+			[class*="span"] {
+				background-color: @grayLight;
+			}
+		}
+	}
 }
 
 .form-horizontal {
@@ -1120,6 +1146,7 @@ ul {
 				background-image: none;
 				color: @headingTabColor;
 				filter: none;
+			  	text-shadow: none;
 
 				&:after {
 					color: @headingTabColor;
@@ -1127,10 +1154,12 @@ ul {
 					float: right;
 					font-family: FontAwesome;
 					font-size: @baseFontSize - 7;
+				  	margin-left: 6px;
 				}
 
 				&:hover , &:focus {
 					color: @headingTabColor;
+				  	text-shadow: none;
 
 					&:after {
 						color: @headingTabColor;
@@ -1382,6 +1411,7 @@ ul {
 					float: right;
 					font-family: FontAwesome;
 					font-size: @baseFontSize - 6;
+				  	margin-left: 6px;
 				}
 			}
 		}
@@ -2214,8 +2244,8 @@ dl {
 			text-align: center;
 			background-color: @doubleBackgroundColor;
 			margin-left: -10px;
-			padding-top: 5px;
-			padding-bottom: 5px;
+		  	padding-bottom: 8px;
+		  	padding-top: 10px;
 			z-index: 1;
 			color: @white;
 			text-transform: uppercase;
@@ -2311,8 +2341,10 @@ div {
 	&.bs-docs-example {
 	  	padding: 40px 30px;
 		&:after {
-			font-weight: normal;
-		  	padding: 3px 5px 2px;
+			content: '';
+		}
+		.btn-group {
+		  	margin-bottom: 2px;
 		}
 	}
 }
