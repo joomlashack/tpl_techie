@@ -1,8 +1,36 @@
 @media (min-width: 1200px) {
+
 	#header , #breadcrumbs {
 		position: relative;
 		margin-bottom: 0px;
 	}
+
+}
+
+@media (max-width: 979px) {
+
+  	.navbar #nav-bottom-menu .nav > li,
+  	.navbar #nav-toolbar .nav > li {
+	  	padding: 0;
+	}
+
+	.navbar #nav-toolbar .nav li {
+		margin: 0;
+		.dropdown-menu {
+		  	li {
+				padding-top: 0;
+				&.deeper > a:after {
+				  	content: '';
+				}
+			}
+		}
+	}
+
+	.navbar #nav-toolbar .nav > li > .dropdown-menu {
+	  	background: rgba(0,0,0,0.2);
+	  	margin: 0 !important;
+	}
+
 }
 
 @media (max-width: 979px) and (min-width: 768px) {
@@ -251,7 +279,8 @@
 							content: '\f111';
 							float: left;
 							color: @white;
-							margin-left: -20px;
+							margin-left: -10px;
+						  	margin-right: 6px;
 							font-family: FontAwesome;
 							font-size: @baseFontSize;
 						}
@@ -269,21 +298,20 @@
 		}
 	}
 
-	.navbar #nav-toolbar .nav li {
-	  	border-bottom-color: rgba(255,255,255,0.5);
-		.dropdown-menu {
-			li {
-			  	border-top-color: rgba(255,255,255,0.2);
-			  	padding-top: 0;
-				&.deeper > a:after {
-				  	content: '';
-				}
-			}
-		}
-	}
 }
 
 @media (max-width: 767px) {
+
+  	#sidebar1,
+  	#sidebar2 {
+		margin-bottom: 50px;
+	  	margin-top: 0;
+	}
+
+  	#main + #sidebar2,
+	#main + #sidebar1 {
+	  	margin-top: 50px;
+	}
 
 	#header {
 		position: relative;
@@ -485,6 +513,7 @@
 	#nextslide:after,
 	#prevslide:after {
 		top: 130px;
+	  	font-size: 60px;
 	}
 
 	#lateral-menu {
@@ -743,10 +772,11 @@
 						}
 
 						&:before {
-							content: '\f067';
+							content: '\f111';
 							float: left;
 							color: @white;
-							margin-left: -20px;
+							margin-left: -10px;
+						  	margin-right: 6px;
 							font-family: FontAwesome;
 							font-size: @baseFontSize;
 						}
@@ -764,13 +794,11 @@
 		}
 	}
 
-	.navbar #nav-toolbar .nav li {
-		.dropdown-menu {
-		  	margin: 0 20px;
-		  	li {
-				&.deeper > a:after {
-				  	content: '';
-				}
+	.navbar #nav-toolbar .nav {
+	  	padding: 0;
+		li {
+			.dropdown-menu {
+			  margin: 0 20px;
 			}
 		}
 	}
@@ -782,11 +810,6 @@
 		padding-right: 20px;
 		width: auto;
 		background-image: none;
-	}
-
-	[class ^= "item"] {
-		padding-top: 20px;
-		padding-bottom: 20px;
 	}
 
 	.pagination {

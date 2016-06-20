@@ -243,6 +243,10 @@ blockquote {
 	}
 }
 
+.menu [class^="item"] {
+  	padding: inherit;
+}
+
 .form-actions {
 	background-color: transparent;
 	padding-left: 0px;
@@ -482,6 +486,7 @@ dl {
 			line-height: 30px;
 			a {
 			  	.border-radius(0);
+			  	border: none;
 			}
 		}
 	}
@@ -498,15 +503,16 @@ dl {
 	.open {
 		span {
 			position: relative;
-			top: 1px;
+			top: 0;
 		}
 
 		h3 a,
 		span a {
 			color: @linkColor ! important;
-		  	border-color: @white;
+			border-color: @white;
 			text-decoration: none;
 		  	background: @white;
+		  	border-top: none;
 			&:hover {
 				background: @white;
 			}
@@ -580,6 +586,7 @@ dl {
 .navbar-search {
 	> .search-query {
 		margin: 5px 0px 5px 0px;
+	  	.border-radius(0);
 	}
 }
 
@@ -1669,12 +1676,11 @@ ul {
 	}
 }
 
-.btn-group .dropdown-menu {
-  	&.actions {
-		[class*="icon-"] {
-		  	margin-right: 6px;
-		}
-	}
+.btn-group .dropdown-menu.actions,
+.btn-group.icons-actions .dropdown-menu {
+	  [class*="icon-"] {
+		  margin-right: 6px;
+	  }
 }
 
 .btn-primary .caret, .btn-warning .caret, .btn-danger .caret, .btn-info .caret, .btn-success .caret{
@@ -2171,6 +2177,10 @@ dl {
 		color: @color_one;
 		padding-bottom: 5px;
 		font-size: @baseFontSize + 4;
+	  	&:after {
+		  	right: 50%;
+		  	position: absolute;
+		}
 	}
 
 	.module-inner , .custom_ms2 {
@@ -2205,6 +2215,7 @@ dl {
 		border-bottom: 1px solid @boderModuleStyleColor;
 		color: @color_one;
 		padding-bottom: 20px;
+	  	margin-bottom: 0;
 		font-size: @baseFontSize + 4;
 	}
 
@@ -2241,7 +2252,7 @@ dl {
 		}
 
 		.custom_ms4 {
-			padding: 10px 15px;
+			padding: 20px;
 		}
 
 		.wrightmodule-imgfeatured {
