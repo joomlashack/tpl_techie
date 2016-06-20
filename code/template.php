@@ -256,6 +256,7 @@ defined('_JEXEC') or die('Restricted access');
 	        </script>
 
 			<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_techie/js/techie.js'></script>
+            <w:module type="none" name="debug" chrome="none" />
 		</body>
 	</html>
 </doctype>
