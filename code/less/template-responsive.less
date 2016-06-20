@@ -272,6 +272,7 @@
 }
 
 @media (max-width: 767px) {
+
 	#header {
 		position: relative;
 		margin-bottom: 0px;
@@ -397,6 +398,9 @@
 			float: left;
 			width: auto;
 		}
+		img {
+		  	max-width: 209px;
+		}
 	}
 
 	.breadcrumbs {
@@ -473,6 +477,9 @@
 	#lateral-menu {
 		width: 230px;
 		&.show-lateral-menu {
+		}
+	  	.nav > li [class^="item"] {
+		  	padding: inherit;
 		}
 	}
 
