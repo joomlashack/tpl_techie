@@ -161,7 +161,6 @@
 
 							&.deeper {
 								> a {
-									text-transform: uppercase;
 									&:after {
 										content: '\f0da';
 										position: relative;
@@ -249,7 +248,7 @@
 						}
 
 						&:before {
-							content: '\f067';
+							content: '\f111';
 							float: left;
 							color: @white;
 							margin-left: -20px;
@@ -265,6 +264,19 @@
 
 				&.highlight-parent {
 					margin-top: 15px;
+				}
+			}
+		}
+	}
+
+	.navbar #nav-toolbar .nav li {
+	  	border-bottom-color: rgba(255,255,255,0.5);
+		.dropdown-menu {
+			li {
+			  	border-top-color: rgba(255,255,255,0.2);
+			  	padding-top: 0;
+				&.deeper > a:after {
+				  	content: '';
 				}
 			}
 		}
@@ -470,8 +482,9 @@
 		}
 	}
 
-	#nextslide , #prevslide {
-		top: 60px;
+	#nextslide:after,
+	#prevslide:after {
+		top: 130px;
 	}
 
 	#lateral-menu {
@@ -643,7 +656,6 @@
 
 							&.deeper {
 								> a {
-									text-transform: uppercase;
 									&:after {
 										content: '\f0da';
 										position: relative;
@@ -752,8 +764,15 @@
 		}
 	}
 
-	.navbar #nav-toolbar .nav li.dropdown .dropdown-menu li.deeper > a:after {
-	  	content: '';
+	.navbar #nav-toolbar .nav li {
+		.dropdown-menu {
+		  	margin: 0 20px;
+		  	li {
+				&.deeper > a:after {
+				  	content: '';
+				}
+			}
+		}
 	}
 
 	#grid-bottom2 {
