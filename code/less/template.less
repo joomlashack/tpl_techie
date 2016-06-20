@@ -1,3 +1,11 @@
+a {
+  	transition: all 0.4s ease-in-out 0s;
+	&:hover,
+	&:focus {
+	  	text-decoration: none;
+	}
+}
+
 h1 {
 	font-size: 40px;
 	color: @headingTabColor;
@@ -162,6 +170,7 @@ p {
 
 		margin-top: 0px;
 		margin-bottom: 0px;
+	  	padding-bottom: 0;
 	}
 
 	[class ^= "item"] {
@@ -593,9 +602,9 @@ legend {
 	cursor: pointer;
 	> .legend-menu {
 		float: left;
-		margin-top: 5px;
+		margin-top: 3px;
 		margin-right: 5px;
-		font-size: @baseFontSize - 2;
+		font-size: @baseFontSize + 3;
 		color: @linkTopColor;
 		font-family: @altFontFamily;
 		font-weight: 400;
@@ -722,7 +731,7 @@ legend {
 
 		> li {
 			padding: 8px 15px;
-			margin-right: 30px;
+			margin-right: 20px;
 			font-family: @altFontFamily;
 			font-size: @baseFontSize - 2;
 			> a {
@@ -1660,6 +1669,14 @@ ul {
 	}
 }
 
+.btn-group .dropdown-menu {
+  	&.actions {
+		[class*="icon-"] {
+		  	margin-right: 6px;
+		}
+	}
+}
+
 .btn-primary .caret, .btn-warning .caret, .btn-danger .caret, .btn-info .caret, .btn-success .caret{
 	border-top-color: @white;
 }
@@ -1929,7 +1946,7 @@ ul {
 
 dl {
 	&.article-info {
-		margin: 15px 0px 35px 0px;
+		margin: 0 0 15px;
 		font-size: @baseFontSize - 2;
 		[class ^= "icon-"] , [class *= " icon-"] {
 			margin-right: 3px;
@@ -1944,7 +1961,7 @@ dl {
 }
 
 .item-image {
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 }
 
 #top-header {
