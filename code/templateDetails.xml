@@ -47,19 +47,13 @@
         <position>featured</position>
         <position>grid-top</position>
         <position>grid-top2</position>
-        <position>grid-top3</position>
         <position>above-content</position>
         <position>breadcrumbs</position>
-        <position>slider</position>
         <position>sidebar1</position>
         <position>sidebar2</position>
         <position>below-content</position>
         <position>grid-bottom</position>
         <position>grid-bottom2</position>
-        <position>grid-bottom3</position>
-        <position>grid-bottom4</position>
-        <position>grid-bottom5</position>
-        <position>grid-bottom6</position>
         <position>bottom-menu</position>
         <position>footer</position>
         <position>debug</position>
