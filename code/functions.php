@@ -73,7 +73,7 @@ $techieCategorySlideShow = $this->params->get('slideshow_category','');
 
 function  getSectionItems($itemsCategory) {
     $database = JFactory::getDBO();
-    $sql = "SELECT * FROM #__content WHERE catid = $itemsCategory";
+    $sql = "SELECT * FROM #__content WHERE catid = $itemsCategory ORDER BY ordering ASC";
     $database->setQuery($sql);
     return $database->loadAssocList();
 }
