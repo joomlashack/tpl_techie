@@ -1726,30 +1726,30 @@ ul {
 }
 
 #nextslide {
+  	right: 30px;
 	&:after {
-		right: 30px;
 		content: "\f0da";
 	}
 }
 
 #prevslide {
+  	left: 30px;
   	&:after {
-		left: 30px;
 	  	content: "\f0d9";
 	}
 }
 
 #nextslide,
 #prevslide {
-  &:after {
-	  z-index: 2;
-	  top: 220px;
-	  font-family: FontAwesome;
-	  font-size: 100px;
-	  color: @white;
-	  cursor: pointer;
-	  position: absolute;
-  }
+	z-index: 2;
+	top: 220px;
+	cursor: pointer;
+	position: absolute;
+	&:after {
+		font-family: FontAwesome;
+		font-size: 100px;
+		color: @white;
+	}
 }
 
 .techieSlideshowContainer {

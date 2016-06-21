@@ -510,10 +510,12 @@
 		}
 	}
 
-	#nextslide:after,
-	#prevslide:after {
+	#nextslide,
+	#prevslide {
 		top: 130px;
-	  	font-size: 60px;
+	  	&:after {
+		  	font-size: 60px;
+		}
 	}
 
 	#lateral-menu {
