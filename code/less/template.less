@@ -2530,3 +2530,21 @@ label {
 	  	min-height: 41px !important;
 	}
 }
+
+.is_iphone,
+.is_android {
+	#top-header .mounted[class^="module"] .module-inner {
+	  	margin-left: inherit;
+	}
+  	#header.techieSlideshow {
+	  	margin-bottom: 0;
+		+ #top-header {
+			.container .row [class^="module"],
+			.container-fluid .row [class^="module"],
+			.container .row-fluid [class^="module"],
+			.container-fluid .row-fluid [class^="module"] {
+			  	margin-top: 0;
+			}
+		}
+	}
+}
