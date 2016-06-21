@@ -89,12 +89,20 @@ function getSlideItems($activeCategory) {
     $itemOptions = array();
 
     foreach ($categoryItems as $key => $item ) {
-          $itemOptions[$key]['id'] = $item['id'];
-          $itemOptions[$key]['content'] = $item['introtext'];
-          $itemOptions[$key]['title'] = $item['title'];
-          $images = json_decode($item['images'], true);
-          $itemOptions[$key]['image'] = JURI::root(true) . "/" .$images['image_intro'];
-          $itemOptions[$key]['slide'] = 'slide-' . $key;
+
+            // Check if an intro image is selected for the article
+            $images = json_decode($item['images'], true);
+            if( $images['image_intro'] ){
+                $itemOptions[$key]['image'] = JURI::root(true) . "/" .$images['image_intro'];
+            } else {
+                $itemOptions[$key]['image'] = JURI::root(true) . "/templates/js_techie/images/default-bg-one.jpg";
+            }
+
+            $itemOptions[$key]['id'] = $item['id'];
+            $itemOptions[$key]['content'] = $item['introtext'];
+            $itemOptions[$key]['title'] = $item['title'];
+            $itemOptions[$key]['slide'] = 'slide-' . $key;
+
     }
 
     $slides  =  json_encode($itemOptions);
