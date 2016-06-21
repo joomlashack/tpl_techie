@@ -12,6 +12,13 @@
   	.navbar #nav-bottom-menu .nav > li,
   	.navbar #nav-toolbar .nav > li {
 	  	padding: 0;
+	  	border-bottom: 1px solid rgba(255,255,255,0.3);
+	  	> ul > li {
+		  	border-bottom: 1px solid rgba(255,255,255,0.15);
+		  	&:last-of-type {
+			  	border-bottom: none;
+			}
+		}
 	}
 
 	.navbar #nav-toolbar .nav li {
@@ -522,8 +529,12 @@
 		width: 230px;
 		&.show-lateral-menu {
 		}
-	  	.nav > li [class^="item"] {
-		  	padding: inherit;
+	  	.module {
+			.nav {
+				> li {
+				  	padding: 10px 0;
+				}
+			}
 		}
 	}
 
@@ -651,7 +662,6 @@
 						}
 
 						li {
-							border-bottom: 0;
 							padding-top: 10px;
 							background-color: transparent;
 							> a {
