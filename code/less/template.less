@@ -55,14 +55,14 @@ p {
 	background-image: none;
 	filter: none;
 	font-family: @altFontFamily;
-	border-radius: 0px;
+	.border-radius(0);
 	border: 0px;
 	font-size: @baseFontSize + 2;
 	line-height: 90%;
 	color: @grayDark;
 	text-shadow: none;
 	padding: 8px 12px;
-	border-bottom: 4px solid @color_one;
+	border-bottom: 3px solid @color_one;
 	&:hover {
 		color: @textColor;
 		background-color: @btnHoverBackground;
@@ -738,7 +738,6 @@ legend {
 
 		> li {
 			padding: 8px 15px;
-			margin-right: 20px;
 			font-family: @altFontFamily;
 			font-size: @baseFontSize - 2;
 			> a {
@@ -1748,7 +1747,7 @@ ul {
 	&:after {
 		font-family: FontAwesome;
 		font-size: 100px;
-		color: @white;
+		color: @navs-slide;
 	}
 }
 
@@ -1880,7 +1879,6 @@ ul {
 }
 
 .header-inner {
-	border-bottom: 1px solid #CECEBF;
 	margin-top: 20px;
 	padding-bottom: 15px;
 	position: relative;
@@ -1918,12 +1916,15 @@ ul {
 	display: none;
 }
 
+#slide-text-element {
+  	background: @background-slide;
+}
+
 .current-slide-item {
 	position: relative;
-	padding: 150px 0px 250px 100px;
+	padding: 150px 0px 290px 100px;
 	z-index: 1;
 	display: none;
-  	background: rgba(0, 0, 0, 0.6);
 	h1 {
 		font-family: @sansFontFamily;
 		color: @black;
@@ -1935,7 +1936,7 @@ ul {
 
 	p {
 		font-size: @baseFontSize + 6;
-		color: @white;
+		color: @text-slide;
 		margin-top: 30px;
 		line-height: 140%;
 		width: 55%;
