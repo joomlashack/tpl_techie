@@ -95,7 +95,7 @@ function getSlideItems($activeCategory) {
             if( $images['image_intro'] ){
                 $itemOptions[$key]['image'] = JURI::root(true) . "/" .$images['image_intro'];
             } else {
-                $itemOptions[$key]['image'] = JURI::root(true) . "/templates/js_techie/images/default-bg-one.jpg";
+                $itemOptions[$key]['image'] = JURI::root(true) . "/templates/js_techie/images/default-bg.jpg";
             }
 
             $itemOptions[$key]['id'] = $item['id'];
