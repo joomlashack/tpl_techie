@@ -2013,7 +2013,7 @@ dl {
 	margin-bottom: 60px;
 }
 
-.techie-container #content-wrapper {
+#content-wrapper {
 	background-image: url(../images/content-bg.png);
 	background-repeat: no-repeat;
 	background-position: bottom right;
@@ -2026,7 +2026,7 @@ dl {
 		.row , .row-fluid {
 			.module_ms3 {
 				h3 {
-					color: @color_six;
+					color: @color_six !important;
 				}
 			}
 		}
@@ -2321,6 +2321,22 @@ dl {
 			}
 		}
 	}
+}
+
+.wrightmodule-subtitle {
+	position: absolute;
+	top: 0;
+	margin-top: -27px;
+	width: 100%;
+	text-align: center;
+	background-color: @doubleBackgroundColor;
+	margin-left: -10px;
+	padding-bottom: 8px;
+	padding-top: 10px;
+	z-index: 1;
+	color: @white;
+	text-transform: uppercase;
+	font-size: @baseFontSize - 2;
 }
 
 .module_ms3 , .moduletable_ms3 , .moduletext_ms3 {
