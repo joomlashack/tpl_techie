@@ -117,4 +117,4 @@ function getSlideItems($activeCategory) {
 
 $showTitlePage = ($this->params->get('showTitlePage', '1') == '0' ? false : true);
 $headerHeight = $this->params->get('headerHeight', '328px');
-$titlePageMargin = $this->params->get('titlePageMargin', '80px 0px 80px 100px');
+$titlePageMargin = $this->params->get('titlePageMargin', '80px 0px');
