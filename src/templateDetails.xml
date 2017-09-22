@@ -113,6 +113,11 @@
                 <field name="mobilemenuspacer" label="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_label" description="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_DESC" type="spacer" />
                 <field name="mobile_menu_text" type="text" default="" label="TPL_JS_WRIGHT_MOBILE_MENU_TEXT" description="TPL_JS_WRIGHT_MOBILE_MENU_TEXT_DESC" />
                 <!-- End of default Wright params -->
+                            
+                <field
+                    type="customfooter"
+                    name="customfooter"
+                    media="tpl_js_techie" />
             </fieldset>
             <fieldset name="TPL_JS_TECHIE_SLIDER_OPTIONS">
                 <field name="enableSlideshow" type="list" default="0" label="TPL_JS_TECHIE_ENABLE_SLIDESHOW" description="TPL_JS_TECHIE_ENABLE_SLIDESHOW_DESC">
@@ -136,4 +141,42 @@
             </fieldset>
         </fields>
     </config>
+
+    <scriptfile>script.installer.php</scriptfile>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Techie"><![CDATA[https://deploy.ostraining.com/client/update/pro/stable/tpl_js_techie]]></server>
+    </updateservers>
+
+    <variant>PRO</variant>
+
+    <alledia>
+        <element>tpl_js_techie</element>
+        <namespace>JS_Techie</namespace>
+        <name>JS Techie</name>
+        <license>pro</license>
+        <targetplatform>3.*</targetplatform>
+
+        <relatedExtensions>
+            <extension
+                type="library"
+                element="allediaframework">AllediaFramework</extension>
+
+            <extension
+                type="plugin"
+                group="system"
+                element="ossystem"
+                publish="true"
+                ordering="first">OSSystem</extension>
+
+            <extension
+                type="plugin"
+                group="system"
+                element="osmylicensesmanager"
+                publish="true"
+                ordering="last">OSMyLicensesManager</extension>
+        </relatedExtensions>
+
+        <include>AllediaFreeDefaultFiles</include>
+    </alledia>
 </extension>
