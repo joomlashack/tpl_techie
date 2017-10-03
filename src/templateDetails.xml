@@ -116,11 +116,6 @@
                 <field name="mobilemenuspacer" label="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_label" description="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_DESC" type="spacer" />
                 <field name="mobile_menu_text" type="text" default="" label="TPL_JS_WRIGHT_MOBILE_MENU_TEXT" description="TPL_JS_WRIGHT_MOBILE_MENU_TEXT_DESC" />
                 <!-- End of default Wright params -->
-                            
-                <field
-                    type="customfooter"
-                    name="customfooter"
-                    media="tpl_js_techie" />
             </fieldset>
             <fieldset name="TPL_JS_TECHIE_SLIDER_OPTIONS">
                 <field name="enableSlideshow" type="list" default="0" label="TPL_JS_TECHIE_ENABLE_SLIDESHOW" description="TPL_JS_TECHIE_ENABLE_SLIDESHOW_DESC">
@@ -141,6 +136,12 @@
                 </field>
                 <field name="headerHeight" type="text" default="328px" label="TPL_JS_TECHIE_HEADER_HEIGHT" description="TPL_JS_TECHIE_HEADER_HEIGHT_DESC" />
                 <field name="titlePageMargin" type="text" default="80px 0px" label="TPL_JS_TECHIE_TITLE_PAGE_MARGIN" description="TPL_JS_TECHIE_TITLE_PAGE_MARGIN_DESC" />
+            </fieldset>
+            <fieldset name="footer" addfieldpath="/templates/js_techie/form/fields">     
+                <field
+                    type="customfooter"
+                    name="customfooter"
+                    media="tpl_js_techie" />
             </fieldset>
         </fields>
     </config>
