@@ -1996,9 +1996,25 @@ dl {
 			}
 		}
 	}
-  	.mounted[class^="module"] .module-inner {
-		margin-left: -15px;
+  	.mounted[class^="module"] {
+
+		.module-inner {
+			margin-left: -15px;
+		}
+
+		&.fullwidth {
+			position: relative;
+
+			> .module-inner {
+				width: 100%;
+				box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				margin-left: 0;
+			}
+		}
 	}
+
   	.module-inner {
 	  	margin-top: 20px;
 	}
