@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="3.0" type="template" method="upgrade" client="site">
     <name>js_techie</name>
     <creationDate>November 08 2017</creationDate>
@@ -132,7 +131,7 @@
                 <field name="headerHeight" type="text" default="328px" label="TPL_JS_TECHIE_HEADER_HEIGHT" description="TPL_JS_TECHIE_HEADER_HEIGHT_DESC" />
                 <field name="titlePageMargin" type="text" default="80px 0px" label="TPL_JS_TECHIE_TITLE_PAGE_MARGIN" description="TPL_JS_TECHIE_TITLE_PAGE_MARGIN_DESC" />
             </fieldset>
-            <fieldset name="footer" addfieldpath="/templates/js_techie/form/fields">     
+            <fieldset name="footer" addfieldpath="/templates/js_techie/form/fields">
                 <field
                     type="customfooter"
                     name="customfooter"
