@@ -697,29 +697,6 @@ legend {
 	}
 	.nav {
 		li {
-			&.deeper {
-				> a {
-					.caret {
-						display: none;
-					}
-
-					&:after {
-						font-family: FontAwesome;
-						margin-left: 10px;
-						font-size: @baseFontSize - 2;
-						content: '\f0d7';
-					}
-
-					&:hover , &:focus {
-						&:after {
-							font-family: FontAwesome;
-							margin-left: 10px;
-							font-size: @baseFontSize - 2;
-							content: '\f0d7';
-						}
-					}
-				}
-			}
 
 			&.highlight-parent {
 				background-color: @content-background;
@@ -745,27 +722,6 @@ legend {
 				padding: 2px 0;
 				text-transform: uppercase;
 				text-shadow: none;
-				.caret {
-					border-bottom-color: @linkTopColor;
-					border-top-color: @linkTopColor;
-					margin-top: 8px;
-					margin-left: 10px;
-					position: relative;
-				}
-			}
-
-			&.deeper {
-				> a {
-					.caret {
-						display: none;
-					}
-
-					&:after {
-						font-family: FontAwesome;
-						font-size: @baseFontSize - 2;
-						content: '\f0d7';
-					}
-				}
 			}
 
 			&.active {
@@ -783,72 +739,6 @@ legend {
 					border-radius: 0px;
 					box-shadow: none;
 					padding: 0px;
-
-					&:before , &:after {
-						content: none;
-					}
-
-					> li {
-						border-top: 1px solid @color_four;
-						text-shadow: none;
-						> a {
-							color: @linkTopColor;
-
-							&:hover , &:focus {
-								.caret {
-									border-top-color: transparent;
-									border-bottom-color: transparent;
-								}
-							}
-
-							.caret {
-								border-top-color: transparent;
-								border-left-color: @dropdownLinkColor;
-							}
-
-							&:hover , &:focus {
-								.caret {
-									border-left-color: @dropdownLinkColorHover;
-								}
-							}
-						}
-
-						&.deeper {
-							> a {
-								&:after {
-									content: '\f0da';
-									position: absolute;
-									right: 20px;
-									top: 0;
-								}
-							}
-						}
-
-						&.active {
-							> a {
-								background-image: none;
-								filter: none;
-
-								.caret {
-									border-left-color: @dropdownLinkColorActive;
-								}
-
-								&:hover , &:focus {
-									.caret {
-										border-left-color: @dropdownLinkColorActive;
-									}
-								}
-							}
-						}
-					}
-
-					&.active {
-						&.deeper {
-							li {
-								background-color: @color_four;
-							}
-						}
-					}
 				}
 			}
 
@@ -864,13 +754,7 @@ legend {
 		}
 	}
 
-	.dropdown-submenu>a:after {
-		border: 0;
-	}
 
-	.dropdown-submenu>.dropdown-menu {
-		top: -2px;
-	}
 }
 
 ul {

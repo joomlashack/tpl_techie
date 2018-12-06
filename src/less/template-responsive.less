@@ -7,6 +7,270 @@
 
 }
 
+@media (min-width: 980px) {
+
+	.navbar {
+
+		.nav {
+
+			li {
+
+				&.deeper {
+
+					> a {
+
+						.caret {
+							display: none;
+						}
+
+						&:after {
+							font-family: FontAwesome;
+							font-size: @baseFontSize - 2;
+							content: '\f0d7';
+						}
+					}
+				}
+			}
+
+			> li {
+
+				> a {
+
+					.caret {
+						border-bottom-color: @linkTopColor;
+						border-top-color: @linkTopColor;
+						margin-top: 8px;
+						margin-left: 10px;
+						position: relative;
+					}
+				}
+
+				&.deeper {
+
+					> a {
+						.caret {
+							display: none;
+						}
+
+						&:after {
+							font-family: FontAwesome;
+							margin-left: 10px;
+							font-size: @baseFontSize - 2;
+							content: '\f0d7';
+						}
+
+						&:hover,
+						&:focus {
+
+							&:after {
+								font-family: FontAwesome;
+								margin-left: 10px;
+								font-size: @baseFontSize - 2;
+								content: '\f0d7';
+							}
+						}
+					}
+				}
+
+				&.dropdown {
+
+					.dropdown-menu {
+
+						&:before,
+						&:after {
+							content: none;
+						}
+
+						> li {
+							border-top: 1px solid @color_four;
+							text-shadow: none;
+
+							> a {
+								color: @linkTopColor;
+
+								&:hover,
+								&:focus {
+
+									.caret {
+										border-top-color: transparent;
+										border-bottom-color: transparent;
+									}
+								}
+
+								.caret {
+									border-top-color: transparent;
+									border-left-color: @dropdownLinkColor;
+								}
+
+								&:hover,
+								&:focus {
+
+									.caret {
+										border-left-color: @dropdownLinkColorHover;
+									}
+								}
+							}
+
+							&.deeper {
+
+								> a {
+
+									&:after {
+										content: '\f0da';
+										position: absolute;
+										right: 20px;
+										top: 0;
+									}
+								}
+							}
+
+							&.active {
+
+								> a {
+									background-image: none;
+									filter: none;
+
+									.caret {
+										border-left-color: @dropdownLinkColorActive;
+									}
+
+									&:hover,
+									&:focus {
+
+										.caret {
+											border-left-color: @dropdownLinkColorActive;
+										}
+									}
+								}
+							}
+						}
+
+						&.active {
+
+							&.deeper {
+
+								li {
+									background-color: @color_four;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.dropdown-submenu>a:after {
+			border: 0;
+		}
+
+		.dropdown-submenu>.dropdown-menu {
+			top: -2px;
+		}
+	}
+
+	.navbar {
+		.nav {
+
+			li {
+
+				> a {
+
+					.caret {
+						display: none;
+					}
+				}
+
+				&.dropdown {
+
+					.dropdown-menu {
+						//position: relative;
+						//display: block;
+						//background-color: transparent;
+						//float: none;
+						//border: 0;
+						box-shadow: none;
+						border-radius: 0;
+						min-width: 160px;
+						padding: 0;
+
+						li {
+							border-bottom: 0;
+							//position: relative;
+							//padding-top: 10px;
+							background-color: transparent;
+
+							> a {
+								padding-left: 15px;
+							}
+
+							&.active {
+								> a {
+
+									&:before {
+										content: none;
+									}
+								}
+							}
+
+							&.deeper {
+								> a {
+									&:after {
+										content: '\f0da';
+										position: absolute;
+										//right: 0;
+									}
+								}
+							}
+
+							.sub-menu {
+
+								&:before , &:after {
+									display: none;
+								}
+							}
+						}
+
+						.sub-menu {
+							position: relative;
+							visibility: visible;
+							left: 0;
+
+							&:before , &:after {
+								display: none;
+							}
+						}
+					}
+
+					&.parent {
+						> a {
+							&:after {
+								float: none;
+								//left: 10px;
+								position: relative;
+								top: -3px;
+								content: '\f0dd';
+								//font-size: @baseFontSize - 4;
+							}
+						}
+					}
+				}
+
+				&.active {
+					> a {
+						background-color: transparent;
+						background-image: none;
+						filter: none;
+						color: @tabBackground;
+						&:hover , &:focus {
+							background-color: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 @media (max-width: 979px) {
 
   	.navbar #nav-bottom-menu .nav > li,
@@ -128,7 +392,7 @@
 					}
 
 					.caret {
-						display: none;
+
 					}
 				}
 
@@ -149,18 +413,6 @@
 
 				&.dropdown {
 					.dropdown-menu {
-						position: relative;
-						display: block;
-						background-color: transparent;
-						float: none;
-						border: 0;
-						box-shadow: none;
-						border-radius: 0;
-						min-width: 0;
-						padding: 0;
-						ul {
-							margin: 0 5px;
-						}
 
 						li {
 							border-bottom: 0;
@@ -169,7 +421,6 @@
 							> a {
 								white-space: normal;
 								color: @lateralMenuColor;
-								padding-left: 15px;
 								text-transform: none;
 								font-size: @baseFontSize;
 								&:hover , &:focus {
@@ -184,26 +435,12 @@
 									&:hover , &:focus {
 										background-color: none;
 									}
-
-									&:before {
-										content: none;
-									}
 								}
 							}
 
 							&.current {
 								> a {
 									color: @tabBackground;
-								}
-							}
-
-							&.deeper {
-								> a {
-									&:after {
-										content: '\f0da';
-										position: relative;
-										right: 0px;
-									}
 								}
 							}
 
@@ -220,20 +457,13 @@
 										}
 									}
 								}
-
-								&:before , &:after {
-									display: none;
-								}
 							}
 						}
 
 						.sub-menu {
 							box-shadow: none;
 							margin: 0 10px;
-							position: relative;
-							visibility: visible;
 							margin-top: 0;
-							left: 0;
 							li {
 								background-color: transparent;
 								> a {
@@ -241,10 +471,6 @@
 										background-color: transparent;
 									}
 								}
-							}
-
-							&:before , &:after {
-								display: none;
 							}
 						}
 
@@ -260,19 +486,6 @@
 							}
 						}
 					}
-
-					&.parent {
-						> a {
-							&:after {
-								float: none;
-								left: 10px;
-								position: relative;
-								top: -4px;
-								content: '\f0dd';
-								font-size: @baseFontSize - 4;
-							}
-						}
-					}
 				}
 
 				&.active {
@@ -283,20 +496,6 @@
 						color: @tabBackground;
 						&:hover , &:focus {
 							background-color: none;
-						}
-
-						&:before {
-							content: '\f111';
-							float: left;
-							color: @white;
-							margin-left: -10px;
-						  	margin-right: 6px;
-							font-family: FontAwesome;
-							font-size: @baseFontSize;
-						}
-
-						&:after {
-							content: none;
 						}
 					}
 				}
