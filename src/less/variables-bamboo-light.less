@@ -33,10 +33,10 @@
 @navbarInverseDropdownLinkBackgroundHover : @dropdownLinkBackgroundHover;
 @navbarInverseDropdownLinkBackgroundActive : @dropdownLinkBackgroundActive;
 
-@color_one: #80B788;
-@color_two: #69E8A8;
+@color_one: darken(desaturate(spin(@color_two, -21.0365), 45.7722), 5.0980);
+@color_two: #69E8A8; // Main color
 @color_three: @headingTabColor;
-@color_four: #4A3C55;
+@color_four: #4A3C55; // Accent color
 @color_five: #313140;
 @color_six: #555;
 
@@ -50,7 +50,7 @@
 @hedaer-top: @white;
 
 // Code background color
-@codeBackgroundColor: #D0E9D3;
+@codeBackgroundColor: lighten(desaturate(spin(@color_two, -22.5638), 37.1785), 20.3922);
 
 //Lateral-Menu font color
 
@@ -58,7 +58,7 @@
 
 //Nav after color element
 
-@navAfterColorElement: #b9b9c0;
+@navAfterColorElement: lighten(desaturate(spin(@color_four, -33.6000), 11.9782), 45.4902);
 
 //Style variables
 
@@ -66,9 +66,9 @@
 
 // Tabs und backgrounds
 // --------------------------------------------------
-@tabBackground: #76DF8D;
-@headingTabColor: #787887;
-@doubleBackgroundColor: #73B07C;
+@tabBackground: lighten(desaturate(spin(@color_two, -16.6209), 11.2802), 0.7843);
+@headingTabColor: lighten(desaturate(spin(@color_four, -33.6000), 11.3590), 21.5686);
+@doubleBackgroundColor: darken(desaturate(spin(@color_two, -20.9113), 45.5565), 9.0196);
 
 //As featured in
 @topFuturedTextColor: #545454;
@@ -79,17 +79,17 @@
 
 // Tabs und backgrounds
 // --------------------------------------------------
-@headerTitleBackground: #70E197;
+@headerTitleBackground: lighten(desaturate(spin(@color_two, -9.0558), 8.0925), 0.0000);
 
 // Content Background
-@content-background: #C2F5DB;
+@content-background: lighten(desaturate(spin(@color_two, -0.3520), 1.5794), 20.0000);
 //
 
 @activeTextColor: #777;
 
 // Border colors
 // --------------------------------------------------
-@boderModuleStyleColor: #D3D1D4;
+@boderModuleStyleColor: lighten(desaturate(spin(@color_four, 6.4000), 13.8706), 54.1176);
 
 // Grays
 // -------------------------
@@ -123,7 +123,7 @@
 // Links
 // -------------------------
 @linkTopColor: 			#ebebeb;
-@linkColor:            	#7fb787;
+@linkColor:            	darken(desaturate(spin(@color_two, -21.1924), 45.4104), 5.2941);
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -163,7 +163,7 @@
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
 @tableBackgroundAccent:             @grayLighter; // for striping
-@tableBackgroundHover:              #A2F1C9; // for hover
+@tableBackgroundHover:              lighten(saturate(spin(@color_two, -0.1435), 0.4214), 12.9412); // for hover
 @tableBorder:                       #ddd; // table and cell border
 
 // Buttons
@@ -171,8 +171,8 @@
 @btnBackground:                     @color_two;
 @btnBackgroundHighlight:            @color_two;
 @btnBorder:                         #ccc;
-@btnPrimaryBoder: 					#80B788;
-@btnHoverBackground: 				#91EDBB;
+@btnPrimaryBoder: 					darken(desaturate(spin(@color_two, -21.0365), 45.7722), 5.0980);
+@btnHoverBackground: 				lighten(desaturate(spin(@color_two, -2.3725), 1.5354), 8.8235);
 
 @btnPrimaryBackground:              @color_two;
 @btnPrimaryBackgroundHighlight:     @color_two;

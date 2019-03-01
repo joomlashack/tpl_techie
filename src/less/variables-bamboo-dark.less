@@ -33,10 +33,10 @@
 @navbarInverseDropdownLinkBackgroundHover : @dropdownLinkBackgroundHover;
 @navbarInverseDropdownLinkBackgroundActive : @dropdownLinkBackgroundActive;
 
-@color_one: #80B788;
-@color_two: #69E8A8;
-@color_three: #604D6E;
-@color_four: #4A3C55;
+@color_one: darken(desaturate(spin(@color_two, -21.0365), 45.7722), 5.0980);
+@color_two: #69E8A8; // Main color
+@color_three: lighten(saturate(spin(@color_four, 0.9455), 0.4057), 8.2353);
+@color_four: #4A3C55; // Accent color
 @color_five: #313140;
 @color_six: #333;
 
@@ -47,7 +47,7 @@
 
 // Global values
 // --------------------------------------------------
-@hedaer-top: #868695;
+@hedaer-top: lighten(desaturate(spin(@color_four, -33.6000), 10.6334), 27.0588);
 
 // Code background color
 @codeBackgroundColor: @btnHoverBackground;
@@ -58,7 +58,7 @@
 
 //Nav after color element
 
-@navAfterColorElement: #b9b9c0;
+@navAfterColorElement: lighten(desaturate(spin(@color_four, -33.6000), 11.9782), 45.4902);
 
 //Style variables
 
@@ -89,7 +89,7 @@
 
 // Border colors
 // --------------------------------------------------
-@boderModuleStyleColor: #D3D1D4;
+@boderModuleStyleColor: lighten(desaturate(spin(@color_four, 6.4000), 13.8706), 54.1176);
 
 // Grays
 // -------------------------
@@ -120,8 +120,8 @@
 
 //Ms4 text color
 
-@moduleStyleTextColor: #525261;
-@topHeaderColor: #DBDBEA;
+@moduleStyleTextColor: lighten(desaturate(spin(@color_four, -33.6000), 8.8615), 6.6667);
+@topHeaderColor: lighten(saturate(spin(@color_four, -33.6000), 9.0744), 60.3922);
 
 
 // Links
@@ -167,9 +167,9 @@
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
 @tableBackgroundAccent:             @grayLighter; // for striping
-@tableBackgroundHover:              #A2F1C9; // for hover
-@tableBorder:                       #5F5F7C; // table and cell border
-@stripedFirst:						#49495F;
+@tableBackgroundHover:              lighten(saturate(spin(@color_two, -0.1435), 0.4214), 12.9412); // for hover
+@tableBorder:                       lighten(desaturate(spin(@color_four, -33.6000), 3.9994), 14.5098); // table and cell border
+@stripedFirst:						lighten(desaturate(spin(@color_four, -33.6000), 4.1461), 4.5098);
 @stripedSecond: 					@color_five;
 
 // Buttons
@@ -178,7 +178,7 @@
 @btnBackgroundHighlight:            @color_two;
 @btnBorder:                         @color_two;
 @btnPrimaryBoder: 					@color_two;
-@btnHoverBackground: 				#91EDBB;
+@btnHoverBackground: 				lighten(desaturate(spin(@color_two, -2.3725), 1.5354), 8.8235);
 
 @btnPrimaryBackground:              @color_two;
 @btnPrimaryBackgroundHighlight:     @color_two;
