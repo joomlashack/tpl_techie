@@ -40,9 +40,6 @@ jQuery(function() {
 
         jQuery('#slide-text-element').html(stringArray);
 
-        // Resize correctly the slides
-        api.resizeNow();
-
     }
 
 
@@ -105,6 +102,11 @@ jQuery(function() {
             api.resizeNow();
         }
     }
+
+
+
+
+
 
     // Content on the main page
 
