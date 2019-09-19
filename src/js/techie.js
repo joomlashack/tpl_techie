@@ -4,11 +4,6 @@ jQuery(function() {
     function resizeHeader () {
 
         jQuery('#header.techieSlideshow').css('min-height', (jQuery(window).height() - 170) + 'px' );
-
-        if (jQuery(window).width() < 767) {
-            jQuery('#header.techieSlideshow').css('min-height', 'auto');
-        }
-
     }
 
     resizeHeader();

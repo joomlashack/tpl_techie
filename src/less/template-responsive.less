@@ -568,16 +568,37 @@
 			margin-right: 20px;
 		}
 
-		.container , .container-fluid {
-			.row , .row-fluid {
+		.mounted[class^="module"] {
+
+			&.fullwidth {
+				padding: 0;
+			}
+
+			.module-inner {
+				margin: 0;
+			}
+		}
+
+		.container,
+		.container-fluid {
+
+			.row,
+			.row-fluid {
+
 				[class ^= "module"] {
 					text-align: center;
 					margin-top: 30px;
+
 					img {
 						margin-top: 30px;
 						margin-left: auto;
 						margin-right: auto;
 						display: block;
+					}
+
+					&.mounted,
+					.module-inner {
+						margin-top: 0;
 					}
 				}
 			}
@@ -843,7 +864,7 @@
 					}
 
 					.caret {
-						display: none;
+						//display: none;
 					}
 				}
 
@@ -982,7 +1003,7 @@
 								left: 10px;
 								position: relative;
 								top: -4px;
-								content: '\f0dd';
+								//content: '\f0dd';
 								font-size: @baseFontSize - 4;
 							}
 						}
